@@ -3,6 +3,7 @@ import { api } from './api.js';
 import * as ui from './ui.js';
 import * as dialogs from './dialogs.js';
 import { renderFileList } from './files.js';
+import { LiveSync } from './live.js';
 
 const app = {
   payload: null,
@@ -12,6 +13,9 @@ const app = {
   viewer: null,
   busy: false,
 };
+
+let live = null;
+let pendingLive = null;
 
 const history = [];
 let historyIndex = -1;
@@ -49,6 +53,7 @@ async function refreshFiles() {
 
 function applyState(payload, reframe = true) {
   app.payload = payload;
+  if (live && Number.isFinite(payload?.revision)) live.noteRevision(payload.revision);
   if (!payload) {
     app.viewer.clear();
     ui.showEmpty();
@@ -58,6 +63,50 @@ function applyState(payload, reframe = true) {
   }
   updateActions();
   renderFiles();
+}
+
+function applyLive(data) {
+  if (Array.isArray(data.files)) {
+    app.files = data.files;
+    ui.setFileCount(data.files.length);
+  }
+  const previous = app.payload;
+  const previousRevision = previous?.revision ?? -1;
+  if (data.state === null) {
+    if (previous) applyState(null, false);
+    else renderFiles();
+  } else if (!previous || data.state.revision > previousRevision) {
+    const sizeChanged = !previous
+      || previous.width !== data.state.width
+      || previous.height !== data.state.height
+      || previous.length !== data.state.length;
+    applyState(data.state, sizeChanged);
+  } else {
+    renderFiles();
+  }
+  if (data.actor === 'agent') ui.toast('AI 已更新');
+}
+
+function handleLive(data) {
+  if (app.busy) {
+    pendingLive = data;
+    return;
+  }
+  applyLive(data);
+}
+
+function flushLive() {
+  if (!pendingLive) return;
+  const data = pendingLive;
+  pendingLive = null;
+  const current = app.payload?.revision ?? -1;
+  if (data.revision > current) {
+    applyLive(data);
+  } else if (Array.isArray(data.files)) {
+    app.files = data.files;
+    ui.setFileCount(data.files.length);
+    renderFiles();
+  }
 }
 
 async function withBusy(text, task) {
@@ -74,6 +123,7 @@ async function withBusy(text, task) {
     app.busy = false;
     ui.setBusy(false);
     updateActions();
+    flushLive();
   }
 }
 
@@ -271,6 +321,7 @@ async function run() {
     ui.setBusy(false);
     updateActions();
     renderFiles();
+    flushLive();
   }
 }
 
@@ -388,6 +439,7 @@ async function boot() {
     }
     ui.setHudInfo(`${record.name} @ (${record.x}, ${record.y}, ${record.z})`);
   };
+  live = new LiveSync({ onEvent: handleLive });
   bindEvents();
   ui.setActions({ hasFile: false, dirty: false, busy: false });
   try {
@@ -397,11 +449,13 @@ async function boot() {
   }
   try {
     const data = await api.state();
+    if (Number.isFinite(data.revision)) live.noteRevision(data.revision);
     applyState(data.state, true);
   } catch (error) {
     applyState(null, true);
     ui.toast(error.message, 'error');
   }
+  live.start();
 }
 
 boot();

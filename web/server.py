@@ -6,6 +6,7 @@ import socket
 import sys
 import tempfile
 import threading
+import time
 import webbrowser
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -68,11 +69,37 @@ class Handler(SimpleHTTPRequestHandler):
     def read_json(self, limit: int = 256 * 1024) -> dict:
         return json.loads(self.read_body(limit) or b"{}")
 
+    def stream_events(self):
+        self.send_response(200)
+        self.send_header("Content-Type", "text/event-stream; charset=utf-8")
+        self.send_header("Cache-Control", "no-cache")
+        self.send_header("Connection", "keep-alive")
+        self.end_headers()
+        self.close_connection = True
+        last = None
+        try:
+            self.wfile.write(b"retry: 1000\n\n")
+            self.wfile.flush()
+            while True:
+                revision = WORKSPACE.revision
+                if revision != last:
+                    snapshot = WORKSPACE.snapshot()
+                    data = json.dumps(snapshot, ensure_ascii=False)
+                    self.wfile.write(f"data: {data}\n\n".encode("utf-8"))
+                    self.wfile.flush()
+                    last = snapshot["revision"]
+                time.sleep(0.3)
+        except (BrokenPipeError, ConnectionResetError, OSError):
+            return
+
     def do_GET(self):
         parsed = urlparse(self.path)
         try:
             if parsed.path == "/api/state":
-                return self.send_json({"ok": True, "state": WORKSPACE.state()})
+                snapshot = WORKSPACE.snapshot()
+                return self.send_json({"ok": True, "revision": snapshot["revision"], "state": snapshot["state"]})
+            if parsed.path == "/api/events":
+                return self.stream_events()
             if parsed.path == "/api/files":
                 return self.send_json({"ok": True, "files": WORKSPACE.files()})
             if parsed.path == "/api/download":
@@ -143,7 +170,7 @@ class Handler(SimpleHTTPRequestHandler):
 
             if parsed.path == "/api/run":
                 body = self.read_json()
-                return self.send_json(WORKSPACE.run(body.get("commands", "")))
+                return self.send_json(WORKSPACE.run(body.get("commands", ""), body.get("actor", "user")))
 
             if parsed.path == "/api/reveal":
                 WORKSPACE.reveal()
@@ -204,3 +231,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+

@@ -53,6 +53,7 @@ python tools\inspect_schem.py schematics\demo.schem
 | 保存 / 另存为 | 覆盖原文件 / 保存为新文件（支持覆盖同名） |
 | 重置 / 关闭 | 恢复到原文件 / 放弃当前编辑并回到空状态 |
 | 下载 | 导出当前编辑结果 |
+| 外部 Agent | 调用 /api/run 修改当前投影，页面通过 SSE 自动刷新 |
 
 文件列表支持按名称搜索，以及按名称/修改时间排序；当前文件高亮，有未保存修改时显示橙色圆点。
 删除是不可恢复的，执行前会二次确认；删除当前文件会自动关闭投影。
@@ -64,6 +65,26 @@ python tools\inspect_schem.py schematics\demo.schem
 水、玻璃、冰等半透明；楼梯、台阶、门等不做精细建模。大型投影（几十万方块以上）会变慢。
 运行日志写到 `%TEMP%\worldedit-simulator-web.log`（后台模式），项目目录不产生日志。
 
+## 外部 Agent 接口
+
+本机 AI Agent 可以直接调用现有的命令接口，不需要额外的建筑编辑 API：
+
+```http
+POST http://127.0.0.1:8777/api/run
+Content-Type: application/json
+
+{"commands":"//pos1 0,0,0\n//pos2 12,7,12\n//set minecraft:gold_block","actor":"agent"}
+```
+
+先通过界面或 `POST /api/load` 载入一个 `.schem`；也可以 `POST /api/new` 新建。
+
+- 返回 `{ok, actor, log, state}`；`state.revision` 是当前版本号。
+- `actor` 默认 `user`；传 `agent` 时页面会提示「AI 已更新」。不传也会自动刷新，只是不提示。
+- 浏览器通过 `GET /api/events`（SSE）接收 `{revision, actor, state, files}`；命令、文件操作都会推送，无需刷新页面。
+- `GET /api/state` 返回当前 `revision` 和 `state`；也支持 `/api/files`、`/api/load`、`/api/upload`、`/api/new` 等现有接口。
+- 命令行助手：`python tools\agent_run.py --command "..."` 或 `--file commands.txt`；默认 `--actor agent`。
+- 服务只监听 `127.0.0.1`；远程 Agent 需要自行加隧道和鉴权，不要把端口直接暴露到公网。
+
 ## 项目结构
 
 ```
@@ -71,9 +92,9 @@ core/                共享 Python 核心（不依赖 HTTP/UI）
   nbt.py             NBT 读写
   schematic.py       Sponge .schem 读取/写入/空白生成/重定向
   worldedit.py       方块数据缓存 + WorldEdit-CLI 调用
-  workspace.py       工作区状态、文件操作、脏标记
+  workspace.py       工作区状态、文件操作、脏标记、revision/actor
 web/
-  server.py          HTTP 路由与静态文件，只调用 core.workspace
+  server.py          HTTP 路由、SSE 事件流与静态文件，只调用 core.workspace
   static/
     index.html
     style.css
@@ -85,8 +106,9 @@ web/
       files.js       文件列表、搜索/排序、行菜单
       ui.js          状态栏、日志、toast、空状态
       dialogs.js     新建/重命名/确认弹窗
+      live.js        EventSource 实时同步
     vendor/          Three.js 本地文件
-tools/               CLI 小工具（inspect/make/retarget/ensure）
+tools/               CLI 小工具（inspect/make/retarget/ensure/agent_run）
 examples/            示例投影和命令脚本
 schematics/          用户投影目录（初始为空）
 work/                运行时编辑副本（自动生成，不入库）
@@ -169,3 +191,4 @@ we.cmd schematics\old.schem examples\demo.txt
 3. 修改 `core/worldedit.py` 里的 jar 文件名和 `setup.cmd` 里的下载地址。
 
 WorldEdit 采用 GPLv3，jar 为官方原版未修改；Temurin JRE 采用 GPLv2+CE；Three.js 采用 MIT。
+

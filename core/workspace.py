@@ -58,6 +58,25 @@ class Workspace:
         self._name = None
         self._data = None
         self._dirty = False
+        self._revision = 0
+        self._actor = "user"
+
+    def _touch(self, actor: str = "user"):
+        self._revision += 1
+        self._actor = str(actor or "user")[:32]
+
+    @property
+    def revision(self) -> int:
+        with self._lock:
+            return self._revision
+
+
+    def _clear_state(self):
+        self._source = None
+        self._name = None
+        self._data = None
+        self._dirty = False
+        self.current.unlink(missing_ok=True)
 
     def _path(self, name) -> Path:
         path = self.schematics / safe_name(name)
@@ -73,6 +92,7 @@ class Workspace:
             "name": self._name,
             "source": self._source.name if self._source else None,
             "dirty": self._dirty,
+            "revision": self._revision,
             "width": data.width,
             "height": data.height,
             "length": data.length,
@@ -91,9 +111,15 @@ class Workspace:
             f"可先运行：python tools\\retarget_schem.py \"{path}\" {nearest_supported(version)}"
         )
 
-    def state(self):
+
+    def snapshot(self) -> dict:
         with self._lock:
-            return self._payload()
+            return {
+                "revision": self._revision,
+                "actor": self._actor,
+                "state": self._payload(),
+                "files": self.files(),
+            }
 
     def files(self) -> list:
         with self._lock:
@@ -130,6 +156,7 @@ class Workspace:
             self._name = source.name
             self._data = data
             self._dirty = False
+            self._touch()
             return self._payload()
 
     def new(self, name, width, height, length):
@@ -191,6 +218,7 @@ class Workspace:
             if self._source == source:
                 self._source = target
                 self._name = target.name
+            self._touch()
             return self._payload()
 
     def duplicate(self, name, new_name=None):
@@ -203,23 +231,22 @@ class Workspace:
             else:
                 target = unique_name(self.schematics, f"{source.stem}_copy{source.suffix}")
             shutil.copy2(source, target)
+            self._touch()
             return target.name
 
     def delete(self, name):
         with self._lock:
             source = self._path(name)
             if self._source == source:
-                self.close()
+                self._clear_state()
             source.unlink()
+            self._touch()
             return self._payload()
 
     def close(self):
         with self._lock:
-            self._source = None
-            self._name = None
-            self._data = None
-            self._dirty = False
-            self.current.unlink(missing_ok=True)
+            self._clear_state()
+            self._touch()
             return None
 
     def save(self):
@@ -228,6 +255,7 @@ class Workspace:
                 raise WorkspaceError("还没有载入投影")
             shutil.copy2(self.current, self._source)
             self._dirty = False
+            self._touch()
             return self._payload()
 
     def save_as(self, name, overwrite=False):
@@ -241,6 +269,7 @@ class Workspace:
             self._source = target
             self._name = target.name
             self._dirty = False
+            self._touch()
             return self._payload()
 
     def reset(self):
@@ -250,9 +279,10 @@ class Workspace:
             shutil.copy2(self._source, self.current)
             self._data = read_schem(self.current)
             self._dirty = False
+            self._touch()
             return self._payload()
 
-    def run(self, commands: str) -> dict:
+    def run(self, commands: str, actor: str = "user") -> dict:
         with self._lock:
             if self._data is None:
                 raise WorkspaceError("还没有载入投影")
@@ -268,7 +298,8 @@ class Workspace:
             if (before.st_size, before.st_mtime_ns) != (after.st_size, after.st_mtime_ns):
                 self._dirty = True
             self._data = read_schem(self.current)
-            result = {"ok": code == 0, "log": log, "state": self._payload()}
+            self._touch(actor)
+            result = {"ok": code == 0, "log": log, "actor": self._actor, "state": self._payload()}
             if code != 0:
                 result["error"] = f"WorldEdit 退出码 {code}"
             return result
@@ -289,3 +320,4 @@ class Workspace:
                 os.startfile(self.schematics)
             else:
                 subprocess.Popen(["xdg-open", str(self.schematics)])
+
