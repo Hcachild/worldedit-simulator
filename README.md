@@ -3,6 +3,8 @@
 不启动 Minecraft，在浏览器里对 `.schem` 投影执行 WorldEdit 命令并实时查看 3D 结果。
 打开页面默认为空；示例和操作说明见本文档，界面只保留必要控件。
 
+完整文档见 **[docs/README.md](docs/README.md)**：部署、架构、API、渲染、排错和 WorldEdit 用法。
+
 ![空界面](web/preview-empty.png)
 
 ## 快速开始
@@ -120,6 +122,7 @@ web/
       mc-renderer.js block-model-renderer 适配（真实模型/材质/实例化）
     vendor/          Three.js、block-model-renderer 及 wasm
     assets.zip       block-model-renderer 内置的方块实体覆盖包
+docs/                部署、架构、API、渲染、排错、WorldEdit 用法
 tools/               CLI 小工具（inspect/make/retarget/ensure/agent_run/fetch_assets）
 assets/              下载的 1.21.1 client.jar（本地材质，不入库）
 examples/            示例投影和命令脚本
@@ -207,6 +210,7 @@ we.cmd schematics\old.schem examples\demo.txt
 3. 修改 `core/worldedit.py` 里的 jar 文件名和 `setup.cmd` 里的下载地址。
 
 WorldEdit 采用 GPLv3，jar 为官方原版未修改；Temurin JRE 采用 GPLv2+CE；Three.js 采用 MIT；block-model-renderer 采用 MPL-2.0（许可文件在 web/static/vendor/）。Minecraft 客户端资源仅本地渲染使用，不随仓库分发。
+
 
 
 
