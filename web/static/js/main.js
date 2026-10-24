@@ -59,6 +59,7 @@ async function applyState(payload, reframe = true) {
   if (!payload) {
     app.viewer.clear();
     ui.showEmpty();
+    ui.els.viewSelect.value = 'iso';
   } else {
     ui.showLoaded(payload);
     if (!app.busy) ui.setStatus('构建模型…');
@@ -68,7 +69,14 @@ async function applyState(payload, reframe = true) {
       ui.toast(error.message || String(error), 'error');
     }
     if (token !== applyToken) return;
+    window.__appliedState = {
+      name: payload.name,
+      revision: payload.revision,
+      blockCount: payload.blockCount,
+      at: Date.now(),
+    };
     if (!app.busy) ui.setStatus('就绪');
+    ui.els.viewSelect.value = app.viewer.viewMode || 'iso';
   }
   updateActions();
   renderFiles();
@@ -398,7 +406,9 @@ function bindEvents() {
   ui.els.resetBtn.addEventListener('click', resetFile);
   ui.els.closeBtn.addEventListener('click', closeFile);
   ui.els.exampleBtn.addEventListener('click', fillExample);
-  ui.els.fitBtn.addEventListener('click', () => app.viewer.fit());
+  ui.els.fitBtn.addEventListener('click', () => setView('iso'));
+  ui.els.viewSelect.addEventListener('change', () => setView(ui.els.viewSelect.value));
+  ui.els.shotBtn.addEventListener('click', captureShot);
   ui.els.commands.addEventListener('keydown', (event) => {
     if (event.key === 'Enter' && (event.ctrlKey || event.metaKey)) {
       event.preventDefault();
@@ -439,6 +449,34 @@ function bindEvents() {
     const [file] = event.dataTransfer.files;
     uploadFile(file);
   });
+}
+
+function setView(mode) {
+  app.viewer.setView(mode);
+  ui.els.viewSelect.value = mode;
+}
+
+async function captureShot() {
+  if (!app.payload) return;
+  if (app.viewer.viewMode !== ui.els.viewSelect.value) {
+    setView(ui.els.viewSelect.value);
+  }
+  try {
+    const { png, meta } = app.viewer.capture();
+    const stamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\..+$/, '').replace('T', '-');
+    const base = (app.payload.name || 'untitled')
+      .replace(/\.schem$/i, '')
+      .replace(/[^\w.-]+/g, '_');
+    const data = await api.saveShot({
+      name: `${base}_${meta.view}_${stamp}.png`,
+      png,
+      meta,
+    });
+    ui.toast(`截图已保存：${data.image}`);
+    ui.setLog(`截图：${data.image}\n视角：${meta.view}\n机位：${JSON.stringify(meta.camera)}`);
+  } catch (error) {
+    ui.toast(error.message || String(error), 'error');
+  }
 }
 
 async function boot() {
@@ -485,6 +523,3 @@ async function boot() {
 }
 
 boot();
-
-
-

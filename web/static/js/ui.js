@@ -13,6 +13,8 @@ export const els = {
   hud: document.querySelector('#hud'),
   hudInfo: document.querySelector('#hudInfo'),
   fitBtn: document.querySelector('#fitBtn'),
+  viewSelect: document.querySelector('#viewSelect'),
+  shotBtn: document.querySelector('#shotBtn'),
   console: document.querySelector('#console'),
   commands: document.querySelector('#commands'),
   log: document.querySelector('#log'),
@@ -114,7 +116,6 @@ export function setActions({ hasFile, dirty, busy }) {
   els.downloadBtn.disabled = disabled;
   els.closeBtn.disabled = disabled;
   els.exampleBtn.disabled = disabled;
+  els.shotBtn.disabled = disabled;
   els.saveBtn.disabled = disabled || !dirty;
 }
-
-

@@ -47,6 +47,33 @@ state.palette + state.data
 拾取层是独立的不可见 `InstancedMesh`，每个非空气方块一个单位立方体；它不加入
 `scene`，只用于 `Raycaster`，因此不增加 draw call，但会占实例矩阵内存。
 
+## 视角、正交取景与截图
+
+`viewer.js` 使用 `OrthographicCamera`，所以等轴测/前视/顶视都是真正的工程投影，不是透视相机
+“看起来像”：
+
+| 视角 | 方向 | up | 用途 |
+|---|---|---|---|
+| `iso` | `(1,1,1)` | `(0,1,0)` | 正等轴测，默认 |
+| `front` / `back` | `(0,0,1)` / `(0,0,-1)` | `(0,1,0)` | 前/后立面 |
+| `left` / `right` | `(-1,0,0)` / `(1,0,0)` | `(0,1,0)` | 左/右侧面 |
+| `top` / `bottom` | `(0,1,0)` / `(0,-1,0)` | `(0,0,-1)` / `(0,0,1)` | 顶/底平面 |
+
+自动取景不是按选区尺寸套一个固定距离，而是：
+
+1. 从当前 `records`（非空气方块）计算世界坐标包围盒；
+2. 设置相机方向/up，`lookAt` 包围盒中心；
+3. 把 8 个包围盒角点投影到相机的 right/up 轴；
+4. 按画布宽高比取 `max(投影高, 投影宽/aspect) * 1.08` 作为正交视锥高度；
+5. 设置 `left/right/top/bottom`，`zoom=1`，`controls.target=中心`。
+
+因此模型会刚好占据画面（留 8% 边距），而不是按 128³ 空白选区缩小。没有方块时回退到选区
+包围盒。
+
+“截图”按钮调用 `viewer.capture()`，只截 WebGL canvas，不包含侧栏/HUD/命令面板；同时把
+`position/target/up/direction/azimuth/polar/zoom/视锥/bounds` 写入同名 JSON。服务端
+`/api/shot` 保存到 `work/shots/`，作品集脚本会把选中的图复制到 `docs/portfolio/images/`。
+
 ## 优化清单
 
 已做：
@@ -110,8 +137,8 @@ state.palette + state.data
   `client.jar`/`assets.zip`/WASM 是否 404。
 - 检查当前投影的 DataVersion 是否和 1.21.1 资源匹配；不匹配时先看
   [worldedit/cli.md](worldedit/cli.md) 的 DataVersion 表。
-- 需要拍照/自动化截图时，不要用 `msedge --screenshot` 打开带 SSE 的页面（长连接可能让
-  截图进程不退出）；用 CDP 的 `Page.captureScreenshot`。
+- 页面已有“截图”按钮，输出 `work/shots/*.png` 和同名机位 JSON；自动化测试仍建议用
+  Playwright/CDP，不要用 `msedge --screenshot` 打开带 SSE 的页面。
 
 ## 更新材质
 

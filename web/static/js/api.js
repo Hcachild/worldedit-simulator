@@ -35,6 +35,7 @@ export const api = {
   saveAs: (name, overwrite) => post('/api/save-as', { name, overwrite: Boolean(overwrite) }),
   reset: () => post('/api/reset'),
   reveal: () => post('/api/reveal'),
+  saveShot: (payload) => post('/api/shot', payload),
   async runRaw(commands) {
     const response = await fetch('/api/run', {
       method: 'POST',

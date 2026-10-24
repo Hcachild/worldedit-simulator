@@ -72,9 +72,39 @@ Invoke-RestMethod -Method Post -Uri "http://127.0.0.1:8777/api/run" -ContentType
 | POST | `/api/reset` | `{}` | 源文件覆盖工作副本 |
 | POST | `/api/run` | `{"commands":"...","actor":"agent"}` | 执行 WorldEdit |
 | POST | `/api/reveal` | `{}` | 在资源管理器中打开 `schematics/` |
+| POST | `/api/shot` | `{"name":"x.png","png":"data:image/png;base64,...","meta":{...}}` | 保存截图 + 机位 JSON 到 `work/shots/` |
 
 `/api/new` 尺寸范围 1–256；名称不能包含路径分隔符，`.schematic` 会被拒绝。上传同名文件会自动加
 `_1`、`_2` 后缀。
+
+## 截图与机位
+
+页面右上角“截图”会把**当前 canvas**（不含侧栏/命令面板）编码为 PNG，连同相机元数据
+POST 到 `/api/shot`。服务端写入：
+
+```
+work/shots/<model>_<view>_<timestamp>.png
+work/shots/<model>_<view>_<timestamp>.json
+```
+
+`meta` 至少包含：
+
+```json
+{
+  "name": "a.schem", "view": "iso", "projection": "orthographic",
+  "camera": {
+    "position": [0.5, 53.0, 348.25],
+    "target": [0.5, 53.0, 0.5],
+    "up": [0, 1, 0],
+    "direction": [0, 0, 1],
+    "azimuthDeg": 45.0, "polarDeg": 54.7356, "zoom": 1,
+    "left": -56.7, "right": 56.7, "top": 56.7, "bottom": -56.7
+  },
+  "bounds": {"min": [...], "max": [...], "center": [...], "size": [...]}
+}
+```
+
+`work/shots/` 不入库；作品集里只提交挑选过的 PNG 和 `manifest.json`。
 
 ## SSE 事件
 
@@ -117,7 +147,7 @@ python tools\agent_run.py --file commands.txt --actor my-agent
 - `Workspace` 使用 `RLock`，同一时刻只有一个命令/文件操作在改状态。
 - 命令执行期间 Web 页面显示 busy；外部 Agent 的更新在 busy 结束后应用到页面。
 - 前端按 revision 去重：SSE 事件 revision 不大于当前状态时忽略。
-- 命令超时 180s；超时会终止 JVM，返回 `ok:false`。
+- 命令超时 600s；超时会终止 JVM，返回 `ok:false`。
 - 重新打开文件会丢弃当前未保存的 `work` 副本；先 `/api/save` 或 `/api/save-as`。
 
 ## 安全

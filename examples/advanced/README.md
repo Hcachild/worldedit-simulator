@@ -5,6 +5,8 @@
 
 ![gallery](../../docs/images/advanced-gallery.png)
 
+完整图像作品集（等轴测、四视图、相机机位）：[docs/portfolio/README.md](../../docs/portfolio/README.md)。
+
 ## 怎么运行
 
 ### 页面

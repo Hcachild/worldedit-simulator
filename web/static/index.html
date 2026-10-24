@@ -59,7 +59,17 @@
 
       <div id="hud" class="hidden">
         <span id="hudInfo"></span>
-        <button id="fitBtn" class="ghost small">视角复位</button>
+        <select id="viewSelect" class="view-select" title="工程视角">
+          <option value="iso">等轴测</option>
+          <option value="front">前视</option>
+          <option value="back">后视</option>
+          <option value="left">左视</option>
+          <option value="right">右视</option>
+          <option value="top">顶视</option>
+          <option value="bottom">底视</option>
+        </select>
+        <button id="fitBtn" class="ghost small">等轴测</button>
+        <button id="shotBtn" class="ghost small">截图</button>
       </div>
 
       <section id="console" class="hidden">

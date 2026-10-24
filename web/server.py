@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """HTTP layer for the local 3D WorldEdit simulator."""
+import base64
 import json
 import mimetypes
 import os
@@ -17,6 +18,7 @@ from urllib.parse import parse_qs, quote, unquote, urlparse
 ROOT = Path(__file__).resolve().parent.parent
 STATIC = Path(__file__).resolve().parent / "static"
 ASSETS_DIR = ROOT / "assets"
+SHOTS_DIR = ROOT / "work" / "shots"
 PORT = 8777
 
 sys.dont_write_bytecode = True
@@ -197,6 +199,47 @@ class Handler(SimpleHTTPRequestHandler):
             if parsed.path == "/api/reveal":
                 WORKSPACE.reveal()
                 return self.send_json({"ok": True})
+
+            if parsed.path == "/api/shot":
+                body = self.read_json(64 * 1024 * 1024)
+                raw = body.get("png", "")
+                prefix = "data:image/png;base64,"
+                if not isinstance(raw, str) or not raw.startswith(prefix):
+                    raise ValueError("截图数据无效")
+                try:
+                    png = base64.b64decode(raw[len(prefix):], validate=True)
+                except Exception as exc:
+                    raise ValueError("截图数据无效") from exc
+                if len(png) < 1000:
+                    raise ValueError("截图数据为空")
+                target_name = Path(str(body.get("name") or "shot.png")).name
+                if not target_name.lower().endswith(".png"):
+                    target_name += ".png"
+                stem = "".join(
+                    char for char in Path(target_name).stem if char.isalnum() or char in "-_."
+                ) or "shot"
+                SHOTS_DIR.mkdir(parents=True, exist_ok=True)
+                target = SHOTS_DIR / f"{stem}.png"
+                counter = 1
+                while target.exists():
+                    target = SHOTS_DIR / f"{stem}_{counter}.png"
+                    counter += 1
+                target.write_bytes(png)
+                meta = body.get("meta")
+                if not isinstance(meta, dict):
+                    meta = {}
+                meta_path = target.with_suffix(".json")
+                meta_path.write_text(
+                    json.dumps(meta, ensure_ascii=False, indent=2) + "\n",
+                    encoding="utf-8",
+                )
+                return self.send_json(
+                    {
+                        "ok": True,
+                        "image": str(target.relative_to(ROOT)).replace("\\", "/"),
+                        "meta": str(meta_path.relative_to(ROOT)).replace("\\", "/"),
+                    }
+                )
         except (WorkspaceError, ValueError) as exc:
             return self.send_error_json(exc, 400)
         except Exception as exc:

@@ -1,0 +1,1401 @@
+{
+  "generatedAt": "2026-10-24",
+  "project": "worldedit-simulator",
+  "projection": "orthographic",
+  "defaultView": "iso",
+  "note": "All images are app captures (canvas only) at 900x900. Camera metadata is the exact capture state; scripts generate the model in a 128x128x128 selection.",
+  "models": [
+    {
+      "id": "01",
+      "key": "01_heart_128",
+      "title": "鎏金心 / Kintsugi Heart",
+      "script": "examples/advanced/01_heart_128.txt",
+      "image": "images/01_heart_128_iso.png",
+      "view": "iso",
+      "projection": "orthographic",
+      "camera": {
+        "position": [
+          201.27516446679024,
+          253.77516446679024,
+          201.27516446679027
+        ],
+        "target": [
+          0.5,
+          53,
+          0.5
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "direction": [
+          0.5773502691896257,
+          0.5773502691896257,
+          0.5773502691896257
+        ],
+        "azimuthDeg": 45,
+        "polarDeg": 54.735610317245346,
+        "zoom": 1,
+        "near": 0.1,
+        "far": 2012.6403216496299,
+        "left": -89.50435520129733,
+        "right": 89.50435520129733,
+        "top": 89.50435520129733,
+        "bottom": -89.50435520129733,
+        "viewHeight": 179.00871040259466
+      },
+      "bounds": {
+        "min": [
+          -48.5,
+          0.5,
+          -48.5
+        ],
+        "max": [
+          49.5,
+          105.5,
+          49.5
+        ],
+        "center": [
+          0.5,
+          53,
+          0.5
+        ],
+        "size": [
+          98,
+          105,
+          98
+        ]
+      },
+      "modelSize": {
+        "width": 128,
+        "height": 128,
+        "length": 128
+      },
+      "capturedAt": "2026-10-24T16:41:50.067Z"
+    },
+    {
+      "id": "02",
+      "key": "02_arch_bridge_128",
+      "title": "三拱高架桥 / Three-Arch Viaduct",
+      "script": "examples/advanced/02_arch_bridge_128.txt",
+      "image": "images/02_arch_bridge_128_iso.png",
+      "view": "iso",
+      "projection": "orthographic",
+      "camera": {
+        "position": [
+          234.61457755220584,
+          282.61457755220584,
+          234.61457755220587
+        ],
+        "target": [
+          0,
+          48,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "direction": [
+          0.5773502691896257,
+          0.5773502691896257,
+          0.5773502691896258
+        ],
+        "azimuthDeg": 45,
+        "polarDeg": 54.735610317245346,
+        "zoom": 1,
+        "near": 0.1,
+        "far": 2335.00402684201,
+        "left": -97.8816101216158,
+        "right": 97.8816101216158,
+        "top": 97.8816101216158,
+        "bottom": -97.8816101216158,
+        "viewHeight": 195.7632202432316
+      },
+      "bounds": {
+        "min": [
+          -63.5,
+          0.5,
+          -63.5
+        ],
+        "max": [
+          63.5,
+          95.5,
+          63.5
+        ],
+        "center": [
+          0,
+          48,
+          0
+        ],
+        "size": [
+          127,
+          95,
+          127
+        ]
+      },
+      "modelSize": {
+        "width": 128,
+        "height": 128,
+        "length": 128
+      },
+      "capturedAt": "2026-10-24T16:41:54.852Z"
+    },
+    {
+      "id": "03",
+      "key": "03_donut_128",
+      "title": "糖霜甜甜圈 / Frosted Donut",
+      "script": "examples/advanced/03_donut_128.txt",
+      "image": "images/03_donut_128_iso.png",
+      "view": "iso",
+      "projection": "orthographic",
+      "camera": {
+        "position": [
+          196.3264537798711,
+          255.82645377987114,
+          196.32645377987114
+        ],
+        "target": [
+          0.4999999999999999,
+          60.00000000000001,
+          0.4999999999999999
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "direction": [
+          0.5773502691896256,
+          0.5773502691896258,
+          0.5773502691896258
+        ],
+        "azimuthDeg": 45,
+        "polarDeg": 54.735610317245346,
+        "zoom": 1,
+        "near": 0.1,
+        "far": 1965.4975207702637,
+        "left": -88.58633754705069,
+        "right": 88.58633754705069,
+        "top": 88.58633754705069,
+        "bottom": -88.58633754705069,
+        "viewHeight": 177.17267509410138
+      },
+      "bounds": {
+        "min": [
+          -57.5,
+          38.5,
+          -57.5
+        ],
+        "max": [
+          58.5,
+          81.5,
+          58.5
+        ],
+        "center": [
+          0.5,
+          60,
+          0.5
+        ],
+        "size": [
+          116,
+          43,
+          116
+        ]
+      },
+      "modelSize": {
+        "width": 128,
+        "height": 128,
+        "length": 128
+      },
+      "capturedAt": "2026-10-24T16:41:59.765Z"
+    },
+    {
+      "id": "04",
+      "key": "04_rubik_128",
+      "title": "嵌套魔方 / Nested Rubik",
+      "script": "examples/advanced/04_rubik_128.txt",
+      "image": "images/04_rubik_128_iso.png",
+      "view": "iso",
+      "projection": "orthographic",
+      "camera": {
+        "position": [
+          209.84182573007237,
+          262.8418257300724,
+          209.8418257300724
+        ],
+        "target": [
+          0.5,
+          53.5,
+          0.5
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "direction": [
+          0.5773502691896257,
+          0.5773502691896258,
+          0.5773502691896258
+        ],
+        "azimuthDeg": 45,
+        "polarDeg": 54.735610317245346,
+        "zoom": 1,
+        "near": 0.1,
+        "far": 2094.248730725433,
+        "left": -92.59071227720412,
+        "right": 92.59071227720412,
+        "top": 92.59071227720412,
+        "bottom": -92.59071227720412,
+        "viewHeight": 185.18142455440824
+      },
+      "bounds": {
+        "min": [
+          -51.5,
+          0.5,
+          -51.5
+        ],
+        "max": [
+          52.5,
+          106.5,
+          52.5
+        ],
+        "center": [
+          0.5,
+          53.5,
+          0.5
+        ],
+        "size": [
+          104,
+          106,
+          104
+        ]
+      },
+      "modelSize": {
+        "width": 128,
+        "height": 128,
+        "length": 128
+      },
+      "capturedAt": "2026-10-24T16:42:04.425Z"
+    },
+    {
+      "id": "05",
+      "key": "05_ribbed_tunnel_128",
+      "title": "肋拱隧道 / Ribbed Tunnel",
+      "script": "examples/advanced/05_ribbed_tunnel_128.txt",
+      "image": "images/05_ribbed_tunnel_128_iso.png",
+      "view": "iso",
+      "projection": "orthographic",
+      "camera": {
+        "position": [
+          226.94786479130698,
+          272.4478647913069,
+          227.447864791307
+        ],
+        "target": [
+          0,
+          45.49999999999999,
+          0.4999999999999999
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "direction": [
+          0.5773502691896258,
+          0.5773502691896256,
+          0.5773502691896258
+        ],
+        "azimuthDeg": 45,
+        "polarDeg": 54.73561031724535,
+        "zoom": 1,
+        "near": 0.1,
+        "far": 2261.9687786829854,
+        "left": -94.3139024746617,
+        "right": 94.3139024746617,
+        "top": 94.3139024746617,
+        "bottom": -94.3139024746617,
+        "viewHeight": 188.6278049493234
+      },
+      "bounds": {
+        "min": [
+          -63.5,
+          0.5,
+          -59.5
+        ],
+        "max": [
+          63.5,
+          90.5,
+          60.5
+        ],
+        "center": [
+          0,
+          45.5,
+          0.5
+        ],
+        "size": [
+          127,
+          90,
+          120
+        ]
+      },
+      "modelSize": {
+        "width": 128,
+        "height": 128,
+        "length": 128
+      },
+      "capturedAt": "2026-10-24T16:42:09.115Z"
+    },
+    {
+      "id": "06",
+      "key": "06_tornado_128",
+      "title": "龙卷风 / Tornado",
+      "script": "examples/advanced/06_tornado_128.txt",
+      "image": "images/06_tornado_128_iso.png",
+      "view": "iso",
+      "projection": "orthographic",
+      "camera": {
+        "position": [
+          234.65379561305426,
+          296.1537956130543,
+          234.6537956130543
+        ],
+        "target": [
+          0.5,
+          62,
+          0.5
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "direction": [
+          0.5773502691896257,
+          0.5773502691896257,
+          0.5773502691896258
+        ],
+        "azimuthDeg": 45,
+        "polarDeg": 54.735610317245346,
+        "zoom": 1,
+        "near": 0.1,
+        "far": 2330.6144893279966,
+        "left": -104.49523242713038,
+        "right": 104.49523242713038,
+        "top": 104.49523242713038,
+        "bottom": -104.49523242713038,
+        "viewHeight": 208.99046485426075
+      },
+      "bounds": {
+        "min": [
+          -56.5,
+          0.5,
+          -56.5
+        ],
+        "max": [
+          57.5,
+          123.5,
+          57.5
+        ],
+        "center": [
+          0.5,
+          62,
+          0.5
+        ],
+        "size": [
+          114,
+          123,
+          114
+        ]
+      },
+      "modelSize": {
+        "width": 128,
+        "height": 128,
+        "length": 128
+      },
+      "capturedAt": "2026-10-24T16:42:14.203Z"
+    },
+    {
+      "id": "07",
+      "key": "07_rain_mandala_128",
+      "title": "雨纹曼陀罗 / Rain Mandala",
+      "script": "examples/advanced/07_rain_mandala_128.txt",
+      "image": "images/07_rain_mandala_128_iso.png",
+      "view": "iso",
+      "projection": "orthographic",
+      "camera": {
+        "position": [
+          201.07046857590336,
+          207.57046857590333,
+          201.0704685759034
+        ],
+        "target": [
+          0,
+          6.5,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "direction": [
+          0.5773502691896258,
+          0.5773502691896257,
+          0.5773502691896258
+        ],
+        "azimuthDeg": 45,
+        "polarDeg": 54.735610317245346,
+        "zoom": 1,
+        "near": 0.1,
+        "far": 2015.4534711133028,
+        "left": -93.93206481282097,
+        "right": 93.93206481282097,
+        "top": 93.93206481282097,
+        "bottom": -93.93206481282097,
+        "viewHeight": 187.86412962564194
+      },
+      "bounds": {
+        "min": [
+          -61.5,
+          2.5,
+          -61.5
+        ],
+        "max": [
+          61.5,
+          10.5,
+          61.5
+        ],
+        "center": [
+          0,
+          6.5,
+          0
+        ],
+        "size": [
+          123,
+          8,
+          123
+        ]
+      },
+      "modelSize": {
+        "width": 128,
+        "height": 128,
+        "length": 128
+      },
+      "capturedAt": "2026-10-24T16:42:18.474Z"
+    },
+    {
+      "id": "08",
+      "key": "08_hex_honeycomb_128",
+      "title": "六边形蜂巢 / Hex Honeycomb",
+      "script": "examples/advanced/08_hex_honeycomb_128.txt",
+      "image": "images/08_hex_honeycomb_128_iso.png",
+      "view": "iso",
+      "projection": "orthographic",
+      "camera": {
+        "position": [
+          202.9154175184002,
+          261.4154175184002,
+          203.41541751840023
+        ],
+        "target": [
+          0,
+          58.50000000000001,
+          0.4999999999999998
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "direction": [
+          0.5773502691896257,
+          0.5773502691896257,
+          0.5773502691896258
+        ],
+        "azimuthDeg": 45,
+        "polarDeg": 54.735610317245346,
+        "zoom": 1,
+        "near": 0.1,
+        "far": 2033.0289702950654,
+        "left": -87.07936035594199,
+        "right": 87.07936035594199,
+        "top": 87.07936035594199,
+        "bottom": -87.07936035594199,
+        "viewHeight": 174.15872071188397
+      },
+      "bounds": {
+        "min": [
+          -63.5,
+          0.5,
+          -17.5
+        ],
+        "max": [
+          63.5,
+          116.5,
+          18.5
+        ],
+        "center": [
+          0,
+          58.5,
+          0.5
+        ],
+        "size": [
+          127,
+          116,
+          36
+        ]
+      },
+      "modelSize": {
+        "width": 128,
+        "height": 128,
+        "length": 128
+      },
+      "capturedAt": "2026-10-24T16:42:22.985Z"
+    },
+    {
+      "id": "09",
+      "key": "09_onion_dome_128",
+      "title": "洋葱头穹顶 / Onion Dome",
+      "script": "examples/advanced/09_onion_dome_128.txt",
+      "image": "images/09_onion_dome_128_iso.png",
+      "view": "iso",
+      "projection": "orthographic",
+      "camera": {
+        "position": [
+          187.56148721743875,
+          250.56148721743878,
+          187.56148721743878
+        ],
+        "target": [
+          0.5,
+          63.5,
+          0.5
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "direction": [
+          0.5773502691896256,
+          0.5773502691896257,
+          0.5773502691896257
+        ],
+        "azimuthDeg": 45,
+        "polarDeg": 54.735610317245346,
+        "zoom": 1,
+        "near": 0.1,
+        "far": 1882,
+        "left": -87.29981443279247,
+        "right": 87.29981443279247,
+        "top": 87.29981443279247,
+        "bottom": -87.29981443279247,
+        "viewHeight": 174.59962886558495
+      },
+      "bounds": {
+        "min": [
+          -35.5,
+          0.5,
+          -35.5
+        ],
+        "max": [
+          36.5,
+          126.5,
+          36.5
+        ],
+        "center": [
+          0.5,
+          63.5,
+          0.5
+        ],
+        "size": [
+          72,
+          126,
+          72
+        ]
+      },
+      "modelSize": {
+        "width": 128,
+        "height": 128,
+        "length": 128
+      },
+      "capturedAt": "2026-10-24T16:42:27.659Z"
+    },
+    {
+      "id": "10",
+      "key": "10_wheat_field_128",
+      "title": "麦田 / Wheat Field",
+      "script": "examples/advanced/10_wheat_field_128.txt",
+      "image": "images/10_wheat_field_128_iso.png",
+      "view": "iso",
+      "projection": "orthographic",
+      "camera": {
+        "position": [
+          209.08371529126794,
+          221.08371529126796,
+          209.08371529126796
+        ],
+        "target": [
+          0,
+          12,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "direction": [
+          0.5773502691896257,
+          0.5773502691896257,
+          0.5773502691896257
+        ],
+        "azimuthDeg": 45,
+        "polarDeg": 54.735610317245346,
+        "zoom": 1,
+        "near": 0.1,
+        "far": 2091.7898985585803,
+        "left": -96.98676610754686,
+        "right": 96.98676610754686,
+        "top": 96.98676610754686,
+        "bottom": -96.98676610754686,
+        "viewHeight": 193.9735322150937
+      },
+      "bounds": {
+        "min": [
+          -63.5,
+          0.5,
+          -63.5
+        ],
+        "max": [
+          63.5,
+          23.5,
+          63.5
+        ],
+        "center": [
+          0,
+          12,
+          0
+        ],
+        "size": [
+          127,
+          23,
+          127
+        ]
+      },
+      "modelSize": {
+        "width": 128,
+        "height": 128,
+        "length": 128
+      },
+      "capturedAt": "2026-10-24T16:42:32.478Z"
+    },
+    {
+      "id": "11",
+      "key": "11_basalt_columns_128",
+      "title": "六边形玄武岩柱 / Basalt Columns",
+      "script": "examples/advanced/11_basalt_columns_128.txt",
+      "image": "images/11_basalt_columns_128_iso.png",
+      "view": "iso",
+      "projection": "orthographic",
+      "camera": {
+        "position": [
+          211.07344693257843,
+          228.57344693257843,
+          211.07344693257846
+        ],
+        "target": [
+          0,
+          17.5,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "direction": [
+          0.5773502691896257,
+          0.5773502691896257,
+          0.5773502691896257
+        ],
+        "azimuthDeg": 45,
+        "polarDeg": 54.735610317245346,
+        "zoom": 1,
+        "near": 0.1,
+        "far": 2110.7446381875543,
+        "left": -96.98676610754686,
+        "right": 96.98676610754686,
+        "top": 96.98676610754686,
+        "bottom": -96.98676610754686,
+        "viewHeight": 193.9735322150937
+      },
+      "bounds": {
+        "min": [
+          -63.5,
+          0.5,
+          -63.5
+        ],
+        "max": [
+          63.5,
+          34.5,
+          63.5
+        ],
+        "center": [
+          0,
+          17.5,
+          0
+        ],
+        "size": [
+          127,
+          34,
+          127
+        ]
+      },
+      "modelSize": {
+        "width": 128,
+        "height": 128,
+        "length": 128
+      },
+      "capturedAt": "2026-10-24T16:42:38.166Z"
+    },
+    {
+      "id": "12",
+      "key": "12_conch_shell_128",
+      "title": "海螺 / Conch Shell",
+      "script": "examples/advanced/12_conch_shell_128.txt",
+      "image": "images/12_conch_shell_128_iso.png",
+      "view": "iso",
+      "projection": "orthographic",
+      "camera": {
+        "position": [
+          212.98200236952727,
+          276.4820023695273,
+          208.4820023695273
+        ],
+        "target": [
+          0,
+          63.50000000000001,
+          -4.5
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "direction": [
+          0.5773502691896257,
+          0.5773502691896258,
+          0.5773502691896258
+        ],
+        "azimuthDeg": 45,
+        "polarDeg": 54.735610317245346,
+        "zoom": 1,
+        "near": 0.1,
+        "far": 2128.9260706097693,
+        "left": -95.45661527626045,
+        "right": 95.45661527626045,
+        "top": 95.45661527626045,
+        "bottom": -95.45661527626045,
+        "viewHeight": 190.9132305525209
+      },
+      "bounds": {
+        "min": [
+          -52.5,
+          6.5,
+          -54.5
+        ],
+        "max": [
+          52.5,
+          120.5,
+          45.5
+        ],
+        "center": [
+          0,
+          63.5,
+          -4.5
+        ],
+        "size": [
+          105,
+          114,
+          100
+        ]
+      },
+      "modelSize": {
+        "width": 128,
+        "height": 128,
+        "length": 128
+      },
+      "capturedAt": "2026-10-24T16:42:42.661Z"
+    },
+    {
+      "id": "13",
+      "key": "13_mandelbrot_128",
+      "title": "曼德尔布罗特 / Mandelbrot",
+      "script": "examples/advanced/13_mandelbrot_128.txt",
+      "image": "images/13_mandelbrot_128_iso.png",
+      "view": "iso",
+      "projection": "orthographic",
+      "camera": {
+        "position": [
+          188.26320567212653,
+          252.7632056721265,
+          193.76320567212656
+        ],
+        "target": [
+          -5.000000000000001,
+          59.50000000000001,
+          0.5
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "direction": [
+          0.5773502691896258,
+          0.5773502691896257,
+          0.577350269189626
+        ],
+        "azimuthDeg": 45,
+        "polarDeg": 54.735610317245346,
+        "zoom": 1,
+        "near": 0.1,
+        "far": 1941.079303017662,
+        "left": -82.22937066523127,
+        "right": 82.22937066523127,
+        "top": 82.22937066523127,
+        "bottom": -82.22937066523127,
+        "viewHeight": 164.45874133046254
+      },
+      "bounds": {
+        "min": [
+          -63.5,
+          0.5,
+          -9.5
+        ],
+        "max": [
+          53.5,
+          118.5,
+          10.5
+        ],
+        "center": [
+          -5,
+          59.5,
+          0.5
+        ],
+        "size": [
+          117,
+          118,
+          20
+        ]
+      },
+      "modelSize": {
+        "width": 128,
+        "height": 128,
+        "length": 128
+      },
+      "capturedAt": "2026-10-24T16:42:46.935Z"
+    },
+    {
+      "id": "14",
+      "key": "14_mandelbulb_128",
+      "title": "曼德尔球 / Mandelbulb",
+      "script": "examples/advanced/14_mandelbulb_128.txt",
+      "image": "images/14_mandelbulb_128_iso.png",
+      "view": "iso",
+      "projection": "orthographic",
+      "camera": {
+        "position": [
+          199.39025449562214,
+          252.39025449562214,
+          199.39025449562217
+        ],
+        "target": [
+          0.5,
+          53.5,
+          0.5
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "direction": [
+          0.5773502691896257,
+          0.5773502691896257,
+          0.5773502691896258
+        ],
+        "azimuthDeg": 45,
+        "polarDeg": 54.735610317245346,
+        "zoom": 1,
+        "near": 0.1,
+        "far": 1994.68414254197,
+        "left": -89.06344704759634,
+        "right": 89.06344704759634,
+        "top": 89.06344704759634,
+        "bottom": -89.06344704759634,
+        "viewHeight": 178.12689409519268
+      },
+      "bounds": {
+        "min": [
+          -47.5,
+          0.5,
+          -47.5
+        ],
+        "max": [
+          48.5,
+          106.5,
+          48.5
+        ],
+        "center": [
+          0.5,
+          53.5,
+          0.5
+        ],
+        "size": [
+          96,
+          106,
+          96
+        ]
+      },
+      "modelSize": {
+        "width": 128,
+        "height": 128,
+        "length": 128
+      },
+      "capturedAt": "2026-10-24T16:42:51.510Z"
+    },
+    {
+      "id": "15",
+      "key": "15_menger_128",
+      "title": "门格尔海绵 / Menger Sponge",
+      "script": "examples/advanced/15_menger_128.txt",
+      "image": "images/15_menger_128_iso.png",
+      "view": "iso",
+      "projection": "orthographic",
+      "camera": {
+        "position": [
+          208.49999999999997,
+          260.5,
+          208.5
+        ],
+        "target": [
+          0.5,
+          52.5,
+          0.5
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "direction": [
+          0.5773502691896257,
+          0.5773502691896258,
+          0.5773502691896258
+        ],
+        "azimuthDeg": 45,
+        "polarDeg": 54.735610317245346,
+        "zoom": 1,
+        "near": 0.1,
+        "far": 2081.4661238587955,
+        "left": -91.70889596980219,
+        "right": 91.70889596980219,
+        "top": 91.70889596980219,
+        "bottom": -91.70889596980219,
+        "viewHeight": 183.41779193960437
+      },
+      "bounds": {
+        "min": [
+          -51.5,
+          0.5,
+          -51.5
+        ],
+        "max": [
+          52.5,
+          104.5,
+          52.5
+        ],
+        "center": [
+          0.5,
+          52.5,
+          0.5
+        ],
+        "size": [
+          104,
+          104,
+          104
+        ]
+      },
+      "modelSize": {
+        "width": 128,
+        "height": 128,
+        "length": 128
+      },
+      "capturedAt": "2026-10-24T16:42:56.591Z"
+    },
+    {
+      "id": "16",
+      "key": "16_mandelbox_128",
+      "title": "曼德尔箱 / Mandelbox",
+      "script": "examples/advanced/16_mandelbox_128.txt",
+      "image": "images/16_mandelbox_128_iso.png",
+      "view": "iso",
+      "projection": "orthographic",
+      "camera": {
+        "position": [
+          241.37936945812083,
+          303.8793694581209,
+          241.3793694581209
+        ],
+        "target": [
+          0,
+          62.5,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "direction": [
+          0.5773502691896257,
+          0.5773502691896258,
+          0.5773502691896258
+        ],
+        "azimuthDeg": 45,
+        "polarDeg": 54.735610317245346,
+        "zoom": 1,
+        "near": 0.1,
+        "far": 2399.4473249022253,
+        "left": -107.1406813493362,
+        "right": 107.1406813493362,
+        "top": 107.1406813493362,
+        "bottom": -107.1406813493362,
+        "viewHeight": 214.2813626986724
+      },
+      "bounds": {
+        "min": [
+          -59.5,
+          0.5,
+          -59.5
+        ],
+        "max": [
+          59.5,
+          124.5,
+          59.5
+        ],
+        "center": [
+          0,
+          62.5,
+          0
+        ],
+        "size": [
+          119,
+          124,
+          119
+        ]
+      },
+      "modelSize": {
+        "width": 128,
+        "height": 128,
+        "length": 128
+      },
+      "capturedAt": "2026-10-24T16:43:11.199Z"
+    },
+    {
+      "id": "17",
+      "key": "17_mobius_128",
+      "title": "莫比乌斯带 / Möbius Strip",
+      "script": "examples/advanced/17_mobius_128.txt",
+      "image": "images/17_mobius_128_iso.png",
+      "view": "iso",
+      "projection": "orthographic",
+      "camera": {
+        "position": [
+          212.2734638711848,
+          253.2734638711848,
+          212.27346387118482
+        ],
+        "target": [
+          0.5,
+          41.5,
+          0.5
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "direction": [
+          0.5773502691896258,
+          0.5773502691896258,
+          0.5773502691896258
+        ],
+        "azimuthDeg": 45,
+        "polarDeg": 54.735610317245346,
+        "zoom": 1,
+        "near": 0.1,
+        "far": 2117.4131951585923,
+        "left": -88.58633754705069,
+        "right": 88.58633754705069,
+        "top": 88.58633754705069,
+        "bottom": -88.58633754705069,
+        "viewHeight": 177.17267509410138
+      },
+      "bounds": {
+        "min": [
+          -57.5,
+          0.5,
+          -57.5
+        ],
+        "max": [
+          58.5,
+          82.5,
+          58.5
+        ],
+        "center": [
+          0.5,
+          41.5,
+          0.5
+        ],
+        "size": [
+          116,
+          82,
+          116
+        ]
+      },
+      "modelSize": {
+        "width": 128,
+        "height": 128,
+        "length": 128
+      },
+      "capturedAt": "2026-10-24T16:43:18.150Z"
+    },
+    {
+      "id": "18",
+      "key": "18_galaxy_128",
+      "title": "银河 / Galaxy",
+      "script": "examples/advanced/18_galaxy_128.txt",
+      "image": "images/18_galaxy_128_iso.png",
+      "view": "iso",
+      "projection": "orthographic",
+      "camera": {
+        "position": [
+          215.21221048960706,
+          253.2122104896071,
+          215.2122104896071
+        ],
+        "target": [
+          0.5,
+          38.5,
+          0.5
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "direction": [
+          0.5773502691896257,
+          0.5773502691896258,
+          0.5773502691896258
+        ],
+        "azimuthDeg": 45,
+        "polarDeg": 54.735610317245346,
+        "zoom": 1,
+        "near": 0.1,
+        "far": 2145.408516653825,
+        "left": -91.64103884177656,
+        "right": 91.64103884177656,
+        "top": 91.64103884177656,
+        "bottom": -91.64103884177656,
+        "viewHeight": 183.28207768355313
+      },
+      "bounds": {
+        "min": [
+          -59.5,
+          0.5,
+          -59.5
+        ],
+        "max": [
+          60.5,
+          76.5,
+          60.5
+        ],
+        "center": [
+          0.5,
+          38.5,
+          0.5
+        ],
+        "size": [
+          120,
+          76,
+          120
+        ]
+      },
+      "modelSize": {
+        "width": 128,
+        "height": 128,
+        "length": 128
+      },
+      "capturedAt": "2026-10-24T16:43:22.825Z"
+    }
+  ],
+  "engineeringViews": {
+    "model": "08_hex_honeycomb_128",
+    "plate": "00_engineering_views.png",
+    "views": {
+      "iso": {
+        "image": "images/08_hex_honeycomb_128_iso.png",
+        "camera": {
+          "position": [
+            202.9154175184002,
+            261.4154175184002,
+            203.41541751840023
+          ],
+          "target": [
+            0,
+            58.50000000000001,
+            0.4999999999999998
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "direction": [
+            0.5773502691896257,
+            0.5773502691896257,
+            0.5773502691896258
+          ],
+          "azimuthDeg": 45,
+          "polarDeg": 54.735610317245346,
+          "zoom": 1,
+          "near": 0.1,
+          "far": 2033.0289702950654,
+          "left": -87.07936035594199,
+          "right": 87.07936035594199,
+          "top": 87.07936035594199,
+          "bottom": -87.07936035594199,
+          "viewHeight": 174.15872071188397
+        },
+        "capturedAt": "2026-10-24T16:45:22.730Z"
+      },
+      "front": {
+        "image": "images/08_hex_honeycomb_front.png",
+        "camera": {
+          "position": [
+            0,
+            58.50000000000003,
+            351.95981278092097
+          ],
+          "target": [
+            0,
+            58.50000000000001,
+            0.4999999999999998
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "direction": [
+            0,
+            6.065069546397984e-17,
+            1
+          ],
+          "azimuthDeg": 0,
+          "polarDeg": 90,
+          "zoom": 1,
+          "near": 0.1,
+          "far": 2033.0289702950654,
+          "left": -68.58,
+          "right": 68.58,
+          "top": 68.58,
+          "bottom": -68.58,
+          "viewHeight": 137.16
+        },
+        "capturedAt": "2026-10-24T16:45:24.969Z"
+      },
+      "top": {
+        "image": "images/08_hex_honeycomb_top.png",
+        "camera": {
+          "position": [
+            0,
+            409.9598127807452,
+            0.5003514754349244
+          ],
+          "target": [
+            0,
+            58.50000000000001,
+            0.4999999999999998
+          ],
+          "up": [
+            0,
+            0,
+            -1
+          ],
+          "direction": [
+            0,
+            0.9999999999995,
+            1.0000444493030292e-06
+          ],
+          "azimuthDeg": 0,
+          "polarDeg": 5.729832627056611e-05,
+          "zoom": 1,
+          "near": 0.1,
+          "far": 2033.0289702950654,
+          "left": -68.58,
+          "right": 68.58,
+          "top": 68.58,
+          "bottom": -68.58,
+          "viewHeight": 137.16
+        },
+        "capturedAt": "2026-10-24T16:45:27.334Z"
+      },
+      "right": {
+        "image": "images/08_hex_honeycomb_right.png",
+        "camera": {
+          "position": [
+            351.45981278092097,
+            58.50000000000003,
+            0.5000000000000213
+          ],
+          "target": [
+            0,
+            58.50000000000001,
+            0.4999999999999998
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "direction": [
+            1,
+            6.065069546397984e-17,
+            6.128247354172962e-17
+          ],
+          "azimuthDeg": 90,
+          "polarDeg": 90,
+          "zoom": 1,
+          "near": 0.1,
+          "far": 2033.0289702950654,
+          "left": -62.64,
+          "right": 62.64,
+          "top": 62.64,
+          "bottom": -62.64,
+          "viewHeight": 125.28
+        },
+        "capturedAt": "2026-10-24T16:45:29.713Z"
+      }
+    }
+  }
+}

@@ -12,6 +12,7 @@
 | 调整材质、模型、性能 | [rendering.md](rendering.md) |
 | 遇到报错、卡死、空白页面 | [troubleshooting.md](troubleshooting.md) |
 | 查 WorldEdit 命令、选区、生成 | [worldedit/README.md](worldedit/README.md) |
+| 看 128³ 图像作品集与机位 | [portfolio/README.md](portfolio/README.md) |
 | 做 128³ 艺术模型、看高级 `//gen` | [worldedit/advanced-generation.md](worldedit/advanced-generation.md) |
 
 ## WorldEdit 使用文档
@@ -28,6 +29,10 @@
 | [worldedit/tools-brushes.md](worldedit/tools-brushes.md) | 工具、笔刷及 CLI 限制 |
 | [worldedit/cli.md](worldedit/cli.md) | 无头 CLI 的行为、数据和退出码 |
 | [worldedit/gotchas.md](worldedit/gotchas.md) | 踩坑清单（含本项目实测问题） |
+
+## 图像作品集
+
+- [portfolio/README.md](portfolio/README.md)：18 张 128³ 等轴测图、四视图对比、相机机位与生成指令。
 
 ## 版本基线
 

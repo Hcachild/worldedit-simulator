@@ -36,16 +36,25 @@ export class Viewer {
     this.container = container;
     this.scene = new THREE.Scene();
     this.scene.background = new THREE.Color(0x111318);
-    this.camera = new THREE.PerspectiveCamera(50, 1, 0.05, 4000);
-    this.renderer = new THREE.WebGLRenderer({ canvas, antialias: true, powerPreference: 'high-performance' });
+    this.camera = new THREE.OrthographicCamera(-8, 8, 8, -8, 0.1, 4000);
+    this.camera.zoom = 1;
+    this.viewHeight = 32;
+    this.viewMode = 'iso';
+    this.modelBounds = null;
+    this.renderer = new THREE.WebGLRenderer({
+      canvas,
+      antialias: true,
+      powerPreference: 'high-performance',
+      preserveDrawingBuffer: true,
+    });
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     this.renderer.outputColorSpace = THREE.SRGBColorSpace;
     this.controls = new OrbitControls(this.camera, canvas);
     this.controls.enableDamping = true;
     this.controls.dampingFactor = 0.08;
     this.controls.screenSpacePanning = true;
-    this.controls.minDistance = 2;
-    this.controls.maxDistance = 1500;
+    this.controls.minZoom = 0.05;
+    this.controls.maxZoom = 20;
     this.controls.target.set(0, 1, 0);
     this.scene.add(new THREE.HemisphereLight(0xffffff, 0x2a2f3a, 1.5));
     const sun = new THREE.DirectionalLight(0xffffff, 1.7);
@@ -99,7 +108,17 @@ export class Viewer {
     const width = this.container.clientWidth || 1;
     const height = this.container.clientHeight || 1;
     this.renderer.setSize(width, height, false);
-    this.camera.aspect = width / height;
+    this.viewAspect = width / height;
+    this.applyFrustum();
+  }
+
+  applyFrustum() {
+    const aspect = this.viewAspect || 1;
+    const height = Math.max(this.viewHeight || 32, 1);
+    this.camera.left = (-height * aspect) / 2;
+    this.camera.right = (height * aspect) / 2;
+    this.camera.top = height / 2;
+    this.camera.bottom = -height / 2;
     this.camera.updateProjectionMatrix();
   }
 
@@ -149,32 +168,173 @@ export class Viewer {
     this.scene.add(this.grid);
   }
 
+  selectionBounds() {
+    const width = this.current?.width || 32;
+    const height = this.current?.height || 32;
+    const length = this.current?.length || 32;
+    return this.boundsFromMinMax(
+      new THREE.Vector3(-width / 2 + 0.5, 0, -length / 2 + 0.5),
+      new THREE.Vector3(width / 2 - 0.5, height, length / 2 - 0.5),
+    );
+  }
+
+  boundsFromMinMax(min, max) {
+    const center = new THREE.Vector3().addVectors(min, max).multiplyScalar(0.5);
+    const size = new THREE.Vector3().subVectors(max, min);
+    return { min, max, center, size };
+  }
+
+  computeBounds(records) {
+    if (!records.length || !this.current) return null;
+    const { width, length } = this.current;
+    let minX = Infinity;
+    let minY = Infinity;
+    let minZ = Infinity;
+    let maxX = -Infinity;
+    let maxY = -Infinity;
+    let maxZ = -Infinity;
+    for (const record of records) {
+      if (record.x < minX) minX = record.x;
+      if (record.y < minY) minY = record.y;
+      if (record.z < minZ) minZ = record.z;
+      if (record.x > maxX) maxX = record.x;
+      if (record.y > maxY) maxY = record.y;
+      if (record.z > maxZ) maxZ = record.z;
+    }
+    return this.boundsFromMinMax(
+      new THREE.Vector3(minX - width / 2 + 0.5, minY + 0.5, minZ - length / 2 + 0.5),
+      new THREE.Vector3(maxX - width / 2 + 0.5, maxY + 1.5, maxZ - length / 2 + 0.5),
+    );
+  }
+
   fitDefault() {
-    this.controls.target.set(0, 1, 0);
-    this.camera.position.set(26, 24, 32);
+    this.modelBounds = null;
+    this.viewMode = 'iso';
+    const target = new THREE.Vector3(0, 1, 0);
+    const direction = new THREE.Vector3(1, 1, 1).normalize();
+    this.camera.up.set(0, 1, 0);
+    this.camera.position.copy(target).addScaledVector(direction, 120);
+    this.camera.lookAt(target);
     this.camera.near = 0.1;
-    this.camera.far = 1000;
-    this.controls.maxDistance = 500;
-    this.camera.updateProjectionMatrix();
+    this.camera.far = 2000;
+    this.camera.zoom = 1;
+    this.viewHeight = 48;
+    this.applyFrustum();
+    this.controls.target.copy(target);
     this.controls.update();
   }
 
-  fitCamera(width, height, length) {
-    const span = Math.max(width, height, length, 4);
-    const distance = span * 1.9 + 6;
-    this.controls.target.set(0, height / 2, 0);
-    this.camera.position.set(distance * 0.85, height * 0.9 + span * 0.8, distance * 1.05);
-    this.controls.maxDistance = Math.max(1500, distance * 6);
-    this.camera.near = Math.max(0.05, distance / 2000);
-    this.camera.far = distance * 30;
-    this.camera.updateProjectionMatrix();
+  setView(mode = 'iso') {
+    const modes = {
+      iso: { direction: [1, 1, 1], up: [0, 1, 0] },
+      front: { direction: [0, 0, 1], up: [0, 1, 0] },
+      back: { direction: [0, 0, -1], up: [0, 1, 0] },
+      left: { direction: [-1, 0, 0], up: [0, 1, 0] },
+      right: { direction: [1, 0, 0], up: [0, 1, 0] },
+      top: { direction: [0, 1, 0], up: [0, 0, -1] },
+      bottom: { direction: [0, -1, 0], up: [0, 0, 1] },
+    };
+    this.viewMode = modes[mode] ? mode : 'iso';
+    const config = modes[this.viewMode];
+    const bounds = this.modelBounds || this.selectionBounds();
+    const target = bounds.center.clone();
+    const radius = Math.max(bounds.size.length() / 2, 1);
+    const distance = Math.max(radius * 4, 120);
+    const direction = new THREE.Vector3(...config.direction).normalize();
+    this.camera.up.set(...config.up);
+    this.camera.position.copy(target).addScaledVector(direction, distance);
+    this.camera.lookAt(target);
+    this.camera.near = 0.1;
+    this.camera.far = distance * 4 + radius * 6 + 100;
+    this.camera.zoom = 1;
+    this.camera.updateMatrixWorld(true);
+
+    const right = new THREE.Vector3().setFromMatrixColumn(this.camera.matrixWorld, 0);
+    const up = new THREE.Vector3().setFromMatrixColumn(this.camera.matrixWorld, 1);
+    let minX = Infinity;
+    let maxX = -Infinity;
+    let minY = Infinity;
+    let maxY = -Infinity;
+    for (const x of [bounds.min.x, bounds.max.x]) {
+      for (const y of [bounds.min.y, bounds.max.y]) {
+        for (const z of [bounds.min.z, bounds.max.z]) {
+          const point = new THREE.Vector3(x, y, z).sub(target);
+          const px = point.dot(right);
+          const py = point.dot(up);
+          if (px < minX) minX = px;
+          if (px > maxX) maxX = px;
+          if (py < minY) minY = py;
+          if (py > maxY) maxY = py;
+        }
+      }
+    }
+    const projectedWidth = Math.max(maxX - minX, 0.1);
+    const projectedHeight = Math.max(maxY - minY, 0.1);
+    const aspect = this.viewAspect || this.container.clientWidth / Math.max(this.container.clientHeight, 1);
+    const margin = 1.08;
+    this.viewHeight = Math.max(projectedHeight, projectedWidth / Math.max(aspect, 0.01)) * margin;
+    this.applyFrustum();
+    this.controls.target.copy(target);
     this.controls.update();
+  }
+
+  fitCamera() {
+    this.setView(this.viewMode || 'iso');
+  }
+
+  cameraMetadata() {
+    const canvas = this.renderer.domElement;
+    const direction = new THREE.Vector3().subVectors(this.camera.position, this.controls.target);
+    const spherical = new THREE.Spherical().setFromVector3(direction);
+    const bounds = this.modelBounds || this.selectionBounds();
+    return {
+      version: 1,
+      capturedAt: new Date().toISOString(),
+      name: this.current?.name || null,
+      view: this.viewMode,
+      projection: 'orthographic',
+      modelSize: this.current
+        ? { width: this.current.width, height: this.current.height, length: this.current.length }
+        : null,
+      canvas: { width: canvas.width, height: canvas.height },
+      camera: {
+        position: this.camera.position.toArray(),
+        target: this.controls.target.toArray(),
+        up: this.camera.up.toArray(),
+        direction: direction.normalize().toArray(),
+        azimuthDeg: ((spherical.theta * 180) / Math.PI + 360) % 360,
+        polarDeg: (spherical.phi * 180) / Math.PI,
+        zoom: this.camera.zoom,
+        near: this.camera.near,
+        far: this.camera.far,
+        left: this.camera.left,
+        right: this.camera.right,
+        top: this.camera.top,
+        bottom: this.camera.bottom,
+        viewHeight: this.viewHeight,
+      },
+      bounds: {
+        min: bounds.min.toArray(),
+        max: bounds.max.toArray(),
+        center: bounds.center.toArray(),
+        size: bounds.size.toArray(),
+      },
+    };
+  }
+
+  capture() {
+    this.renderer.render(this.scene, this.camera);
+    return {
+      png: this.renderer.domElement.toDataURL('image/png'),
+      meta: this.cameraMetadata(),
+    };
   }
 
   clear() {
     this.buildToken += 1;
     this.disposeModel();
     this.current = null;
+    this.modelBounds = null;
     this.updateGrid(0, 0);
     this.fitDefault();
     if (this.onPick) this.onPick(null);
@@ -207,6 +367,7 @@ export class Viewer {
     handle.group.scale.setScalar(1 / 16);
     handle.group.position.set(-width / 2 + 0.5, 0.5, -length / 2 + 0.5);
     this.scene.add(handle.group);
+    this.modelBounds = this.computeBounds(records);
     this.pickMesh = records.length <= 250000 ? this.buildPickMesh(records) : null;
     this.pickables = this.pickMesh ? [this.pickMesh] : [];
     if (!this.pickMesh) console.info('[pick] disabled for large model', records.length);
@@ -295,6 +456,7 @@ export class Viewer {
     this.addFallbackInstances(opaque, false);
     this.addFallbackInstances(transparent, true);
     this.scene.add(this.fallbackGroup);
+    this.modelBounds = this.computeBounds(records);
     this.pickMesh = records.length <= 250000 ? this.buildPickMesh(records) : null;
     this.pickables = this.pickMesh ? [this.pickMesh] : [];
     if (!this.pickMesh) console.info('[pick] disabled for large model', records.length);
@@ -304,6 +466,7 @@ export class Viewer {
   async setModel(state, reframe = true) {
     const token = ++this.buildToken;
     this.current = state;
+    this.modelBounds = null;
     if (!state) {
       this.clear();
       return;
@@ -345,12 +508,12 @@ export class Viewer {
       }
       this.buildFallback(state);
     }
-    if (reframe) this.fitCamera(state.width, state.height, state.length);
+    if (reframe) this.setView(this.viewMode || 'iso');
   }
 
   fit() {
     if (this.current) {
-      this.fitCamera(this.current.width, this.current.height, this.current.length);
+      this.setView('iso');
     } else {
       this.fitDefault();
     }
