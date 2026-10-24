@@ -21,7 +21,7 @@ sys.path.insert(0, str(ROOT))
 from core.workspace import Workspace, WorkspaceError  # noqa: E402
 from core.worldedit import JAR, JAVA  # noqa: E402
 
-WORKSPACE = Workspace(ROOT)
+WORKSPACE = None
 
 
 class LocalServer(ThreadingHTTPServer):
@@ -187,6 +187,9 @@ def main():
                 webbrowser.open(url)
             return
         raise
+
+    global WORKSPACE
+    WORKSPACE = Workspace(ROOT)
 
     print(f"[web] 3D 模拟器: {url}")
     if not os.environ.get("WEB_NO_OPEN"):

@@ -15,7 +15,6 @@ from .nbt import (
     TAG_SHORT,
     compound,
     decode_varints,
-    find_data_version_offset,
     patch_data_version,
     s,
     tag,
@@ -184,7 +183,6 @@ def retarget(path: Path, target: int) -> tuple:
         return old, old
     raw = path.read_bytes()
     data = gzip.decompress(raw)
-    find_data_version_offset(data)
     backup = path.with_suffix(path.suffix + ".bak")
     if not backup.exists():
         shutil.copy2(path, backup)

@@ -7,6 +7,9 @@
 
 ## 快速开始
 
+环境要求：Windows 10/11 x64、Python 3.10+、`curl.exe`（系统自带）；浏览器用 Edge/Chrome。
+`setup.cmd` 会下载官方 WorldEdit-CLI 和便携版 JRE 25，不需要单独装 Java。
+
 从 GitHub 克隆：
 
 ```bat
@@ -16,7 +19,6 @@ setup.cmd
 web.cmd
 ```
 
-`setup.cmd` 会下载官方 WorldEdit-CLI 和便携版 JRE 25；本机已有这两个文件时直接跳过。
 浏览器会自动打开 <http://127.0.0.1:8777/>，左侧文件列表初始为空。
 
 ## 示例
