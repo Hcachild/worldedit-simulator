@@ -1,4 +1,5 @@
 """WorldEdit CLI integration: data cache and headless command execution."""
+import os
 import re
 import shutil
 import subprocess
@@ -21,6 +22,18 @@ NOISE = re.compile(
 )
 
 
+def _hidden_process_options() -> dict:
+    if os.name != "nt":
+        return {}
+    startupinfo = subprocess.STARTUPINFO()
+    startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+    startupinfo.wShowWindow = subprocess.SW_HIDE
+    return {
+        "creationflags": subprocess.CREATE_NO_WINDOW,
+        "startupinfo": startupinfo,
+    }
+
+
 class DataNotFound(Exception):
     def __init__(self, version: int):
         super().__init__(version)
@@ -32,18 +45,27 @@ def _download_with_curl(url: str, target: Path) -> None:
     if not curl:
         raise FileNotFoundError("curl not available")
     tmp = target.with_suffix(".tmp")
-    result = subprocess.run(
-        [curl, "-fsSL", "--connect-timeout", "20", "--max-time", "120", "--retry", "2", "-o", str(tmp), url],
-        capture_output=True,
-        text=True,
-    )
+    try:
+        result = subprocess.run(
+            [curl, "-fsSL", "--connect-timeout", "20", "--max-time", "120", "--retry", "2", "-o", str(tmp), url],
+            capture_output=True,
+            text=True,
+            timeout=150,
+            **_hidden_process_options(),
+        )
+    except subprocess.TimeoutExpired as exc:
+        tmp.unlink(missing_ok=True)
+        raise OSError("curl timed out") from exc
     if result.returncode != 0:
+        tmp.unlink(missing_ok=True)
         message = (result.stderr or "").strip()
         if "404" in message:
             raise urllib.error.HTTPError(url, 404, message, None, None)
         raise OSError(message or f"curl exited with {result.returncode}")
     if tmp.stat().st_size < 1000:
-        raise OSError(f"unexpected response size {tmp.stat().st_size}")
+        size = tmp.stat().st_size
+        tmp.unlink(missing_ok=True)
+        raise OSError(f"unexpected response size {size}")
     tmp.replace(target)
 
 
@@ -136,6 +158,7 @@ def run_cli(schematic_path: Path, commands, timeout: int = 180) -> tuple:
                 encoding="utf-8",
                 errors="replace",
                 timeout=timeout,
+                **_hidden_process_options(),
             )
             return result.returncode, _clean_log((result.stdout or "") + (result.stderr or ""))
         except subprocess.TimeoutExpired as exc:
@@ -145,3 +168,5 @@ def run_cli(schematic_path: Path, commands, timeout: int = 180) -> tuple:
             return 124, _clean_log(raw) + "\n命令执行超时"
     finally:
         script.unlink(missing_ok=True)
+
+
