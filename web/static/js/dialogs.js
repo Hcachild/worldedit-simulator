@@ -87,7 +87,9 @@ export function openForm({
     submit.textContent = submitText;
     actions.append(cancel, submit);
 
-    form.append(heading, desc, fieldsBox, error, actions);
+    form.append(heading);
+    if (description) form.append(desc);
+    form.append(fieldsBox, error, actions);
     dialog.append(form);
 
     form.addEventListener('submit', async (event) => {

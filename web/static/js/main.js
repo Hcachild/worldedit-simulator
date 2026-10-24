@@ -91,7 +91,6 @@ function createNew() {
   if (app.busy) return;
   dialogs.openForm({
     title: '新建空白投影',
-    description: '生成一个全空气的 Sponge .schem，载入后用命令填充。',
     fields: [
       { name: 'name', label: '文件名', value: 'untitled.schem' },
       { name: 'width', label: '宽 X', type: 'number', value: '16', min: 1, max: 256, inline: true },
@@ -181,7 +180,6 @@ function saveAs() {
   const base = app.payload.name.replace(/\.schem$/i, '');
   dialogs.openForm({
     title: '另存为',
-    description: '把当前编辑结果保存为新的 .schem。',
     fields: [
       { name: 'name', label: '文件名', value: `${base}_out.schem` },
       { name: 'overwrite', label: '覆盖同名文件', type: 'checkbox', value: false, required: false },
