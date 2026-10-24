@@ -1,0 +1,21 @@
+# runtime state
+/work/
+/worldedit/
+/logs/
+*.log
+
+# python
+__pycache__/
+*.py[cod]
+
+# temporary files
+*.bak
+*.tmp
+
+# bundled runtime fetched by setup.cmd
+/jdk-*/
+/bin/*.jar
+
+# OS
+Thumbs.db
+.DS_Store

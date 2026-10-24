@@ -1,0 +1,6 @@
+//pos1 0,0,0
+//pos2 12,7,12
+//replace minecraft:oak_planks minecraft:birch_planks
+//replace minecraft:spruce_planks minecraft:gold_block
+//replace minecraft:glass minecraft:light_blue_stained_glass
+stop
