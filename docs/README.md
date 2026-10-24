@@ -33,6 +33,7 @@
 ## 图像作品集
 
 - [portfolio/README.md](portfolio/README.md)：18 张 128³ 等轴测图、四视图对比、相机机位与生成指令。
+- [portfolio/imhols/README.md](portfolio/imhols/README.md)：B站 imhols 的 WorldEdit 进阶专栏/动态索引。
 
 ## 版本基线
 

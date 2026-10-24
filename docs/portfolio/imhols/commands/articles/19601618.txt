@@ -1,0 +1,6 @@
+//generate 35 -h A=(atan2(x,z)+pi)/pi;type=((((A+(1+y))*40)%8<1)||(((A+(1-y))*40)%8<1))?35:95;x^2+z^2<0.5^2
+//re =(-x)%10<2 1
+//generate 35 type=( (((atan2(x,z)+pi)/pi)*40)%5<2 )?35:95 x^2+z^2<0.5^2
+//generate 35 -h A=(atan2(x,z)+pi)/pi;type=(((A+(1+y))*40)%8<2)?35:0;x^2+z^2+y^2<1
+//generate 35 -h A=(atan2(x,z)+pi)/pi;type=((((A+(1+y))*40)%8<1)||(((A+(1-y))*40)%8<1))?35:95;z/=sqrt((1.8-y)/2);x/=sqrt((1.8-y)/2);rotate(x,z,-(1+y)*pi/3);x^2+z^2<(0.5+0.13*cos(3/2*atan2(x,z))^4)^2
+//re =x%(a+b)<b 1 来实现，如图

@@ -1,0 +1,6 @@
+//generate 35 -h x<1
+//generate 35 -h sqrt(x^2+z^2)<1
+//generate 35 -h 0.2*sin(10*y)<z-0.5
+//generate 35 -h 0.2*sin(10*y)<sqrt(x^2+z^2)-0.5
+//generate hand k=1;b=1.74;a=0.373;L=k*y+b;c=1.8;(L*(sqrt(x^2+z^2)-a))^2+c*y^2<(0.9)^2
+//generate hand k=1;b=1.74;a=0.373;L=k*y+b;c=1.8;(L*(sqrt(x^2+z^2)-a))^2+c*y^2<(0.9-0.1*(sin(6*atan2(x,z)))^10)^2

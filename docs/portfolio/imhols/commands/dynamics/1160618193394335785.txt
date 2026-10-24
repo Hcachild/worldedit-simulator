@@ -1,0 +1,1 @@
+//g 251 n=8;R=0.3;a=2;r=R/(1+1/sin(pi/n));d=0;X=sqrt(x^2+z^2)-(1-R);rotate(X,y,a*atan2(x,z))for(i=1,n){if(sqrt((X-(R-r))^2+y^2)<r){data=d;return 1}rotate(X,y,2*pi/n);d+=1}0

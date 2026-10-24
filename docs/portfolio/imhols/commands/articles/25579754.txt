@@ -1,0 +1,13 @@
+//calc
+//generate 251 n=100;d=0.01;i=gclosest(x,y,z,0,n,3)for(u=-1,1)for(v=-1,1)for(w=-1,1){I=gclosest(x+d*u,y+d*v,z+d*w,0,n,3)if(I!=i){return 0}}1
+//generate 251 n=150;d=0.1*(max(sqrt(x^2+z^2)-0.5,0));i=gclosest(x,y,z,0,n,3)for(u=-1,1)for(v=-1,1)for(w=-1,1){I=gclosest(x+d*u,y+d*v,z+d*w,0,n,3)if(I!=i){return 0}}1
+//generate 251 n=150;d=0.1*(max(1-sqrt(x^2+z^2),0));i=gclosest(x,y,z,0,n,3)for(u=-1,1)for(v=-1,1)for(w=-1,1){I=gclosest(x+d*u,y+d*v,z+d*w,0,n,3)if(I!=i){return 0}}1
+//generate 251 n=200;d=0.08*(max(1-max(abs(x),abs(z)),0));i=gclosest(x,y,z,0,n,3)for(u=-1,1)for(v=-1,1)for(w=-1,1){I=gclosest(x+d*u,y+d*v,z+d*w,0,n,3)if(I!=i){return 0}}1
+//generate 251 s=1;f=3;d=0.01;i=voronoi(s,x,y,z,f)for(u=-1,1)for(v=-1,1)for(w=-1,1){I=voronoi(s,x+d*u,y+d*v,z+d*w,f);if(I!=i){return 0}}data=i*16%16;1
+//g 251 n=100;a=0;i=gclosest(x,y,z,0,n,3);for(d=0;a==0;d+=.005){for(u=-1,1)for(w=-1,1){I=gclosest(x+d*u,y,z+d*w,0,n,3)a+=(I!=i)}}d>0.02
+//g 251 n=200;a=0;i=gclosest(x,y,z,0,n,3);for(d=0;a==0;d+=.005){for(u=-1,1)for(w=-1,1){I=gclosest(x+d*u,y,z+d*w,0,n,3)a+=(I!=i)}}data=i/3%16;d>0.1*(1-sqrt(x^2+z^2))
+//generate 251 n=100;r=9;I=0;for(i=0,255)for(j=0;j<255*3;j+=3){k=i*255+j;if(k>n*3)break;X=x-gmegabuf(k)Z=z-gmegabuf(k+2);if((R=abs(X)+abs(Z))<r){r=R;I=k}}data=I%16;1
+//g 251:1 s=1;f=5;d=0do{d+=0.005;A=voronoi(s,x+d,1,z,f)B=voronoi(s,x-d,1,z,f)C=voronoi(s,x,1,z+d,f)D=voronoi(s,x,1,z-d,f)}while((A==B)+(B==C)+(C==D)+(A==C)+(A==D)+(B==D)!=1);data=d*50
+//generate 251 n=100;l=gclosest(x,y,z,0,n,3);I=0;for(i=0,255)for(j=0;j<255*3;j+=3){k=i*255+j;if(k>n*3)break;if(k==l)continue;a=(x-gmegabuf(I));b=(z-gmegabuf(I+2));I=(((x-gmegabuf(k))^2+(z-gmegabuf(k+2))^2)<a^2+b^2)?k:I;}data=I/3%16+.1
+//g 251 n=100;a=0;i=gclosest(x,y,z,0,n,3);for(d=0;a==0;d+=.005){for(u=-1,1)for(w=-1,1){I=gclosest(x+d*u,y,z+d*w,0,n,3)a+=(I!=i)}}r=sqrt((x-gmegabuf(i))^2+(z-gmegabuf(i+2))^2);data=i/3%16;d>max(.01,.8*(r-.1))
+//g 251 n=200;i=gclosest(x,y,z,0,n,3);X=gmegabuf(i);Z=gmegabuf(i+2)r=1;for(l=0,255)for(k=0;k<255*3;k+=3){if((j=l*255+k)>n*3)break;if(j==i)continue;r=min(sqrt((gmegabuf(j)-X)^2+(gmegabuf(j+2)-Z)^2),r)}data=i/3%16;(x-X)^2+(z-Z)^2<(r/2)^2;

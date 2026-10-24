@@ -4,6 +4,10 @@
 
 ![all models](00_contact_sheet.png)
 
+## 作者专题
+
+- [imhols — WorldEdit 进阶](imhols/README.md)：11 篇 WorldEdit 专栏 + 12 条公开动态，包含 `gmegabuf/gclosest`、Voronoi、噪声、`//deform` 二次体素化、正多边形/洋葱顶等进阶公式与指令。
+
 ## 工程制图视角
 
 同一个六边形蜂巢模型的等轴测、前视、顶视、右视。视角由 `Viewer.setView()` 根据**实际方块包围盒**自动取景，不是固定相机距离。

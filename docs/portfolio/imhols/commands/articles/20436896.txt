@@ -1,0 +1,6 @@
+//deform -c x=3*floor(x/3);z=3*floor(z/3);y=3*floor(y/3)
+//generate -c 251 X=3*floor(x/3);Z=3*floor(z/3);y+60<40*perlin(1,x,1,z,0.03,1,1)
+//generate -c 251 Y=2*floor(y/2);Y+60<40*perlin(1,x,1,z,0.03,1,1)
+//deform -c y=3*floor(y/3)
+//deform -c x=3*floor(x/3)
+//deform -c x=3*floor(x/3);z=3*floor(z/3)

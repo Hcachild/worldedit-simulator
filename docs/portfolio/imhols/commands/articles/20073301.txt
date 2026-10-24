@@ -1,0 +1,11 @@
+//re =(x+50*perlin(1,x,y,z,0.02,1,1))%10<5 251
+//re =x-=528;z-=-176;(sqrt(x^2+z^2)+80*perlin(1,x,y,z,0.02,1,1))%4<2 hand
+//re =x%10<5 251
+//re =x-=528;z-=-176;sqrt(x^2+z^2)%10<5 251
+//re =(x+30*ridgedmulti(1,x,y,z,0.01,1))%4<2 251
+//re =(x+80*voronoi(1,x,y,z,0.03))%10<5 251
+//re =x-=528;z-=-176;(sqrt(x^2+z^2)+80*perlin(1,x,y,z,0.015,1,1))%8<4 251
+//re "=x-=528;z-=-176;(sqrt(x^2+z^2)+80*perlin(1,x,y,z,0.02,1,1))%8<4 #existing" 251
+//re "=x-=528;z-=-176;(sqrt(x^2+z^2)+80*perlin(1,x,y,z,0.02,1,1))%8<4 #existing" 251，
+//re "=(x+80*perlin(1,x,y,z,0.02,1,1))%8<4 #existing" 251
+//re "=(x+10*perlin(1,x,y,z,0.02,1,1))%8<4 #existing" 251

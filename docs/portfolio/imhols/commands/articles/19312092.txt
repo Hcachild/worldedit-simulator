@@ -1,0 +1,7 @@
+//generate 35 G=min(sin(18*atan2(x,z)+20*(y+1)),sin(18*atan2(x,z)-20*(y+1)));data=(G>(-0.7))?4:13;i=sqrt(x^2+z^2);k=0.9;a=6.5;b=0.9;m=0.6;i<k*a^(-b*(y+m)^2)+0.02*G
+//generate 35 i=sqrt(x^2+z^2);k=0.9;a=6.5;b=0.9;m=0.6;i<k*a^(-b*(y+m)^2)
+//generate 35 G=sin(18*atan2(x,z));i=sqrt(x^2+z^2);k=0.9;a=6.5;b=0.9;m=0.6;i<k*a^(-b*(y+m)^2)+0.05*G
+//generate 35 G=sin(18*atan2(x,z)+10*(y+1));i=sqrt(x^2+z^2);k=0.9;a=6.5;b=0.9;m=0.6;i<k*a^(-b*(y+m)^2)+0.05*G
+//generate 35 data=1 y>0
+//generate 35 G=sin(18*atan2(x,z)+10*(y+1));data=(G>-0.6?4:13)i=sqrt(x^2+z^2);k=0.9;a=6.5;b=0.9;m=0.6;i<k*a^(-b*(y+m)^2)+0.05*G
+//generate 35 data=(y>0?4:13) min(0.2*sin(10*x),0.2*sin(10*z))>y

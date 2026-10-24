@@ -1,0 +1,11 @@
+//set hand 执行结果就是在选区中set手上拿着的方块
+//replace slot1 slot2 执行结果就是把选区中的物品栏中第一格的方块替换成物品栏中第二格中的方块
+//copy -m hand 进行copy操作时，蒙版方块为此时手上的方块，结果就是只复制了蒙版中的方块，在paste操作中也只能粘贴出这个蒙版中的方块
+//paste -m hand 和上面同理，只粘贴剪贴板中-m后面的蒙版方块，即hand手上拿的方块
+//move 20 -m hand 和//stack 20 -m hand 同理，不必多说
+//deform rotate
+//deform -c rotate(x,z,pi/12);rotate(x,y,pi/3)
+//re "~[0][2][3] 2" 1
+//re #averagecolor[121][89][51][255]，如图：
+//re #averagecolor[121][89][51][255]
+//deform 后面跟的是表达式或函数，其中rotate()是we中自带的函数，之前的generate教程专栏多次使用，相比//rotate x y z的优势是不会容易出现漏洞破损
