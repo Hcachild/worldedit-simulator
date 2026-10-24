@@ -4,6 +4,10 @@
 /logs/
 *.log
 
+# user schematics
+/schematics/*
+!/schematics/.gitkeep
+
 # python
 __pycache__/
 *.py[cod]

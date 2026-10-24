@@ -10,9 +10,6 @@ export const els = {
   uploadBtn: document.querySelector('#uploadBtn'),
   refreshBtn: document.querySelector('#refreshBtn'),
   revealBtn: document.querySelector('#revealBtn'),
-  emptyState: document.querySelector('#emptyState'),
-  emptyUploadBtn: document.querySelector('#emptyUploadBtn'),
-  emptyNewBtn: document.querySelector('#emptyNewBtn'),
   hud: document.querySelector('#hud'),
   hudInfo: document.querySelector('#hudInfo'),
   fitBtn: document.querySelector('#fitBtn'),
@@ -84,7 +81,6 @@ export function setStats(state) {
 }
 
 export function showEmpty() {
-  els.emptyState.classList.remove('hidden');
   els.hud.classList.add('hidden');
   els.console.classList.add('hidden');
   els.statSize.textContent = '—';
@@ -92,13 +88,12 @@ export function showEmpty() {
   els.statVersion.textContent = '—';
   els.statStatus.textContent = '未载入';
   els.statStatus.style.color = 'var(--muted)';
-  els.hudInfo.textContent = '拖动鼠标查看';
+  els.hudInfo.textContent = '';
   els.log.textContent = '';
   document.title = 'WorldEdit 3D 模拟器';
 }
 
 export function showLoaded(state) {
-  els.emptyState.classList.add('hidden');
   els.hud.classList.remove('hidden');
   els.console.classList.remove('hidden');
   setStats(state);
@@ -117,3 +112,4 @@ export function setActions({ hasFile, dirty, busy }) {
   els.exampleBtn.disabled = disabled;
   els.saveBtn.disabled = disabled || !dirty;
 }
+

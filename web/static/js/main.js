@@ -313,9 +313,7 @@ function fillExample() {
 
 function bindEvents() {
   ui.els.newBtn.addEventListener('click', createNew);
-  ui.els.emptyNewBtn.addEventListener('click', createNew);
   ui.els.uploadBtn.addEventListener('click', () => ui.els.fileInput.click());
-  ui.els.emptyUploadBtn.addEventListener('click', () => ui.els.fileInput.click());
   ui.els.fileInput.addEventListener('change', () => {
     const [file] = ui.els.fileInput.files;
     ui.els.fileInput.value = '';

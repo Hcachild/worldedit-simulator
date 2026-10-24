@@ -51,31 +51,14 @@
         <div class="stat"><span>状态</span><b id="statStatus">未载入</b></div>
       </section>
 
-      <section class="panel help">
-        <p><b>左键</b> 旋转 · <b>右键</b> 平移 · <b>滚轮</b> 缩放</p>
-        <p>点击方块查看 ID 和坐标</p>
-        <p class="muted">结果只写入 work/current.schem，原文件不变</p>
-      </section>
     </aside>
 
     <main id="main">
       <canvas id="view"></canvas>
 
-      <div id="emptyState" class="empty-state">
-        <div class="empty-card">
-          <div class="empty-icon">▦</div>
-          <h2>还没有打开投影</h2>
-          <p>拖入 .schem 文件，或从空白开始</p>
-          <div class="empty-actions">
-            <button id="emptyUploadBtn" class="primary">上传 .schem</button>
-            <button id="emptyNewBtn" class="ghost">新建空白投影</button>
-          </div>
-          <p class="muted">示例文件在 examples/，用法见 README</p>
-        </div>
-      </div>
 
       <div id="hud" class="hidden">
-        <span id="hudInfo">拖动鼠标查看</span>
+        <span id="hudInfo"></span>
         <button id="fitBtn" class="ghost small">视角复位</button>
       </div>
 
@@ -93,7 +76,7 @@
           </div>
         </div>
         <div class="console-body">
-          <textarea id="commands" spellcheck="false" placeholder="//pos1 0,0,0&#10;//pos2 15,15,15&#10;//set minecraft:stone"></textarea>
+          <textarea id="commands" spellcheck="false"></textarea>
           <pre id="log"></pre>
         </div>
       </section>
@@ -108,3 +91,4 @@
   <script type="module" src="./js/main.js"></script>
 </body>
 </html>
+

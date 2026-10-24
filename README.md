@@ -1,7 +1,7 @@
 # WorldEdit 3D 模拟器
 
 不启动 Minecraft，在浏览器里对 `.schem` 投影执行 WorldEdit 命令并实时查看 3D 结果。
-打开页面默认为空，示例和文件操作都在界面内完成。
+打开页面默认为空；示例和操作说明见本文档，界面只保留必要控件。
 
 ![空界面](web/preview-empty.png)
 
@@ -42,7 +42,7 @@ python tools\inspect_schem.py schematics\demo.schem
 
 | 操作 | 说明 |
 |---|---|
-| 空状态 | 3D 网格 + 欢迎卡片，可上传 `.schem` 或新建空白投影 |
+| 空状态 | 只显示 3D 网格；用侧栏的 `＋` / `↑` 新建或上传 |
 | 左键拖动 / 右键拖动 / 滚轮 | 旋转 / 平移 / 缩放 |
 | 点击方块 | 查看方块 ID 和坐标 |
 | 命令框 + `Ctrl+Enter` | 执行 WorldEdit 命令并刷新 3D |
