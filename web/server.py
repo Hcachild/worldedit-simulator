@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """HTTP layer for the local 3D WorldEdit simulator."""
 import json
+import mimetypes
 import os
+import shutil
 import socket
 import sys
 import tempfile
@@ -10,10 +12,11 @@ import time
 import webbrowser
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-from urllib.parse import parse_qs, quote, urlparse
+from urllib.parse import parse_qs, quote, unquote, urlparse
 
 ROOT = Path(__file__).resolve().parent.parent
 STATIC = Path(__file__).resolve().parent / "static"
+ASSETS_DIR = ROOT / "assets"
 PORT = 8777
 
 sys.dont_write_bytecode = True
@@ -44,7 +47,7 @@ class Handler(SimpleHTTPRequestHandler):
             sys.stderr.write("[web] %s\n" % (fmt % args))
 
     def end_headers(self):
-        if not self.path.startswith("/api/"):
+        if not self.path.startswith(("/api/", "/assets/")):
             self.send_header("Cache-Control", "no-cache")
         super().end_headers()
 
@@ -92,9 +95,28 @@ class Handler(SimpleHTTPRequestHandler):
         except (BrokenPipeError, ConnectionResetError, OSError):
             return
 
+    def send_asset(self, relative: str):
+        target = (ASSETS_DIR / unquote(relative)).resolve()
+        try:
+            target.relative_to(ASSETS_DIR.resolve())
+        except ValueError:
+            return self.send_error_json("not found", 404)
+        if not target.is_file():
+            return self.send_error_json("not found", 404)
+        content_type = mimetypes.guess_type(target.name)[0] or "application/octet-stream"
+        self.send_response(200)
+        self.send_header("Content-Type", content_type)
+        self.send_header("Content-Length", str(target.stat().st_size))
+        self.send_header("Cache-Control", "public, max-age=86400")
+        self.end_headers()
+        with target.open("rb") as handle:
+            shutil.copyfileobj(handle, self.wfile)
+
     def do_GET(self):
         parsed = urlparse(self.path)
         try:
+            if parsed.path.startswith("/assets/"):
+                return self.send_asset(parsed.path[len("/assets/"):])
             if parsed.path == "/api/state":
                 snapshot = WORKSPACE.snapshot()
                 return self.send_json({"ok": True, "revision": snapshot["revision"], "state": snapshot["state"]})
@@ -231,5 +253,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 

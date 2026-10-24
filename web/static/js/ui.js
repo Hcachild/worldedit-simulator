@@ -40,6 +40,10 @@ export function setBusy(busy, text = '处理中…') {
   els.runBtn.disabled = busy;
 }
 
+export function setBusyText(text) {
+  els.busyText.textContent = text;
+}
+
 export function setStatus(text, error = false) {
   els.statStatus.textContent = text;
   els.statStatus.style.color = error
@@ -112,4 +116,5 @@ export function setActions({ hasFile, dirty, busy }) {
   els.exampleBtn.disabled = disabled;
   els.saveBtn.disabled = disabled || !dirty;
 }
+
 

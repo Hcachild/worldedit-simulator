@@ -28,4 +28,10 @@ if errorlevel 1 (
 del "%ZIP%"
 :jre_done
 
+if exist "assets\client.jar" goto assets_done
+echo [setup] downloading Minecraft assets...
+python tools\fetch_assets.py
+if errorlevel 1 echo [setup] asset download failed; run setup-assets.cmd later (fallback colors will be used)
+:assets_done
+
 echo [setup] ready. Run web.cmd

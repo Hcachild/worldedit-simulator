@@ -53,6 +53,7 @@ python tools\inspect_schem.py schematics\demo.schem
 | 保存 / 另存为 | 覆盖原文件 / 保存为新文件（支持覆盖同名） |
 | 重置 / 关闭 | 恢复到原文件 / 放弃当前编辑并回到空状态 |
 | 下载 | 导出当前编辑结果 |
+| 真实材质/模型 | 1.21.1 方块模型与贴图；台阶、楼梯、玻璃、植物、朝向、流体和方块实体按原版模型渲染 |
 | 外部 Agent | 调用 /api/run 修改当前投影，页面通过 SSE 自动刷新 |
 
 文件列表支持按名称搜索，以及按名称/修改时间排序；当前文件高亮，有未保存修改时显示橙色圆点。
@@ -61,9 +62,18 @@ python tools\inspect_schem.py schematics\demo.schem
 命令由后台的官方 WorldEdit-CLI 真正执行，结果写入 `work/current.schem`，**原文件不会被修改**。
 每次运行需要启动一次 JVM，通常 1–2 秒。
 
-渲染说明：所有方块按立方体绘制，使用按方块类型着色的程序纹理（带方块网格线），
-水、玻璃、冰等半透明；楼梯、台阶、门等不做精细建模。大型投影（几十万方块以上）会变慢。
+渲染说明：使用原版 1.21.1 client jar 的 blockstates/models/textures（block-model-renderer），
+非完整方块、朝向、玻璃/植物/流体和方块实体按原版模型渲染；材质缺失时回退为颜色方块。大型投影（几十万方块以上）会变慢。
 运行日志写到 `%TEMP%\worldedit-simulator-web.log`（后台模式），项目目录不产生日志。
+
+## 渲染与性能
+
+- 隐藏面剔除、面合并/少量 draw call、纹理图集、cutout/translucent 分类和动画纹理由 block-model-renderer 处理。
+- prepared assets 缓存复用；只有状态变更才重建场景；新状态会取消旧构建并释放旧 handle。
+- 拾取使用不可见的实例网格，不参与绘制；命令执行与模型构建分离，Java 子进程隐藏运行。
+- 渲染器限制 pixel ratio 为 2，关闭阴影和后处理；使用世界面光照但关闭 light volume（light: false），省去 flood fill。
+- 当前实测：1,736 方块球体 = 1 draw call / 1,522 triangles；730 方块 demo = 1 / 286；512 方块玻璃立方体 = 1 / 12（贪婪面合并）；19 种不同方块 = 3 / 288。
+- 剩余瓶颈：每次 AI/命令更新重建整个场景（超大投影会慢）；没有额外的分块视锥裁剪（依赖库的合批）；拾取射线逐实例；无 LOD；材质固定 1.21.1。需要火把照明/平滑 AO 时可改开 light volume，但构建成本更高。
 
 ## 外部 Agent 接口
 
@@ -107,13 +117,17 @@ web/
       ui.js          状态栏、日志、toast、空状态
       dialogs.js     新建/重命名/确认弹窗
       live.js        EventSource 实时同步
-    vendor/          Three.js 本地文件
-tools/               CLI 小工具（inspect/make/retarget/ensure/agent_run）
+      mc-renderer.js block-model-renderer 适配（真实模型/材质/实例化）
+    vendor/          Three.js、block-model-renderer 及 wasm
+    assets.zip       block-model-renderer 内置的方块实体覆盖包
+tools/               CLI 小工具（inspect/make/retarget/ensure/agent_run/fetch_assets）
+assets/              下载的 1.21.1 client.jar（本地材质，不入库）
 examples/            示例投影和命令脚本
 schematics/          用户投影目录（初始为空）
 work/                运行时编辑副本（自动生成，不入库）
 worldedit/           CLI 配置、语言缓存、方块表（自动生成，不入库）
 bin/                 官方 CLI jar 和 log4j 配置
+setup-assets.cmd     单独下载 Minecraft 1.21.1 材质
 ```
 
 `core` 不感知 HTTP，`web/server.py` 只负责路由；前端按视图、API、文件、弹窗拆成独立模块。
@@ -167,6 +181,8 @@ stop
 
 ## DataVersion 与旧投影
 
+3D 材质包固定为 1.21.1（DataVersion 3955）；CLI 方块表支持下面这些版本，但其他版本的模型/贴图可能不同，渲染以 1.21.1 资源为准。
+
 CLI 按投影里的 `DataVersion` 下载方块表，目前 EngineHub 只发布了这些版本：
 
 ```
@@ -190,5 +206,9 @@ we.cmd schematics\old.schem examples\demo.txt
 2. 下载 `worldedit-cli-*-dist.jar` 放进 `bin/`。
 3. 修改 `core/worldedit.py` 里的 jar 文件名和 `setup.cmd` 里的下载地址。
 
-WorldEdit 采用 GPLv3，jar 为官方原版未修改；Temurin JRE 采用 GPLv2+CE；Three.js 采用 MIT。
+WorldEdit 采用 GPLv3，jar 为官方原版未修改；Temurin JRE 采用 GPLv2+CE；Three.js 采用 MIT；block-model-renderer 采用 MPL-2.0（许可文件在 web/static/vendor/）。Minecraft 客户端资源仅本地渲染使用，不随仓库分发。
+
+
+
+
 

@@ -8,6 +8,9 @@
 /schematics/*
 !/schematics/.gitkeep
 
+# downloaded Minecraft assets
+/assets/
+
 # python
 __pycache__/
 *.py[cod]

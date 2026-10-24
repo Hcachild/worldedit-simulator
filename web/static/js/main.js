@@ -16,6 +16,7 @@ const app = {
 
 let live = null;
 let pendingLive = null;
+let applyToken = 0;
 
 const history = [];
 let historyIndex = -1;
@@ -51,21 +52,29 @@ async function refreshFiles() {
   renderFiles();
 }
 
-function applyState(payload, reframe = true) {
+async function applyState(payload, reframe = true) {
+  const token = ++applyToken;
   app.payload = payload;
   if (live && Number.isFinite(payload?.revision)) live.noteRevision(payload.revision);
   if (!payload) {
     app.viewer.clear();
     ui.showEmpty();
   } else {
-    app.viewer.setModel(payload, reframe);
     ui.showLoaded(payload);
+    if (!app.busy) ui.setStatus('构建模型…');
+    try {
+      await app.viewer.setModel(payload, reframe);
+    } catch (error) {
+      ui.toast(error.message || String(error), 'error');
+    }
+    if (token !== applyToken) return;
+    if (!app.busy) ui.setStatus('就绪');
   }
   updateActions();
   renderFiles();
 }
 
-function applyLive(data) {
+async function applyLive(data) {
   if (Array.isArray(data.files)) {
     app.files = data.files;
     ui.setFileCount(data.files.length);
@@ -73,14 +82,14 @@ function applyLive(data) {
   const previous = app.payload;
   const previousRevision = previous?.revision ?? -1;
   if (data.state === null) {
-    if (previous) applyState(null, false);
+    if (previous) await applyState(null, false);
     else renderFiles();
   } else if (!previous || data.state.revision > previousRevision) {
     const sizeChanged = !previous
       || previous.width !== data.state.width
       || previous.height !== data.state.height
       || previous.length !== data.state.length;
-    applyState(data.state, sizeChanged);
+    await applyState(data.state, sizeChanged);
   } else {
     renderFiles();
   }
@@ -92,7 +101,7 @@ function handleLive(data) {
     pendingLive = data;
     return;
   }
-  applyLive(data);
+  applyLive(data).catch((error) => ui.toast(error.message || String(error), 'error'));
 }
 
 function flushLive() {
@@ -101,7 +110,7 @@ function flushLive() {
   pendingLive = null;
   const current = app.payload?.revision ?? -1;
   if (data.revision > current) {
-    applyLive(data);
+    applyLive(data).catch((error) => ui.toast(error.message || String(error), 'error'));
   } else if (Array.isArray(data.files)) {
     app.files = data.files;
     ui.setFileCount(data.files.length);
@@ -130,7 +139,7 @@ async function withBusy(text, task) {
 async function loadFile(name) {
   await withBusy(`载入 ${name}…`, async () => {
     const data = await api.load(name);
-    applyState(data.state, true);
+    await applyState(data.state, true);
     await refreshFiles();
     ui.setLog(`已载入 ${name}`);
     ui.toast(`已载入 ${name}`);
@@ -155,7 +164,7 @@ function createNew() {
         height: Number(values.height),
         length: Number(values.length),
       });
-      applyState(data.state, true);
+      await applyState(data.state, true);
       await refreshFiles();
       ui.setLog(`已创建 ${data.state.name}`);
       ui.toast('已创建');
@@ -172,7 +181,7 @@ function renameFile(name) {
     submitText: '重命名',
     onSubmit: async (values) => {
       const data = await api.rename(name, values.name);
-      applyState(data.state, false);
+      await applyState(data.state, false);
       await refreshFiles();
       ui.toast('已重命名');
     },
@@ -210,7 +219,7 @@ async function deleteFile(name) {
   if (!ok) return;
   await withBusy('删除中…', async () => {
     const data = await api.deleteFile(name);
-    applyState(data.state, false);
+    await applyState(data.state, false);
     await refreshFiles();
     ui.toast('已删除');
   });
@@ -219,7 +228,7 @@ async function deleteFile(name) {
 async function save() {
   await withBusy('保存中…', async () => {
     const data = await api.save();
-    applyState(data.state, false);
+    await applyState(data.state, false);
     await refreshFiles();
     ui.toast('已保存到原文件');
   });
@@ -237,7 +246,7 @@ function saveAs() {
     submitText: '保存',
     onSubmit: async (values) => {
       const data = await api.saveAs(values.name, values.overwrite);
-      applyState(data.state, false);
+      await applyState(data.state, false);
       await refreshFiles();
       ui.toast('已保存');
     },
@@ -257,7 +266,7 @@ async function resetFile() {
   }
   await withBusy('重置中…', async () => {
     const data = await api.reset();
-    applyState(data.state, false);
+    await applyState(data.state, false);
     ui.toast('已重置');
   });
 }
@@ -275,7 +284,7 @@ async function closeFile() {
   }
   await withBusy('关闭中…', async () => {
     const data = await api.close();
-    applyState(data.state, false);
+    await applyState(data.state, false);
     await refreshFiles();
     ui.toast('已关闭');
   });
@@ -301,7 +310,7 @@ async function run() {
   try {
     const data = await api.runRaw(text);
     if (data.log) ui.setLog(data.log);
-    if (data.state) applyState(data.state, false);
+    if (data.state) await applyState(data.state, false);
     if (!data.ok) {
       ui.setStatus('错误', true);
       if (data.error) {
@@ -334,7 +343,7 @@ async function uploadFile(file) {
   await withBusy(`上传 ${file.name}…`, async () => {
     const buffer = await file.arrayBuffer();
     const data = await api.upload(file.name, buffer);
-    applyState(data.state, true);
+    await applyState(data.state, true);
     await refreshFiles();
     ui.setLog(`已上传 ${data.state.name}`);
     ui.toast('已上传');
@@ -439,6 +448,15 @@ async function boot() {
     }
     ui.setHudInfo(`${record.name} @ (${record.x}, ${record.y}, ${record.z})`);
   };
+  app.viewer.onProgress = (text) => {
+    if (app.busy) ui.setBusyText(text);
+    else ui.setStatus(text);
+  };
+  app.viewer.onNotice = (message) => ui.toast(message, 'error');
+  app.viewer.onMetrics = (metrics) => {
+    console.info('[render]', metrics);
+    window.__renderMetrics = metrics;
+  };
   live = new LiveSync({ onEvent: handleLive });
   bindEvents();
   ui.setActions({ hasFile: false, dirty: false, busy: false });
@@ -450,12 +468,21 @@ async function boot() {
   try {
     const data = await api.state();
     if (Number.isFinite(data.revision)) live.noteRevision(data.revision);
-    applyState(data.state, true);
+    if (data.state) ui.setBusy(true, '加载模型…');
+    try {
+      await applyState(data.state, true);
+    } finally {
+      ui.setBusy(false);
+      updateActions();
+    }
   } catch (error) {
-    applyState(null, true);
+    await applyState(null, true);
     ui.toast(error.message, 'error');
   }
   live.start();
 }
 
 boot();
+
+
+
