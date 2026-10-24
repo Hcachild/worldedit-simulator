@@ -1,0 +1,9 @@
+//pos1 0,0,0
+//pos2 127,127,127
+//set air
+//gen -r gold_block cx=(x-63.5)/46; cy=(y-63.5)/46; zx=0; zy=0; i=0; while(zx*zx+zy*zy<=4&&i<80){ nx=zx*zx-zy*zy+cx; zy=2*zx*zy+cy; zx=nx; i++; }; abs(z-64)<3&&i>=80
+//gen -r polished_blackstone z>=56&&z<60&&(x-63.5)^2+(y-63.5)^2<=52^2
+//gen -r gold_block z>=59&&z<61&&(x-63.5)^2+(y-63.5)^2>=51^2&&(x-63.5)^2+(y-63.5)^2<=54^2
+//gen -r polished_blackstone y>=0&&y<4&&abs(x-64)<=48&&abs(z-64)<=10
+stop
+

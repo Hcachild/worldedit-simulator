@@ -1,0 +1,16 @@
+//pos1 0,0,0
+//pos2 127,127,127
+//set air
+//gen -r -h white_concrete t=(y-8)/112; th=t*pi*8; R=7+38*t; cx=63.5+R*cos(th); cz=63.5+R*sin(th); d=sqrt((x-cx)^2+(z-cz)^2); tube=2.2+7*t; d<tube&&y>=8&&y<120
+//gmask white_concrete
+//replace =y<40 white_concrete
+//replace =y>=40&&y<70 light_gray_concrete
+//replace =y>=70&&y<95 pink_concrete
+//replace =y>=95 gold_block
+//replace =y>=20&&abs(sin((y-8)/112*pi*8*7))<0.12 gold_block
+//gmask
+//gen -r pink_concrete t=(y-8)/112; th=t*pi*8; R=7+38*t; cx=63.5+R*cos(th); cz=63.5+R*sin(th); d=sqrt((x-cx)^2+(z-cz)^2); y>=104&&y<116&&d<2.2+7*t+4
+//gen -r sea_lantern t=(y-8)/112; th=t*pi*8; R=7+38*t; cx=63.5+R*cos(th); cz=63.5+R*sin(th); d=sqrt((x-cx)^2+(z-cz)^2); y>=104&&y<116&&d<1.2+2*t
+//gen -r gold_block y>=6&&y<8&&(x-64)^2+(z-64)^2>=24^2&&(x-64)^2+(z-64)^2<=27^2
+stop
+

@@ -1,0 +1,12 @@
+//pos1 0,0,0
+//pos2 127,127,127
+//set air
+//gen -r stone h=8+9*perlin(7,x,0,z,0.035,4,0.5)+3*sin(x/9)*cos(z/11); y<h-4
+//gen -r dirt h=8+9*perlin(7,x,0,z,0.035,4,0.5)+3*sin(x/9)*cos(z/11); y>=h-4&&y<h-1
+//gen -r grass_block h=8+9*perlin(7,x,0,z,0.035,4,0.5)+3*sin(x/9)*cos(z/11); y>=h-1&&y<=h
+//gen -r wheat[age=7] h=8+9*perlin(7,x,0,z,0.035,4,0.5)+3*sin(x/9)*cos(z/11); y>h&&y<h+2&&(x%5<1)&&z>8&&z<118
+//gen -r dirt_path h=8+9*perlin(7,x,0,z,0.035,4,0.5)+3*sin(x/9)*cos(z/11); y>=h-1&&y<=h&&abs(x-64)<3
+//gen -r oak_fence h=8+9*perlin(7,x,0,z,0.035,4,0.5)+3*sin(x/9)*cos(z/11); y>h&&y<h+4&&((x<10)||(x>117))&&(z%6<1)
+//gen -r hay_block y>=10&&y<13&&(x>=18&&x<26)&&(z>=18&&z<26)
+//gen -r hay_block y>=10&&y<13&&(x>=100&&x<106)&&(z>=100&&z<108)
+stop

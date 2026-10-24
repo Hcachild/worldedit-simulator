@@ -1,0 +1,15 @@
+//pos1 0,0,0
+//pos2 127,127,127
+//set air
+//gen -r white_concrete dx=x-63.5; dz=z-63.5; dy=y-63.5; r=sqrt(dx*dx+dz*dz); th=atan2(dz,dx); u=r-36; s=abs(u*sin(th/2)-dy*cos(th/2)); tt=sqrt(u*u+dy*dy); s<2.2&&tt<18
+//gmask white_concrete
+//replace =atan2(z-63.5,x-63.5)<0 cyan_concrete
+//replace =atan2(z-63.5,x-63.5)>=0&&atan2(z-63.5,x-63.5)<pi/2 purple_concrete
+//replace =atan2(z-63.5,x-63.5)>=pi/2&&atan2(z-63.5,x-63.5)<pi gold_block
+//replace =atan2(z-63.5,x-63.5)>=pi&&atan2(z-63.5,x-63.5)<3*pi/2 magenta_concrete
+//replace =atan2(z-63.5,x-63.5)>=3*pi/2&&atan2(z-63.5,x-63.5)<=pi red_concrete
+//replace =abs(atan2(z-63.5,x-63.5))<0.08 gold_block
+//gmask
+//gen -r sea_lantern dx=x-63.5; dz=z-63.5; dy=y-63.5; r=sqrt(dx*dx+dz*dz); th=atan2(dz,dx); u=r-36; s=abs(u*sin(th/2)-dy*cos(th/2)); tt=sqrt(u*u+dy*dy); s>=2.2&&s<2.7&&tt<18
+//gen -r polished_blackstone y>=0&&y<4&&(x-64)^2+(z-64)^2<=58^2
+stop

@@ -1,0 +1,18 @@
+//pos1 0,0,0
+//pos2 127,127,127
+//set air
+//gen -r stone_bricks cy=54+5*sin(x/22); cz=64+5*cos(x/19); d=sqrt((y-cy)^2+(z-cz)^2); d<31 && d>26.5
+//gmask stone_bricks
+//replace =abs(sin(x/8))>0.94 polished_deepslate
+//replace =y<34 deepslate_tiles
+//gmask
+//gen -r polished_deepslate cy=54+5*sin(x/22); cz=64+5*cos(x/19); d=sqrt((y-cy)^2+(z-cz)^2); d<31 && d>29.5 && abs(sin(x/7))>0.92
+//gen -r sea_lantern cy=54+5*sin(x/22); cz=64+5*cos(x/19); d=sqrt((y-cy)^2+(z-cz)^2); d>22 && d<24.5 && abs(sin(x/12))>0.98 && y>cy
+//gen -r deepslate_tiles y>24 && y<29 && (z-64)^2<=20^2 && x<127
+//gen -r rail y==30 && (abs(z-60)<1 || abs(z-68)<1)
+//gen -r oak_planks y==29 && (abs(z-60)<2 || abs(z-68)<2) && x%6<2
+//gen -r chiseled_stone_bricks cy=54; cz=64; d=sqrt((y-cy)^2+(z-cz)^2); d<34 && d>31 && x>120
+//gen -r crying_obsidian cy=54; cz=64; d=sqrt((y-cy)^2+(z-cz)^2); d<18 && d>15 && x>123
+//gen -r polished_blackstone y>=0 && y<5 && (x-64)^2+(z-64)^2<=60^2
+stop
+

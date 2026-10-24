@@ -1,0 +1,23 @@
+//pos1 0,0,0
+//pos2 127,127,127
+//set air
+//gen -r sand y>=0&&y<8&&abs(z-64)<26
+//gen -r water y>=8&&y<20&&abs(z-64)<26
+//gen -r stone_bricks y>=20&&y<25&&((abs(z-40)<2)||(abs(z-88)<2))&&x>=0&&x<=127
+//gen -r grass_block y>=22&&y<24&&(z<40||z>88)&&x>=0&&x<=127
+//gen -r dirt y>=20&&y<22&&(z<40||z>88)&&x>=0&&x<=127
+//gen -r stone_bricks y>=20&&y<79&&abs(z-64)<=12&&((abs(sqrt((x-32)^2+(y-79)^2)-24)<2.8)||(abs(sqrt((x-64)^2+(y-79)^2)-24)<2.8)||(abs(sqrt((x-96)^2+(y-79)^2)-24)<2.8))
+//gen -r chiseled_stone_bricks y>=20&&y<79&&abs(z-64)<=12&&((abs(x-32)<2)||(abs(x-64)<2)||(abs(x-96)<2))
+//gen -r stone_bricks y>=20&&y<79&&abs(z-64)<=12&&((abs(x-8)<4)||(abs(x-52)<4)||(abs(x-76)<4)||(abs(x-120)<4))
+//gen -r stone_bricks y>=20&&y<79&&abs(z-64)<=12&&((x<8)||(x>119))
+//gen -r polished_deepslate y>=79&&y<83&&abs(z-64)<=13&&x>=4&&x<=123
+//gen -r polished_blackstone y>=83&&y<86&&(abs(z-53)<1||abs(z-75)<1)&&x>=6&&x<=121
+//gen -r oak_fence y>=86&&y<91&&(abs(z-53)<1||abs(z-75)<1)&&x>=8&&x<=120&&(abs(x%8)<1)
+//gen -r oak_fence y>=90&&y<92&&(abs(z-53)<1||abs(z-75)<1)&&x>=8&&x<=120
+//gen -r lantern y>=92&&y<95&&(abs(z-53)<1||abs(z-75)<1)&&(abs(x-20)<1||abs(x-64)<1||abs(x-108)<1)
+//gen -r gold_block y>=79&&y<80&&abs(z-64)<=13&&x>=4&&x<=123&&((abs(x-8)<1)||(abs(x-120)<1))
+//gen -r oak_log y>=24&&y<44&&(x-22)^2+(z-22)^2<3^2&&y<44
+//gen -r oak_leaves (x-22)^2+(z-22)^2+(y-46)^2<8^2
+//gen -r oak_log y>=24&&y<42&&(x-106)^2+(z-20)^2<3^2
+//gen -r oak_leaves (x-106)^2+(z-20)^2+(y-44)^2<7^2
+stop

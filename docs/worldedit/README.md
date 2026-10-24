@@ -103,7 +103,7 @@ POST /api/run {"commands":"//pos1 ...\n//pos2 ...\n//set ...","actor":"agent"}
 - [patterns-masks.md](patterns-masks.md)：pattern 与 mask
 - [clipboard-schematics.md](clipboard-schematics.md)：剪贴板与 `.schem`
 - [generation-expressions.md](generation-expressions.md)：`//gen` 与表达式
+- [advanced-generation.md](advanced-generation.md)：128³ 艺术建模、B 站教程索引、18 个配方
 - [tools-brushes.md](tools-brushes.md)：工具/笔刷及 CLI 限制
 - [cli.md](cli.md)：CLI 细节、DataVersion、保存
 - [gotchas.md](gotchas.md)：踩坑清单
-

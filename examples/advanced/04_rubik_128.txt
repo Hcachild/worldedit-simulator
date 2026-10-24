@@ -1,0 +1,22 @@
+//pos1 0,0,0
+//pos2 127,127,127
+//set air
+//gen -r black_concrete m=max(abs(x-63.5),abs(y-63.5),abs(z-63.5)); m<=42 && m>=39
+//gmask black_concrete
+//replace =x>=104&&(y-22)%28>=2&&(z-22)%28>=2 red_stained_glass
+//replace =x<=23&&(y-22)%28>=2&&(z-22)%28>=2 orange_stained_glass
+//replace =y>=104&&(x-22)%28>=2&&(z-22)%28>=2 yellow_stained_glass
+//replace =y<=23&&(x-22)%28>=2&&(z-22)%28>=2 white_stained_glass
+//replace =z>=104&&(x-22)%28>=2&&(y-22)%28>=2 blue_stained_glass
+//replace =z<=23&&(x-22)%28>=2&&(y-22)%28>=2 lime_stained_glass
+//gmask
+//gen -r gold_block m=max(abs(x-63.5),abs(y-63.5),abs(z-63.5)); m<=42 && m>=41 && (abs(abs(x-63.5)-41.5)<1 || abs(abs(y-63.5)-41.5)<1 || abs(abs(z-63.5)-41.5)<1) && (abs(x-63.5)>39 && abs(y-63.5)>39 && abs(z-63.5)>39)
+//gen -r purple_stained_glass m=max(abs(x-63.5),abs(y-63.5),abs(z-63.5)); m<=30 && m>=28
+//gen -r magenta_stained_glass m=max(abs(x-63.5),abs(y-63.5),abs(z-63.5)); m<=18 && m>=16
+//gen -r sea_lantern m=max(abs(x-63.5),abs(y-63.5),abs(z-63.5)); m<=10
+//gen -r polished_blackstone y>=0 && y<6 && (x-64)^2+(z-64)^2<=52^2
+//gen -r gold_block y>=6 && y<8 && (x-64)^2+(z-64)^2>=49^2 && (x-64)^2+(z-64)^2<=52^2
+//replace =x>80&&y>80&&z>80 air
+stop
+
+

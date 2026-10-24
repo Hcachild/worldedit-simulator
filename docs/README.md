@@ -12,6 +12,7 @@
 | 调整材质、模型、性能 | [rendering.md](rendering.md) |
 | 遇到报错、卡死、空白页面 | [troubleshooting.md](troubleshooting.md) |
 | 查 WorldEdit 命令、选区、生成 | [worldedit/README.md](worldedit/README.md) |
+| 做 128³ 艺术模型、看高级 `//gen` | [worldedit/advanced-generation.md](worldedit/advanced-generation.md) |
 
 ## WorldEdit 使用文档
 
@@ -23,6 +24,7 @@
 | [worldedit/patterns-masks.md](worldedit/patterns-masks.md) | 方块 pattern 与 mask |
 | [worldedit/clipboard-schematics.md](worldedit/clipboard-schematics.md) | 复制粘贴、投影格式与保存 |
 | [worldedit/generation-expressions.md](worldedit/generation-expressions.md) | 球体/圆柱/`//gen` 与表达式 |
+| [worldedit/advanced-generation.md](worldedit/advanced-generation.md) | 128³ 艺术建模、B 站教程索引、18 个配方 |
 | [worldedit/tools-brushes.md](worldedit/tools-brushes.md) | 工具、笔刷及 CLI 限制 |
 | [worldedit/cli.md](worldedit/cli.md) | 无头 CLI 的行为、数据和退出码 |
 | [worldedit/gotchas.md](worldedit/gotchas.md) | 踩坑清单（含本项目实测问题） |
@@ -48,5 +50,7 @@
 - Mask：<https://worldedit.enginehub.org/en/latest/usage/general/masks/>
 - 工具：<https://worldedit.enginehub.org/en/latest/usage/tools/tools/>
 - 笔刷：<https://worldedit.enginehub.org/en/latest/usage/tools/brushes/>
+- B 站 `//gen` 系统课：<https://www.bilibili.com/video/BV1AP4y1b7EN/>
+- 128³ 示例：[examples/advanced](../examples/advanced/README.md)
 
 文档中的命令以 WorldEdit 7.4.x 为准；方块 ID 使用 1.13+ 的命名空间 ID（例如 `minecraft:stone`），不再使用 1.12 及以前的数字 ID。

@@ -1,0 +1,10 @@
+//pos1 0,0,0
+//pos2 127,127,127
+//set air
+//gen -r blackstone y>=0&&y<5&&(x-63.5)^2+(z-63.5)^2<60^2
+//gen -r magma_block y>=2&&y<6&&(x-63.5)^2+(z-63.5)^2>=60^2&&(x-63.5)^2+(z-63.5)^2<64^2
+//gen -r basalt q=(0.577350269*(x-63.5)-0.333333333*(z-63.5))/7; r=(0.666666667*(z-63.5))/7; dq=q-round(q); dr=r-round(r); hd=(abs(dq)+abs(dr)+abs(dq+dr))/2; hash=sin(round(q)*12.9898+round(r)*78.233)*43758.5453; hash=hash-floor(hash); top=8+18*perlin(9,x,0,z,0.035,4,0.5)+8*hash; hd<0.44&&y<top
+//gen -r smooth_basalt q=(0.577350269*(x-63.5)-0.333333333*(z-63.5))/7; r=(0.666666667*(z-63.5))/7; dq=q-round(q); dr=r-round(r); hd=(abs(dq)+abs(dr)+abs(dq+dr))/2; hash=sin(round(q)*12.9898+round(r)*78.233)*43758.5453; hash=hash-floor(hash); top=8+18*perlin(9,x,0,z,0.035,4,0.5)+8*hash; hd<0.44&&y>=top-1&&y<=top
+//gen -r moss_block q=(0.577350269*(x-63.5)-0.333333333*(z-63.5))/7; r=(0.666666667*(z-63.5))/7; dq=q-round(q); dr=r-round(r); hd=(abs(dq)+abs(dr)+abs(dq+dr))/2; hash=sin(round(q)*12.9898+round(r)*78.233)*43758.5453; hash=hash-floor(hash); top=8+18*perlin(9,x,0,z,0.035,4,0.5)+8*hash; hd<0.44&&y>=top-1&&y<=top&&hash>0.72
+//gen -r magma_block q=(0.577350269*(x-63.5)-0.333333333*(z-63.5))/7; r=(0.666666667*(z-63.5))/7; dq=q-round(q); dr=r-round(r); hd=(abs(dq)+abs(dr)+abs(dq+dr))/2; hd>=0.44&&hd<0.5&&y>=0&&y<5
+stop

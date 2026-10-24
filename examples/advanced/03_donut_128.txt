@@ -1,0 +1,17 @@
+//pos1 0,0,0
+//pos2 127,127,127
+//set air
+//gen -r white_concrete (sqrt((x-63.5)^2+(z-63.5)^2)-40)^2+(y-64)^2<=17^2
+//gmask white_concrete
+//replace =y>64-6*abs(sin(atan2(z-63.5,x-63.5)*6)) pink_concrete
+//gmask pink_concrete
+//replace =y>66&&random()<0.035 lime_concrete
+//replace =y>66&&random()<0.03 cyan_concrete
+//replace =y>66&&random()<0.025 yellow_concrete
+//replace =y>66&&random()<0.02 white_wool
+//gmask
+//replace white_concrete brown_concrete
+//gen -r smooth_quartz y>=38 && y<43 && (x-64)^2+(z-64)^2<=58^2
+//gen -r gold_block y>=43 && y<45 && (x-64)^2+(z-64)^2>=55^2 && (x-64)^2+(z-64)^2<=58^2
+stop
+

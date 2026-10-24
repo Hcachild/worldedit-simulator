@@ -1,0 +1,19 @@
+//pos1 0,0,0
+//pos2 127,127,127
+//set air
+//gen -r white_concrete dx=x-63.5; dz=z-63.5; dy=y-63.5; r=sqrt(dx*dx+dz*dz); a=atan2(dz,dx); arm=abs(sin(2*a-2.2*ln(r+2))); th=2+7*exp(-r/30); (r<58&&abs(dy)<th*(0.3+0.7*arm))||(r<14&&abs(dy)<12)
+//gmask white_concrete
+//replace =sqrt((x-63.5)^2+(z-63.5)^2)<11 gold_block
+//replace =sqrt((x-63.5)^2+(z-63.5)^2)>=11&&sqrt((x-63.5)^2+(z-63.5)^2)<20 yellow_concrete
+//replace =abs(sin(2*atan2(z-63.5,x-63.5)-2.2*ln(sqrt((x-63.5)^2+(z-63.5)^2)+2)))<0.35 cyan_stained_glass
+//replace =abs(sin(2*atan2(z-63.5,x-63.5)-2.2*ln(sqrt((x-63.5)^2+(z-63.5)^2)+2)))>=0.35&&abs(sin(2*atan2(z-63.5,x-63.5)-2.2*ln(sqrt((x-63.5)^2+(z-63.5)^2)+2)))<0.7 blue_concrete
+//replace =sqrt((x-63.5)^2+(z-63.5)^2)>=20&&sqrt((x-63.5)^2+(z-63.5)^2)<58 purple_concrete
+//gmask
+//gen -r obsidian r=sqrt((x-63.5)^2+(z-63.5)^2); r<5&&abs(y-63.5)<5
+//gen -r orange_concrete r=sqrt((x-63.5)^2+(z-63.5)^2); r>=5&&r<8&&abs(y-63.5)<2
+//gen -r polished_blackstone y>=0&&y<4&&(x-64)^2+(z-64)^2<=60^2
+//gen -r gold_block y>=4&&y<5&&(x-64)^2+(z-64)^2>=57^2&&(x-64)^2+(z-64)^2<=60^2
+//gen -r glowstone dx=x-63.5; dz=z-63.5; dy=y-63.5; r=sqrt(dx*dx+dz*dz); r<58&&abs(dy)<4&&random()<0.004
+stop
+
+

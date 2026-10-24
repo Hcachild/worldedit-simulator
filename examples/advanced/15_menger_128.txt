@@ -1,0 +1,12 @@
+//pos1 0,0,0
+//pos2 127,127,127
+//set air
+//gen -r light_gray_concrete a=(x-63.5)/40; b=(y-63.5)/40; c=(z-63.5)/40; ox=a; oy=b; oz=c; inside=1; i=0; while(i<4&&inside){ ax=abs(a); ay=abs(b); az=abs(c); dx=ax>1/3&&ax<2/3; dy=ay>1/3&&ay<2/3; dz=az>1/3&&az<2/3; if(dx+dy+dz>=2){inside=0;}; a=3*a-2*(a>1/3?1:(a<-1/3?-1:0)); b=3*b-2*(b>1/3?1:(b<-1/3?-1:0)); c=3*c-2*(c>1/3?1:(c<-1/3?-1:0)); i++; }; inside&&abs(ox)<=1&&abs(oy)<=1&&abs(oz)<=1
+//gmask light_gray_concrete
+//replace =y<45 gray_concrete
+//replace =y>=45&&y<70 white_concrete
+//replace =y>=70 gold_block
+//gmask
+//gen -r polished_blackstone y>=0&&y<4&&(x-64)^2+(z-64)^2<=52^2
+//gen -r gold_block y>=4&&y<6&&(x-64)^2+(z-64)^2>=49^2&&(x-64)^2+(z-64)^2<=52^2
+stop

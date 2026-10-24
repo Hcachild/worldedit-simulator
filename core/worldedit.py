@@ -118,7 +118,7 @@ def _clean_log(raw: str) -> str:
     return "\n".join(lines).strip()
 
 
-def run_cli(schematic_path: Path, commands, timeout: int = 180) -> tuple:
+def run_cli(schematic_path: Path, commands, timeout: int = 600) -> tuple:
     if not JAVA.exists():
         raise RuntimeError(f"找不到 Java: {JAVA}")
     if not JAR.exists():

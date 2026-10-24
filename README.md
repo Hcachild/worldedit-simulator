@@ -5,6 +5,8 @@
 
 完整文档见 **[docs/README.md](docs/README.md)**：部署、架构、API、渲染、排错和 WorldEdit 用法。
 
+128³ 艺术生成示例见 **[docs/worldedit/advanced-generation.md](docs/worldedit/advanced-generation.md)** 与 **[examples/advanced](examples/advanced/README.md)**。
+
 ![空界面](web/preview-empty.png)
 
 ## 快速开始
@@ -210,9 +212,3 @@ we.cmd schematics\old.schem examples\demo.txt
 3. 修改 `core/worldedit.py` 里的 jar 文件名和 `setup.cmd` 里的下载地址。
 
 WorldEdit 采用 GPLv3，jar 为官方原版未修改；Temurin JRE 采用 GPLv2+CE；Three.js 采用 MIT；block-model-renderer 采用 MPL-2.0（许可文件在 web/static/vendor/）。Minecraft 客户端资源仅本地渲染使用，不随仓库分发。
-
-
-
-
-
-

@@ -1,0 +1,15 @@
+//pos1 0,0,0
+//pos2 127,127,127
+//set air
+//gen -r -h white_concrete a=(x-63.5)/40; b=(y-63.5)/40; c=(z-63.5)/40; ox=a; oy=b; oz=c; i=0; while(i<9&&a*a+b*b+c*c<4){ rr=sqrt(a*a+b*b+c*c); rr=max(rr,0.00001); th=acos(max(-1,min(1,c/rr))); ph=atan2(b,a); rp=rr^8; th=th*8; ph=ph*8; a=rp*sin(th)*cos(ph)+ox; b=rp*sin(th)*sin(ph)+oy; c=rp*cos(th)+oz; i++; }; i>=9
+//gmask white_concrete
+//replace =y<40 purple_concrete
+//replace =y>=40&&y<60 magenta_concrete
+//replace =y>=60&&y<85 pink_concrete
+//replace =y>=85 cyan_concrete
+//replace =abs(sin(atan2(z-63.5,x-63.5)*12+y/7))<0.05 gold_block
+//gmask
+//replace white_concrete black_concrete
+//gen -r polished_blackstone y>=0&&y<5&&(x-64)^2+(z-64)^2<=48^2
+//gen -r gold_block y>=5&&y<7&&(x-64)^2+(z-64)^2>=45^2&&(x-64)^2+(z-64)^2<=48^2
+stop

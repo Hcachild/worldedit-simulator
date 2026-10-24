@@ -1,0 +1,18 @@
+//pos1 0,0,0
+//pos2 127,127,127
+//set air
+//gen -r white_concrete r=sqrt((x-64)^2+(z-64)^2); a=atan2(z-64,x-64); h=y/127; R=2.5+43*h^1.7; d=abs(r-R); arm=sin(a*5+h*24+r*0.16); y>4&&y<118&&(d<2.0&&arm>-0.25)
+//gmask white_concrete
+//replace =y<35 gray_concrete
+//replace =y>=35&&y<70 light_gray_concrete
+//replace =y>=70&&y<100 white_concrete
+//replace =y>=100&&y<118 black_concrete
+//replace =abs(sin(atan2(z-64,x-64)*9+y/6))>0.9 light_blue_stained_glass
+//gmask
+//gen -r gray_concrete r=sqrt((x-64)^2+(z-64)^2); y>=114&&y<122&&r<58&&r>16&&random()<0.55
+//gen -r light_gray_concrete r=sqrt((x-64)^2+(z-64)^2); y>=118&&y<123&&r<48&&r>20&&random()<0.18
+//gen -r glowstone abs(x-86-4*sin(y/8))<1&&abs(z-52-3*cos(y/9))<1&&y>=30&&y<110
+//gen -r grass_block r=sqrt((x-64)^2+(z-64)^2); y>=0&&y<4&&r<58
+//gen -r dirt r=sqrt((x-64)^2+(z-64)^2); y>=3&&y<6&&r<58
+//gen -r coarse_dirt r=sqrt((x-64)^2+(z-64)^2); y>=4&&y<6&&r<20
+stop

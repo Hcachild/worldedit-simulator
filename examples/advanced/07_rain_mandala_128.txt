@@ -1,0 +1,11 @@
+//pos1 0,0,0
+//pos2 127,127,127
+//set air
+//gen -r blue_concrete r=sqrt((x-63.5)^2+(z-63.5)^2); y>=2&&y<5&&r<60
+//gen -r cyan_concrete r=sqrt((x-63.5)^2+(z-63.5)^2); y>=5&&y<7&&r<59&&(abs(r-12)<1.5||abs(r-24)<1.5||abs(r-36)<1.5||abs(r-48)<1.5)
+//gen -r white_concrete r=sqrt((x-63.5)^2+(z-63.5)^2); a=atan2(z-63.5,x-63.5); seg=2*pi/3; edge=22*cos(pi/3)/cos(a-seg*round(a/seg)); y>=6&&y<8&&abs(r-edge)<1.5
+//gen -r gold_block r=sqrt((x-63.5)^2+(z-63.5)^2); a=atan2(z-63.5,x-63.5); seg=2*pi/5; edge=38*cos(pi/5)/cos(a-seg*round(a/seg)); y>=7&&y<9&&abs(r-edge)<1.5
+//gen -r purple_concrete r=sqrt((x-63.5)^2+(z-63.5)^2); a=atan2(z-63.5,x-63.5); y>=7&&y<9&&r<50&&abs(sin(a*5))<0.08&&abs(r-30)<10
+//gen -r sea_lantern r=sqrt((x-63.5)^2+(z-63.5)^2); y>=8&&y<10&&r<7
+//gen -r gold_block r=sqrt((x-63.5)^2+(z-63.5)^2); y>=5&&y<7&&r>=59&&r<62
+stop

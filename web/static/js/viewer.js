@@ -207,8 +207,9 @@ export class Viewer {
     handle.group.scale.setScalar(1 / 16);
     handle.group.position.set(-width / 2 + 0.5, 0.5, -length / 2 + 0.5);
     this.scene.add(handle.group);
-    this.pickMesh = this.buildPickMesh(records);
+    this.pickMesh = records.length <= 250000 ? this.buildPickMesh(records) : null;
     this.pickables = this.pickMesh ? [this.pickMesh] : [];
+    if (!this.pickMesh) console.info('[pick] disabled for large model', records.length);
     this.updateGrid(width, length);
     if (this.onMetrics) {
       this.onMetrics({ drawCalls: handle.drawCalls, tris: handle.tris });
@@ -294,8 +295,9 @@ export class Viewer {
     this.addFallbackInstances(opaque, false);
     this.addFallbackInstances(transparent, true);
     this.scene.add(this.fallbackGroup);
-    this.pickMesh = this.buildPickMesh(records);
+    this.pickMesh = records.length <= 250000 ? this.buildPickMesh(records) : null;
     this.pickables = this.pickMesh ? [this.pickMesh] : [];
+    if (!this.pickMesh) console.info('[pick] disabled for large model', records.length);
     this.updateGrid(width, length);
   }
 
