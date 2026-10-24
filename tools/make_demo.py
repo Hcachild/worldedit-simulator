@@ -1,38 +1,17 @@
-"""Build the 13x8x13 cottage used as the default 3D demo schematic."""
-import gzip
-import struct
+"""Build the 13x8x13 cottage used as the demo schematic."""
 import sys
 from collections import Counter
 from pathlib import Path
 
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
 sys.dont_write_bytecode = True
 
-from make_schem import (
-    TAG_BYTE_ARRAY,
-    TAG_COMPOUND,
-    TAG_INT,
-    TAG_INT_ARRAY,
-    TAG_LIST,
-    TAG_SHORT,
-    compound,
-    s,
-    tag,
-)
+from core.nbt import encode_varint  # noqa: E402
+from core.schematic import write_schem  # noqa: E402
 
 WIDTH, HEIGHT, LENGTH = 13, 8, 13
 DATA_VERSION = 3955
-
-
-def varint(value: int) -> bytes:
-    out = bytearray()
-    while True:
-        byte = value & 0x7F
-        value >>= 7
-        if value:
-            out.append(byte | 0x80)
-        else:
-            out.append(byte)
-            return bytes(out)
 
 
 def build_blocks():
@@ -79,9 +58,8 @@ def build_blocks():
 
 
 def main():
-    out = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).resolve().parent.parent / "schematics" / "demo.schem"
+    out = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "examples" / "demo.schem"
     blocks = build_blocks()
-
     palette = {}
     indices = []
     counts = Counter()
@@ -94,34 +72,9 @@ def main():
                     palette[name] = len(palette)
                 indices.append(palette[name])
 
-    block_data = b"".join(varint(index) for index in indices)
-    root = compound(
-        tag(TAG_INT, "Version", struct.pack(">i", 2))
-        + tag(TAG_INT, "DataVersion", struct.pack(">i", DATA_VERSION))
-        + tag(TAG_SHORT, "Width", struct.pack(">h", WIDTH))
-        + tag(TAG_SHORT, "Height", struct.pack(">h", HEIGHT))
-        + tag(TAG_SHORT, "Length", struct.pack(">h", LENGTH))
-        + tag(TAG_INT_ARRAY, "Offset", struct.pack(">i", 3) + struct.pack(">iii", 0, 0, 0))
-        + tag(
-            TAG_COMPOUND,
-            "Metadata",
-            compound(
-                tag(TAG_INT, "WEOffsetX", struct.pack(">i", 0))
-                + tag(TAG_INT, "WEOffsetY", struct.pack(">i", 0))
-                + tag(TAG_INT, "WEOffsetZ", struct.pack(">i", 0))
-            ),
-        )
-        + tag(TAG_INT, "PaletteMax", struct.pack(">i", len(palette)))
-        + tag(
-            TAG_COMPOUND,
-            "Palette",
-            compound(b"".join(tag(TAG_INT, name, struct.pack(">i", index)) for name, index in palette.items())),
-        )
-        + tag(TAG_BYTE_ARRAY, "BlockData", struct.pack(">i", len(block_data)) + block_data)
-        + tag(TAG_LIST, "BlockEntities", bytes([TAG_COMPOUND]) + struct.pack(">i", 0))
-    )
+    block_data = b"".join(encode_varint(index) for index in indices)
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_bytes(gzip.compress(bytes([TAG_COMPOUND]) + s("Schematic") + root))
+    write_schem(out, WIDTH, HEIGHT, LENGTH, palette, block_data, DATA_VERSION)
     print(f"wrote {out} ({out.stat().st_size} bytes)")
     for name, count in counts.most_common():
         if name != "minecraft:air":

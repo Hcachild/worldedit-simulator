@@ -25,23 +25,35 @@
 
       <section class="panel">
         <div class="panel-title">
-          <span>投影文件</span>
-          <button id="uploadBtn" class="ghost" title="上传 .schem">上传</button>
+          <span>投影文件 <em id="fileCount">0</em></span>
+          <div class="title-actions">
+            <button id="newBtn" class="icon-btn" title="新建空白投影">＋</button>
+            <button id="uploadBtn" class="icon-btn" title="上传 .schem">↑</button>
+            <button id="refreshBtn" class="icon-btn" title="刷新">↻</button>
+          </div>
+        </div>
+        <div class="file-tools">
+          <input id="fileSearch" type="search" placeholder="搜索文件…" autocomplete="off">
+          <select id="fileSort" title="排序">
+            <option value="name">名称</option>
+            <option value="mtime">修改时间</option>
+          </select>
         </div>
         <ul id="fileList" class="file-list"></ul>
+        <button id="revealBtn" class="link">打开文件夹</button>
         <input id="fileInput" type="file" accept=".schem" hidden>
       </section>
 
       <section class="panel stats">
-        <div class="stat"><span>尺寸</span><b id="statSize">-</b></div>
-        <div class="stat"><span>方块</span><b id="statBlocks">-</b></div>
-        <div class="stat"><span>DataVersion</span><b id="statVersion">-</b></div>
-        <div class="stat"><span>状态</span><b id="statStatus">-</b></div>
+        <div class="stat"><span>尺寸</span><b id="statSize">—</b></div>
+        <div class="stat"><span>方块</span><b id="statBlocks">—</b></div>
+        <div class="stat"><span>DataVersion</span><b id="statVersion">—</b></div>
+        <div class="stat"><span>状态</span><b id="statStatus">未载入</b></div>
       </section>
 
       <section class="panel help">
         <p><b>左键</b> 旋转 · <b>右键</b> 平移 · <b>滚轮</b> 缩放</p>
-        <p>点击方块查看名称和坐标</p>
+        <p>点击方块查看 ID 和坐标</p>
         <p class="muted">结果只写入 work/current.schem，原文件不变</p>
       </section>
     </aside>
@@ -49,33 +61,50 @@
     <main id="main">
       <canvas id="view"></canvas>
 
-      <div id="hud">
+      <div id="emptyState" class="empty-state">
+        <div class="empty-card">
+          <div class="empty-icon">▦</div>
+          <h2>还没有打开投影</h2>
+          <p>拖入 .schem 文件，或从空白开始</p>
+          <div class="empty-actions">
+            <button id="emptyUploadBtn" class="primary">上传 .schem</button>
+            <button id="emptyNewBtn" class="ghost">新建空白投影</button>
+          </div>
+          <p class="muted">示例文件在 examples/，用法见 README</p>
+        </div>
+      </div>
+
+      <div id="hud" class="hidden">
         <span id="hudInfo">拖动鼠标查看</span>
         <button id="fitBtn" class="ghost small">视角复位</button>
       </div>
 
-      <section id="console">
+      <section id="console" class="hidden">
         <div class="console-head">
           <span class="title">命令</span>
           <div class="actions">
             <button id="exampleBtn" class="ghost small">示例</button>
             <button id="runBtn" class="primary small">运行 Ctrl+Enter</button>
-            <button id="resetBtn" class="ghost small">重置</button>
+            <button id="saveBtn" class="ghost small">保存</button>
+            <button id="saveAsBtn" class="ghost small">另存为</button>
             <button id="downloadBtn" class="ghost small">下载</button>
-            <button id="saveBtn" class="ghost small">另存为</button>
+            <button id="resetBtn" class="ghost small">重置</button>
+            <button id="closeBtn" class="ghost small">关闭</button>
           </div>
         </div>
         <div class="console-body">
-          <textarea id="commands" spellcheck="false" placeholder="//pos1 0,0,0&#10;//pos2 12,7,12&#10;//replace minecraft:oak_planks minecraft:birch_planks&#10;//replace minecraft:spruce_planks minecraft:gold_block"></textarea>
+          <textarea id="commands" spellcheck="false" placeholder="//pos1 0,0,0&#10;//pos2 15,15,15&#10;//set minecraft:stone"></textarea>
           <pre id="log"></pre>
         </div>
       </section>
 
       <div id="dropHint" class="hidden">松开载入 .schem</div>
       <div id="busy" class="hidden"><div class="spinner"></div><span id="busyText">处理中…</span></div>
+      <div id="toasts" class="toasts"></div>
+      <dialog id="modal" class="modal"></dialog>
     </main>
   </div>
 
-  <script type="module" src="app.js"></script>
+  <script type="module" src="./js/main.js"></script>
 </body>
 </html>
