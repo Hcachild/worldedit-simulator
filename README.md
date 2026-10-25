@@ -5,7 +5,7 @@
 
 完整文档见 **[docs/README.md](docs/README.md)**：部署、架构、API、渲染、排错和 WorldEdit 用法。
 
-128³ 艺术生成示例见 **[docs/worldedit/advanced-generation.md](docs/worldedit/advanced-generation.md)** 与 **[examples/advanced](examples/advanced/README.md)**；图像作品集见 **[docs/portfolio/README.md](docs/portfolio/README.md)**。
+128³ 艺术生成示例见 **[docs/worldedit/advanced-generation.md](docs/worldedit/advanced-generation.md)** 与 **[examples/advanced](examples/advanced/README.md)**；图像作品集见 **[docs/portfolio/README.md](docs/portfolio/README.md)**。256³ 三叶草结见 **[docs/portfolio/256](docs/portfolio/256/README.md)**，由 `tools/make_trefoil.py` 生成。
 
 右上角提供**等轴测/前/后/左/右/顶/底**正交视角，按实际方块包围盒自动取景；“截图”保存 PNG 与机位 JSON 到 `work/shots/`。
 
@@ -52,7 +52,7 @@ python tools\inspect_schem.py schematics\demo.schem
 | 左键拖动 / 右键拖动 / 滚轮 | 旋转 / 平移 / 缩放 |
 | 点击方块 | 查看方块 ID 和坐标 |
 | 命令框 + `Ctrl+Enter` | 执行 WorldEdit 命令并刷新 3D |
-| 新建 | 文件名 + X/Y/Z（默认 16×16×16，上限 256），生成全空气投影 |
+| 新建 | 文件名 + X/Y/Z（默认 16×16×16，上限 256）；可勾选 128³ 或 256³ 快捷画布 |
 | 上传 / 拖入 | 导入 `.schem`；同名文件自动编号 |
 | 文件行 `⋯` | 重命名、复制、删除、下载 |
 | 打开文件夹 | 在资源管理器中打开 `schematics/` |
@@ -127,7 +127,7 @@ web/
     vendor/          Three.js、block-model-renderer 及 wasm
     assets.zip       block-model-renderer 内置的方块实体覆盖包
 docs/                部署、架构、API、渲染、排错、WorldEdit 用法
-tools/               CLI 小工具（inspect/make/retarget/ensure/agent_run/fetch_assets）
+tools/               CLI 小工具（inspect/make/retarget/ensure/agent_run/fetch_assets/make_trefoil）
 assets/              下载的 1.21.1 client.jar（本地材质，不入库）
 examples/            示例投影和命令脚本
 schematics/          用户投影目录（初始为空）

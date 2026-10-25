@@ -13,7 +13,8 @@
 | 遇到报错、卡死、空白页面 | [troubleshooting.md](troubleshooting.md) |
 | 查 WorldEdit 命令、选区、生成 | [worldedit/README.md](worldedit/README.md) |
 | 看 128³ 图像作品集与机位 | [portfolio/README.md](portfolio/README.md) |
-| 做 128³ 艺术模型、看高级 `//gen` | [worldedit/advanced-generation.md](worldedit/advanced-generation.md) |
+| 看 256³ 三叶草结与生成器 | [portfolio/256/README.md](portfolio/256/README.md) |
+| 做 128³/256³ 艺术模型、看高级 `//gen` | [worldedit/advanced-generation.md](worldedit/advanced-generation.md) |
 
 ## WorldEdit 使用文档
 
@@ -25,7 +26,7 @@
 | [worldedit/patterns-masks.md](worldedit/patterns-masks.md) | 方块 pattern 与 mask |
 | [worldedit/clipboard-schematics.md](worldedit/clipboard-schematics.md) | 复制粘贴、投影格式与保存 |
 | [worldedit/generation-expressions.md](worldedit/generation-expressions.md) | 球体/圆柱/`//gen` 与表达式 |
-| [worldedit/advanced-generation.md](worldedit/advanced-generation.md) | 128³ 艺术建模、B 站教程索引、18 个配方 |
+| [worldedit/advanced-generation.md](worldedit/advanced-generation.md) | 128³ 艺术建模、B 站教程索引、18 个配方、256³ 三叶草结 |
 | [worldedit/tools-brushes.md](worldedit/tools-brushes.md) | 工具、笔刷及 CLI 限制 |
 | [worldedit/cli.md](worldedit/cli.md) | 无头 CLI 的行为、数据和退出码 |
 | [worldedit/gotchas.md](worldedit/gotchas.md) | 踩坑清单（含本项目实测问题） |
@@ -33,6 +34,7 @@
 ## 图像作品集
 
 - [portfolio/README.md](portfolio/README.md)：18 张 128³ 等轴测图、四视图对比、相机机位与生成指令。
+- [portfolio/256/README.md](portfolio/256/README.md)：256³ 三叶草结、Frenet 正方形扫掠与生成器。
 - [portfolio/imhols/README.md](portfolio/imhols/README.md)：B站 imhols 的 WorldEdit 进阶专栏/动态索引。
 
 ## 版本基线
@@ -58,5 +60,6 @@
 - 笔刷：<https://worldedit.enginehub.org/en/latest/usage/tools/brushes/>
 - B 站 `//gen` 系统课：<https://www.bilibili.com/video/BV1AP4y1b7EN/>
 - 128³ 示例：[examples/advanced](../examples/advanced/README.md)
+- 256³ 三叶草结：[portfolio/256](portfolio/256/README.md)
 
 文档中的命令以 WorldEdit 7.4.x 为准；方块 ID 使用 1.13+ 的命名空间 ID（例如 `minecraft:stone`），不再使用 1.12 及以前的数字 ID。

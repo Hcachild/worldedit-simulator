@@ -7,6 +7,9 @@
 ## 作者专题
 
 - [imhols — WorldEdit 进阶](imhols/README.md)：11 篇 WorldEdit 专栏 + 143 条动态（72 条 WorldEdit/程序化建模相关），包含 `gmegabuf/gclosest`、Voronoi、噪声、`//deform` 二次体素化、正多边形/洋葱顶等进阶公式与指令。
+- [256³ 三叶草结](256/README.md)：imhols 的 Trefoil Knot，改用 Frenet 扫掠，256³ 画布 + 221k 方块。
+
+![Trefoil Knot](256/19_trefoil_256_iso.png)
 
 ## 工程制图视角
 

@@ -164,10 +164,11 @@ function createNew() {
       { name: 'height', label: '高 Y', type: 'number', value: '16', min: 1, max: 256, inline: true },
       { name: 'length', label: '长 Z', type: 'number', value: '16', min: 1, max: 256, inline: true },
       { name: 'large', label: '128 × 128 × 128 大型画布', type: 'checkbox', value: false, required: false },
+      { name: 'huge', label: '256 × 256 × 256 超大画布', type: 'checkbox', value: false, required: false },
     ],
     submitText: '创建',
     onSubmit: async (values) => {
-      const size = values.large ? 128 : null;
+      const size = values.huge ? 256 : values.large ? 128 : null;
       const data = await api.newFile({
         name: values.name,
         width: size ?? Number(values.width),

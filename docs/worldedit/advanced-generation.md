@@ -1,4 +1,4 @@
-# 高级 `//gen`：128³ 艺术建模
+# 高级 `//gen`：128³ 艺术建模与 256³ 扩展
 
 这篇文档把散落在官方手册、B 站教程、WesterosCraft/MathMod 公式和分形资料里的 `//gen` 用法，
 整理成一套可复现的 128×128×128 建模流程。配套脚本在
@@ -28,7 +28,7 @@ B 站上“爱心/拱桥/龙卷风”的成品公式很少单独成系列，更�
 
 ### 2.1 建立画布
 
-页面：`＋` → 文件名 → 勾选 **128 × 128 × 128 大型画布** → 创建。
+页面：`＋` → 文件名 → 勾选 **128 × 128 × 128 大型画布**（或 **256 × 256 × 256 超大画布**）→ 创建。
 CLI/API 也可以直接建 128³（上限 256³）：
 
 ```text
@@ -100,7 +100,7 @@ ox=a; oy=b; oz=c;
 inside&&abs(ox)<=1&&abs(oy)<=1&&abs(oz)<=1
 ```
 
-## 3. 18 个 128³ 配方
+## 3. 18 个 128³ 配方 + 256³ 扩展
 
 脚本都在 [examples/advanced](../../examples/advanced/README.md)。下表是核心思路，完整命令
 （含配色/底座）以脚本为准。
@@ -360,7 +360,57 @@ python tools\colorize_y.py work\advanced\tornado_white128.schem ^
 
 128³ 的 `//paste` 剪贴板在 CLI 中不稳定，脚本的 `--send` 走 `/api/upload` 加载完整结果；overlay 仍保留给手动/小尺寸流程。
 
-## 10. 资料与延伸
+## 10. 256³ 三叶草结（imhols）
+
+256³ 有 16,777,216 个格子，直接对每个格子求一次 `//gen` 表达式会很慢；这个例子改用
+`tools/make_trefoil.py` 在 Python 里完成扫掠，再写出 Sponge `.schem`。它复现 imhols
+的 Trefoil Knot Lua 脚本，并修正了正方形截面的朝向。
+
+### 10.1 曲线
+
+```text
+S = scale; k = n-1
+hx = S*(cos(t) + 2*cos(k*t))
+hy = 2*S*a*sin(n*t)
+hz = S*(sin(t) - 2*sin(k*t))
+```
+
+`n=3`、`a=0.5` 是参考图使用的三叶结投影。曲线绕 Y 轴旋转 `rotation` 度后放进
+256³ 画布中心。
+
+### 10.2 扫掠正方形
+
+每个采样段取切线 `T`，再取横截面两个轴 `N/B`，把正方形沿 `T` 平移：
+
+```text
+P(t+dt)-P(t) -> T
+R' = N*cos(twist) + B*sin(twist)
+U' = B*cos(twist) - N*sin(twist)
+|lx|<=thickness && |ly|<=thickness && -0.5<=lz<=seg_len+0.5
+```
+
+- 默认 `--frame frenet`：`N` 来自曲线曲率法线，正方形会随 3D 走线旋转。
+- `--frame parallel`：平行传输，尽量少扭转。
+- `--frame projected`：保留 Lua 原来的固定上方向框，适合对照原脚本；它会让一个
+  截面轴一直保持水平，所以看起来“正方形没转”。
+
+注意 `lz` 的上界是**整段长度** `seg_len`，不是 `dt*seg_len`；把这段写错会在每段
+只填一小片，管子会断成点。
+
+### 10.3 生成
+
+```bat
+python tools\make_trefoil.py --out schematics\portfolio_19_trefoil_256.schem ^
+  --frame frenet --rotation 75
+```
+
+默认 `scale=30`、`thickness=8`、`step=0.04`、`n=3`、`a=0.5`、`material=stone`；
+输出约 221k 方块，`bounds` 180×80×179，生成约 1 秒。256³ 空白状态的 JSON 约 20MB，
+所以页面的 256³ 选项只用于建模/查看，不建议对每个格子跑大规模 `//gen`。
+
+![Trefoil Knot](../portfolio/256/19_trefoil_256_iso.png)
+
+## 11. 资料与延伸
 
 ### B 站
 

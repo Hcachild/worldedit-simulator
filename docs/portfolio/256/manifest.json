@@ -1,0 +1,81 @@
+{
+  "generatedAt": "2026-10-25",
+  "project": "worldedit-simulator",
+  "note": "256x256x256 app capture; orthographic canvas-only PNG. Camera metadata is the exact capture state.",
+  "models": [
+    {
+      "id": "19",
+      "key": "19_trefoil_256",
+      "title": "三叶草结 / Trefoil Knot",
+      "source": "tools/make_trefoil.py",
+      "command": "python tools\\make_trefoil.py --out schematics\\portfolio_19_trefoil_256.schem --frame frenet --rotation 75",
+      "image": "19_trefoil_256_iso.png",
+      "metadata": "19_trefoil_256_iso.json",
+      "view": "iso",
+      "projection": "orthographic",
+      "modelSize": {
+        "width": 256,
+        "height": 256,
+        "length": 256
+      },
+      "bounds": {
+        "min": [
+          -97.5,
+          88.5,
+          -82.5
+        ],
+        "max": [
+          82.5,
+          168.5,
+          96.5
+        ],
+        "center": [
+          -7.5,
+          128.5,
+          7
+        ],
+        "size": [
+          180,
+          80,
+          179
+        ]
+      },
+      "capturedAt": "2026-10-25T12:56:56.293Z",
+      "camera": {
+        "position": [
+          299.834779461529,
+          435.834779461529,
+          314.334779461529
+        ],
+        "target": [
+          -7.5,
+          128.5,
+          7
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "direction": [
+          0.5773502691896257,
+          0.5773502691896257,
+          0.5773502691896257
+        ],
+        "azimuthDeg": 45,
+        "polarDeg": 54.735610317245346,
+        "zoom": 1,
+        "near": 0.1,
+        "far": 3027.756991281892,
+        "left": -137.07972060082412,
+        "right": 137.07972060082412,
+        "top": 137.07972060082412,
+        "bottom": -137.07972060082412,
+        "viewHeight": 274.15944120164824
+      },
+      "frame": "frenet",
+      "rotationDeg": 75,
+      "blocks": 221143
+    }
+  ]
+}
