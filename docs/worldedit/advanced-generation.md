@@ -112,7 +112,7 @@ inside&&abs(ox)<=1&&abs(oy)<=1&&abs(oz)<=1
 | 03 | 甜甜圈 | 环面 `(sqrt(dx²+dz²)-R)²+dy²<=r²`；糖霜波浪边界 + 彩色糖针 + 盘子 | `03_donut_128.txt` |
 | 04 | 嵌套魔方 | 3×3 魔方面板 + 黑框 + 金色角块 + 切角露出内层紫/品红/发光核心 | `04_rubik_128.txt` |
 | 05 | 肋拱隧道 | 弯曲中心线的圆管壳 + 深色肋 + 铁轨/枕木 + 尽头黑曜石门 | `05_ribbed_tunnel_128.txt` |
-| 06 | 龙卷风 | 半径随高度增长的漏斗 + 螺旋臂 + 云层 + 闪电 + 地面 | `06_tornado_128.txt` |
+| 06 | 龙卷风 v3 | 平滑双曲线旋转涡管 + 尘柱；白模后用 `tools/colorize_y.py` 做分位/Voronoi/玻璃层色映射 | `06_tornado_128.txt` |
 | 07 | 雨纹曼陀罗 | 同心圆 + 正三角形/正五边形轮廓 + 五重花瓣 + 金色外圈 | `07_rain_mandala_128.txt` |
 | 08 | 六边形蜂巢 | 轴向六边形距离 + 蜂窝壁 + 蜂蜜背板 + 金边 | `08_hex_honeycomb_128.txt` |
 | 09 | 洋葱头穹顶 | 旋转洋葱轮廓 + 金色穹顶/棱线 + 鼓座 + 十字 | `09_onion_dome_128.txt` |
@@ -322,7 +322,25 @@ JSON 含 `position`、`target`、`up`、`direction`、`azimuthDeg`、`polarDeg`�
 视锥和模型 bounds。完整作品集见 [docs/portfolio](../../docs/portfolio/README.md)：18 张等轴测图
 + 六边形蜂巢的四视图对比 + `manifest.json`；每张图都链接回本目录的生成脚本。
 
-## 9. 资料与延伸
+## 9. 白模 + Y 轴颜色曲线（新工具）
+
+龙卷风的最终版本不再把所有颜色写死在一个 `//gen` 表达式里，而是：
+
+1. `examples/advanced/06_tornado_128.txt` 只生成白模；
+2. `tools/colorize_y.py` 读取白模，统计每个 Y 层的非空气方块数；
+3. 用**累计分位** `q(y)` 而不是裸 `y` 来分配颜色，避免上宽下窄的漏斗顶部因为面积大而吃掉大部分白色；
+4. 在调色板相邻颜色间用 Bayer 有序抖动，边界叠加低频扰动，避免硬水平带；
+5. 可选 `tornado_glass_layers`：上半段使用白色/淡蓝/青色/蓝色玻璃，下半段保持不透明灰/白，形成透明层次；
+6. 输出完整彩色 `.schem`、颜色 overlay，并可通过 `--send` 上传到本地模拟器。
+
+```bat
+python tools\colorize_y.py work\advanced\tornado_white128.schem ^
+  --palette tornado_glass_layers --send --name tornado_colored
+```
+
+128³ 的 `//paste` 剪贴板在 CLI 中不稳定，脚本的 `--send` 走 `/api/upload` 加载完整结果；overlay 仍保留给手动/小尺寸流程。
+
+## 10. 资料与延伸
 
 ### B 站
 

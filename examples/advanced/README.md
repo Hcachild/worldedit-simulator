@@ -32,6 +32,23 @@ we.cmd schematics\my_heart.schem examples\advanced\01_heart_128.txt
 python tools\agent_run.py -f examples\advanced\01_heart_128.txt
 ```
 
+## 龙卷风的白模 + 颜色曲线
+
+`06_tornado_128.txt` 现在只生成**白色漏斗和场景**。颜色由脚本按 Y 轴分位曲线映射，不再手写几条水平色带：
+
+```bat
+python tools\colorize_y.py work\advanced\tornado_white128.schem ^
+  --palette tornado_glass_layers ^
+  --output work\advanced\tornado_colored.schem ^
+  --overlay work\advanced\tornado_overlay.schem ^
+  --send --name tornado_colored
+```
+
+- `tornado`：不透明灰/白渐变
+- `tornado_glass` / `tornado_glass_layers`：上部换成白色、淡蓝、青色、蓝色玻璃，增强透明层次
+- 脚本会读取每个非空气 Y 层的数量，用**累计分位**而不是直接 Y 位置来分配颜色，避免宽大的顶部把白色/蓝色吃掉。
+- `--send` 在当前 128³ 规模下通过 `/api/upload` 上传完整结果并加载；WorldEdit-CLI 的 `//paste` 对大剪贴板不稳定，脚本保留 overlay 供手动/小尺寸使用。
+
 ## 作品列表
 
 | # | 文件 | 内容 | 验证方块数 | CLI 约耗时 |
@@ -41,7 +58,7 @@ python tools\agent_run.py -f examples\advanced\01_heart_128.txt
 | 03 | `03_donut_128.txt` | 粉色糖霜甜甜圈 + 糖针 + 盘子 | 282k | 11s |
 | 04 | `04_rubik_128.txt` | 3×3 魔方 + 切角 + 嵌套内层 | 228k | 31s |
 | 05 | `05_ribbed_tunnel_128.txt` | 弯曲肋拱隧道 + 铁轨 | 181k | 15s |
-| 06 | `06_tornado_128.txt` | 龙卷风 + 云 + 闪电 + 地面 | 136k | 13s |
+| 06 | `06_tornado_128.txt` | 上宽下窄白模 + 平滑双曲线尘柱；再用 `colorize_y.py` 玻璃分层上色 | 119k | 15s |
 | 07 | `07_rain_mandala_128.txt` | 同心圆/三角形/五边形曼陀罗 | 43k | 23s |
 | 08 | `08_hex_honeycomb_128.txt` | 六边形蜂巢墙/蜂蜜背板 | 145k | 9s |
 | 09 | `09_onion_dome_128.txt` | 俄罗斯洋葱头穹顶 + 十字 | 125k | 12s |

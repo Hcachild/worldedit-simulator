@@ -105,6 +105,7 @@ def write_schem(
     palette: dict,
     block_data: bytes,
     data_version: int = 3955,
+    offset: tuple = (0, 0, 0),
 ) -> None:
     root = compound(
         tag(TAG_INT, "Version", struct.pack(">i", 2))
@@ -112,14 +113,14 @@ def write_schem(
         + tag(TAG_SHORT, "Width", struct.pack(">h", width))
         + tag(TAG_SHORT, "Height", struct.pack(">h", height))
         + tag(TAG_SHORT, "Length", struct.pack(">h", length))
-        + tag(TAG_INT_ARRAY, "Offset", struct.pack(">i", 3) + struct.pack(">iii", 0, 0, 0))
+        + tag(TAG_INT_ARRAY, "Offset", struct.pack(">i", 3) + struct.pack(">iii", *offset))
         + tag(
             TAG_COMPOUND,
             "Metadata",
             compound(
-                tag(TAG_INT, "WEOffsetX", struct.pack(">i", 0))
-                + tag(TAG_INT, "WEOffsetY", struct.pack(">i", 0))
-                + tag(TAG_INT, "WEOffsetZ", struct.pack(">i", 0))
+                tag(TAG_INT, "WEOffsetX", struct.pack(">i", offset[0]))
+                + tag(TAG_INT, "WEOffsetY", struct.pack(">i", offset[1]))
+                + tag(TAG_INT, "WEOffsetZ", struct.pack(">i", offset[2]))
             ),
         )
         + tag(TAG_INT, "PaletteMax", struct.pack(">i", len(palette)))

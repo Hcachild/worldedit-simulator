@@ -1,18 +1,15 @@
 //pos1 0,0,0
 //pos2 127,127,127
 //set air
-//gen -r white_concrete r=sqrt((x-64)^2+(z-64)^2); a=atan2(z-64,x-64); h=y/127; R=2.5+43*h^1.7; d=abs(r-R); arm=sin(a*5+h*24+r*0.16); y>4&&y<118&&(d<2.0&&arm>-0.25)
-//gmask white_concrete
-//replace =y<35 gray_concrete
-//replace =y>=35&&y<70 light_gray_concrete
-//replace =y>=70&&y<100 white_concrete
-//replace =y>=100&&y<118 black_concrete
-//replace =abs(sin(atan2(z-64,x-64)*9+y/6))>0.9 light_blue_stained_glass
-//gmask
-//gen -r gray_concrete r=sqrt((x-64)^2+(z-64)^2); y>=114&&y<122&&r<58&&r>16&&random()<0.55
-//gen -r light_gray_concrete r=sqrt((x-64)^2+(z-64)^2); y>=118&&y<123&&r<48&&r>20&&random()<0.18
-//gen -r glowstone abs(x-86-4*sin(y/8))<1&&abs(z-52-3*cos(y/9))<1&&y>=30&&y<110
-//gen -r grass_block r=sqrt((x-64)^2+(z-64)^2); y>=0&&y<4&&r<58
-//gen -r dirt r=sqrt((x-64)^2+(z-64)^2); y>=3&&y<6&&r<58
-//gen -r coarse_dirt r=sqrt((x-64)^2+(z-64)^2); y>=4&&y<6&&r<20
+//gen -r stone r=sqrt((x-63.5)^2+(z-63.5)^2); r<62&&y>=0&&y<2
+//gen -r dirt r=sqrt((x-63.5)^2+(z-63.5)^2); r<62&&y>=2&&y<4
+//gen -r grass_block r=sqrt((x-63.5)^2+(z-63.5)^2); r<62&&y>=4&&y<5
+//replace =r=sqrt((x-63.5)^2+(z-63.5)^2);r<24&&y>floor(4-5*(1-r/24)^2) air
+//gen -r coarse_dirt r=sqrt((x-63.5)^2+(z-63.5)^2); r<12&&y>=0&&y<2
+//gen -r stone r=sqrt((x-63.5)^2+(z-63.5)^2); r>=12&&r<21&&y>=1&&y<2
+//gen -r white_concrete u=(x-63.5)/58; v=(y-62)/58; w=(z-63.5)/58; a=9*(1+v); X=u*cos(a)-w*sin(a); Z=u*sin(a)+w*cos(a); r=sqrt(X^2+Z^2); h=(v+1)/2; R=0.012+0.96*h^2.4; n=0.15*voronoi(1,X,v,Z,5)*(0.2+0.8*h^0.7); t=0.022*sin(6*atan2(Z,X)+h*22)*h^0.5; y>=4&&y<=116&&abs(r-R-n-t)<0.020+0.020*h
+//gen -r coarse_dirt dx=x-63.5; dz=z-63.5; r=sqrt(dx^2+dz^2); a=0.8*(y-4); X=dx*cos(a)-dz*sin(a); Z=dx*sin(a)+dz*cos(a); t=y-26; R=8+(t<0?1.25:0.85)*(sqrt(t*t+100)-10); v=voronoi(1,X,y,Z,0.12); w=voronoi(2,X,y,Z,0.23); ang=atan2(Z,X); R2=R+3*v-1.5+0.8*sin(ang*5+y*0.3); shell=abs(r-R2)<0.6+1.0*w; hh=(y-2)/78; dens=0.03+0.78*(1-hh)^1.4; y>=2&&y<=80&&r>6&&shell&&w>0.50&&random()<dens
+//gen -r red_concrete y>=7&&y<22&&abs(x-30)<9&&abs(z-100)<8
+//gen -r deepslate_tiles y>=22&&y<25&&abs(x-30)<9&&abs(z-100)<8
+//gen -r deepslate_tiles y>=25&&y<27&&abs(x-30)<8&&abs(z-100)<7
 stop
