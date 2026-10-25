@@ -1,13 +1,18 @@
-# 256³ Image — Trefoil Knot
+# 256³ Images — Trefoil Knot & Firework
 
-![Trefoil Knot](19_trefoil_256_iso.png)
+| Trefoil Knot | Firework |
+|---|---|
+| ![Trefoil Knot](19_trefoil_256_iso.png) | ![Firework](20_firework_256_iso.png) |
 
-A 256×256×256 reproduction of the trefoil-knot sweep shared by **imhols**. The
-author's Lua builds the knot from a square cross-section transported along a
-parametric curve; this version ports the same sweep to a deterministic Python
-voxelizer so a 16.7M-cell canvas does not need 16.7M `//gen` evaluations.
+Two 256×256×256 reproductions of **imhols** pieces. The trefoil is a Python
+sweep because 16.7M cells would make a per-cell `//gen` sweep very slow; the
+firework is the author's compact `//gen` expression with 256-cube coordinates.
 
-## Reproduce
+## 19 — Trefoil Knot
+
+A 256³ reproduction of the trefoil-knot sweep shared by imhols. The author's Lua
+builds the knot from a square cross-section transported along a parametric
+curve; this version ports the same sweep to a deterministic Python voxelizer.
 
 ```bat
 python tools\make_trefoil.py --out schematics\portfolio_19_trefoil_256.schem ^
@@ -15,10 +20,9 @@ python tools\make_trefoil.py --out schematics\portfolio_19_trefoil_256.schem ^
 ```
 
 The browser's **＋ → 256 × 256 × 256 超大画布** option can create the blank
-canvas, but the generated file is already a ready-to-open `.schem`. Reload the
-file list and open `portfolio_19_trefoil_256.schem`.
+canvas, but the generated file is already a ready-to-open `.schem`.
 
-## Curve and sweep
+### Curve and sweep
 
 ```text
 hx = S * (cos(t) + 2*cos((n-1)*t))
@@ -43,8 +47,6 @@ uses the curve's curvature normal so the square turns with the actual 3D path.
 `--frame parallel` minimizes twist instead, and `--frame projected` reproduces
 the Lua frame.
 
-Defaults for this render:
-
 | Parameter | Value |
 |---|---:|
 | size | 256³ |
@@ -63,7 +65,30 @@ The output is 180 × 80 × 179 blocks inside the 256 cube. `scale=30` is larger
 than the author's 20 so the knot fills the bigger canvas; use `--scale 20
 --thickness 8` for a closer-to-source 128-ish footprint.
 
+## 20 — Firework
+
+![Firework](20_firework_256_iso.png)
+
+The author's original `//generate 251` is a normalized-coordinate field. This
+256 version maps world coordinates back to `[-1, 1]` and uses **glowstone** for
+the warm, self-lit burst. `g` is gravity, `a` controls thickness, and Perlin
+frequency `20` controls how many fine trails survive.
+
+```text
+nx=(x-127.5)/127.5; ny=(y-127.5)/127.5; nz=(z-127.5)/127.5;
+t=sqrt(nx²+nz²); r=sqrt(nx²+ny²+nz²);
+yy=ny+t²/2;
+q=perlin(1,nx/r,yy/r,nz/r,20,1,1);
+q*r<0.05 && nx²+yy²+nz²<1
+```
+
+Run [`examples/advanced/20_firework_256.txt`](../../../examples/advanced/20_firework_256.txt)
+on a 256³ canvas, or use `we.cmd` with a blank 256³ `.schem`. The command takes
+about 35–45 seconds in the CLI and produces 117,090 glowstone blocks; the
+browser render is 1 draw call / 446k triangles.
+
 ## Camera
 
-`19_trefoil_256_iso.json` records the exact orthographic camera. The image is
-the app's 900×900 canvas capture, not a viewport screenshot with HUD or sidebar.
+`19_trefoil_256_iso.json` and `20_firework_256_iso.json` record the exact
+orthographic cameras. Both images are app canvas captures, not viewport
+screenshots with HUD or sidebar.

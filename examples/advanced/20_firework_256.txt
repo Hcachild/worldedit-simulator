@@ -1,0 +1,5 @@
+//pos1 0,0,0
+//pos2 255,255,255
+//set air
+//gen -r minecraft:glowstone nx=(x-127.5)/127.5; ny=(y-127.5)/127.5; nz=(z-127.5)/127.5; t=sqrt(nx*nx+nz*nz); r=sqrt(nx*nx+ny*ny+nz*nz); yy=ny+t*t/2; q=perlin(1,nx/r,yy/r,nz/r,20,1,1); r>0.0001&&q*r<0.05&&nx*nx+yy*yy+nz*nz<1
+stop

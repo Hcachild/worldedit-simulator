@@ -76,6 +76,79 @@
       "frame": "frenet",
       "rotationDeg": 75,
       "blocks": 221143
+    },
+    {
+      "id": "20",
+      "key": "20_firework_256",
+      "title": "烟花 / Firework",
+      "source": "examples/advanced/20_firework_256.txt",
+      "command": "load a 256 cube and run examples/advanced/20_firework_256.txt",
+      "image": "20_firework_256_iso.png",
+      "metadata": "20_firework_256_iso.json",
+      "view": "iso",
+      "projection": "orthographic",
+      "modelSize": {
+        "width": 256,
+        "height": 256,
+        "length": 256
+      },
+      "camera": {
+        "position": [
+          505.6728313141758,
+          633.1728313141759,
+          504.1728313141759
+        ],
+        "target": [
+          1,
+          128.5,
+          -0.5
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "direction": [
+          0.5773502691896256,
+          0.5773502691896257,
+          0.5773502691896257
+        ],
+        "azimuthDeg": 45,
+        "polarDeg": 54.735610317245346,
+        "zoom": 1,
+        "near": 0.1,
+        "far": 4907.6544176968455,
+        "left": -222.8790716958414,
+        "right": 222.8790716958414,
+        "top": 222.8790716958414,
+        "bottom": -222.8790716958414,
+        "viewHeight": 445.7581433916828
+      },
+      "bounds": {
+        "min": [
+          -124.5,
+          1.5,
+          -126.5
+        ],
+        "max": [
+          126.5,
+          255.5,
+          125.5
+        ],
+        "center": [
+          1,
+          128.5,
+          -0.5
+        ],
+        "size": [
+          251,
+          254,
+          252
+        ]
+      },
+      "capturedAt": "2026-10-25T14:36:38.318Z",
+      "material": "minecraft:glowstone",
+      "blocks": 117090
     }
   ]
 }

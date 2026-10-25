@@ -410,6 +410,34 @@ python tools\make_trefoil.py --out schematics\portfolio_19_trefoil_256.schem ^
 
 ![Trefoil Knot](../portfolio/256/19_trefoil_256_iso.png)
 
+### 10.4 烟花
+
+imhols 的原式使用归一化坐标：
+
+```text
+//generate 251 g=1;a=0.05;t=sqrt(x^2+z^2);r=sqrt(x^2+z^2+y^2);
+y+=g*t^2/2;perlin(1,x/r,y/r,z/r,20,1,1)*r<a&&x^2+z^2+y^2<1
+```
+
+256³ 版本先把世界坐标映射回 `[-1,1]`，并把 `y+=...` 改写成 `yy`（WorldEdit
+表达式里改写全局 `y` 容易影响后续判断）：
+
+```text
+nx=(x-127.5)/127.5; ny=(y-127.5)/127.5; nz=(z-127.5)/127.5;
+t=sqrt(nx²+nz²); r=sqrt(nx²+ny²+nz²);
+yy=ny+t²/2;
+q=perlin(1,nx/r,yy/r,nz/r,20,1,1);
+q*r<0.05 && nx²+yy²+nz²<1
+```
+
+原命令的 `251` 是旧 ID 的橙色混凝土；这里按用户选择改成 **glowstone**，在暗场里
+有自发光效果。完整脚本：
+[`20_firework_256.txt`](../../examples/advanced/20_firework_256.txt)。256³ 下约
+117k 方块，CLI 约 35–45 秒；`g` 控制下坠，`a` 控制粗细，Perlin 频率 `20` 控制
+线条密度。
+
+![Firework](../portfolio/256/20_firework_256_iso.png)
+
 ## 11. 资料与延伸
 
 ### B 站

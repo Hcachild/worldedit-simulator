@@ -74,7 +74,7 @@ python tools\colorize_y.py work\advanced\tornado_white128.schem ^
 
 数字来自一次性本机验证，因随机糖针/云/星尘会略有浮动。CLI 时间不含网页渲染。
 
-### 256³ 扩展：三叶草结
+### 256³ 扩展：三叶草结与烟花
 
 `tools/make_trefoil.py` 是 imhols 的 Lua 扫掠的 Python 版本，不经过 `//gen`：
 256³ 的 1677 万次表达式求值太慢，脚本直接写 Sponge `.schem`。
@@ -86,12 +86,14 @@ python tools\make_trefoil.py --out schematics\portfolio_19_trefoil_256.schem ^
 
 默认 `frenet` 让正方形截面随 3D 走线旋转；`parallel` 最少扭转，`projected`
 才是作者 Lua 的固定上方向版本。输出 221k 方块，生成约 1 秒；页面加载 256³ 状态约 20MB。
-详见 [256³ 作品页](../../docs/portfolio/256/README.md)。
+`20_firework_256.txt` 是作者烟花表达式的 256³ 版本，把归一化坐标映射回
+0..255，并用 glowstone 渲染：117k 方块，CLI 约 35–45 秒。详见
+[256³ 作品页](../../docs/portfolio/256/README.md)。
 
 ## 先跑哪个
 
 - 想看“公式生成”的极限：`14_mandelbulb_128.txt`、`15_menger_128.txt`、`16_mandelbox_128.txt`。
-- 想看 256³：`tools/make_trefoil.py --frame frenet --rotation 75`。
+- 想看 256³：`tools/make_trefoil.py --frame frenet --rotation 75`、`20_firework_256.txt`。
 - 想直接当建筑/展示：`01_heart_128.txt`、`03_donut_128.txt`、`09_onion_dome_128.txt`、
   `18_galaxy_128.txt`。
 - 想改造成自己的场景：`02_arch_bridge_128.txt`、`05_ribbed_tunnel_128.txt`、

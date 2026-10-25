@@ -5,7 +5,7 @@
 
 完整文档见 **[docs/README.md](docs/README.md)**：部署、架构、API、渲染、排错和 WorldEdit 用法。
 
-128³ 艺术生成示例见 **[docs/worldedit/advanced-generation.md](docs/worldedit/advanced-generation.md)** 与 **[examples/advanced](examples/advanced/README.md)**；图像作品集见 **[docs/portfolio/README.md](docs/portfolio/README.md)**。256³ 三叶草结见 **[docs/portfolio/256](docs/portfolio/256/README.md)**，由 `tools/make_trefoil.py` 生成。
+128³ 艺术生成示例见 **[docs/worldedit/advanced-generation.md](docs/worldedit/advanced-generation.md)** 与 **[examples/advanced](examples/advanced/README.md)**；图像作品集见 **[docs/portfolio/README.md](docs/portfolio/README.md)**。256³ 三叶草结/烟花见 **[docs/portfolio/256](docs/portfolio/256/README.md)**；结由 `tools/make_trefoil.py` 生成，烟花为 `//gen` 表达式。
 
 右上角提供**等轴测/前/后/左/右/顶/底**正交视角，按实际方块包围盒自动取景；“截图”保存 PNG 与机位 JSON 到 `work/shots/`。
 
