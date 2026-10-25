@@ -22,6 +22,8 @@ https://worldedit.enginehub.org/en/latest/usage/other/expressions/
 
 ![773117349286903808 image 2](../images/dynamics/773117349286903808/02.jpg)
 
+![773117349286903808 image 3](../images/dynamics/773117349286903808/03.jpg)
+
 ---
 
 内容与图片版权归 **imhols** 所有；本页为作品集索引。
