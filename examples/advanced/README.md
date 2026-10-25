@@ -70,7 +70,7 @@ python tools\colorize_y.py work\advanced\tornado_white128.schem ^
 | 15 | `15_menger_128.txt` | 4 级门格尔海绵 | 134k | 15s |
 | 16 | `16_mandelbox_128.txt` | Mandelbox（10 次迭代） | 606k | 79s |
 | 17 | `17_mobius_128.txt` | 莫比乌斯带 + 发光边 | 86k | 25s |
-| 18 | `18_galaxy_128.txt` | 对数螺旋银河 + 黑洞/吸积环 | 120k | 27s |
+| 18 | `18_galaxy_128.txt` | 平面椭圆玻璃臂 + Voronoi 块 + 黑洞/金环 + 双曲喷流 + `closest` 辐条 + 稀疏星场 | 9.9k | ~60s |
 
 数字来自一次性本机验证，因随机糖针/云/星尘会略有浮动。CLI 时间不含网页渲染。
 

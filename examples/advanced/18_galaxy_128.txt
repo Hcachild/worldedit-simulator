@@ -1,19 +1,25 @@
 //pos1 0,0,0
 //pos2 127,127,127
 //set air
-//gen -r white_concrete dx=x-63.5; dz=z-63.5; dy=y-63.5; r=sqrt(dx*dx+dz*dz); a=atan2(dz,dx); arm=abs(sin(2*a-2.2*ln(r+2))); th=2+7*exp(-r/30); (r<58&&abs(dy)<th*(0.3+0.7*arm))||(r<14&&abs(dy)<12)
-//gmask white_concrete
-//replace =sqrt((x-63.5)^2+(z-63.5)^2)<11 gold_block
-//replace =sqrt((x-63.5)^2+(z-63.5)^2)>=11&&sqrt((x-63.5)^2+(z-63.5)^2)<20 yellow_concrete
-//replace =abs(sin(2*atan2(z-63.5,x-63.5)-2.2*ln(sqrt((x-63.5)^2+(z-63.5)^2)+2)))<0.35 cyan_stained_glass
-//replace =abs(sin(2*atan2(z-63.5,x-63.5)-2.2*ln(sqrt((x-63.5)^2+(z-63.5)^2)+2)))>=0.35&&abs(sin(2*atan2(z-63.5,x-63.5)-2.2*ln(sqrt((x-63.5)^2+(z-63.5)^2)+2)))<0.7 blue_concrete
-//replace =sqrt((x-63.5)^2+(z-63.5)^2)>=20&&sqrt((x-63.5)^2+(z-63.5)^2)<58 purple_concrete
+//gen -r light_blue_stained_glass dx=x-63.5; dz=z-63.5; dy=y-64; r=sqrt(dx*dx+dz*dz); u=dx; v=dz; rot=0.10*r+0.35; rotate(u,v,rot); w=8.0+0.09*r; warp=v+1.4*perlin(4,u*0.04,y*0.06,v*0.04,0.05,2,0.5); arm=(u/54)^2+(warp/w)^2<1; n=voronoi(3,u,y,v,0.08); r>8&&r<56&&abs(dy)<2.5+0.5*sin(r*0.28)&&arm&&n>0.32
+//gmask light_blue_stained_glass
+//replace =sqrt((x-63.5)^2+(z-63.5)^2)<20 cyan_stained_glass
+//replace =sqrt((x-63.5)^2+(z-63.5)^2)>=26&&sqrt((x-63.5)^2+(z-63.5)^2)<40 blue_stained_glass
+//replace =sqrt((x-63.5)^2+(z-63.5)^2)>=40 purple_stained_glass
+//replace =random()<0.10&&sqrt((x-63.5)^2+(z-63.5)^2)>=20&&sqrt((x-63.5)^2+(z-63.5)^2)<40 pink_stained_glass
 //gmask
-//gen -r obsidian r=sqrt((x-63.5)^2+(z-63.5)^2); r<5&&abs(y-63.5)<5
-//gen -r orange_concrete r=sqrt((x-63.5)^2+(z-63.5)^2); r>=5&&r<8&&abs(y-63.5)<2
-//gen -r polished_blackstone y>=0&&y<4&&(x-64)^2+(z-64)^2<=60^2
-//gen -r gold_block y>=4&&y<5&&(x-64)^2+(z-64)^2>=57^2&&(x-64)^2+(z-64)^2<=60^2
-//gen -r glowstone dx=x-63.5; dz=z-63.5; dy=y-63.5; r=sqrt(dx*dx+dz*dz); r<58&&abs(dy)<4&&random()<0.004
+//gen -r glowstone dx=x-63.5; dz=z-63.5; dy=y-64; r=sqrt(dx*dx+dz*dz); u=dx; v=dz; rot=0.10*r+0.35; rotate(u,v,rot); w=8.0+0.09*r; warp=v+1.4*perlin(4,u*0.04,y*0.06,v*0.04,0.05,2,0.5); arm=(u/54)^2+(warp/w)^2<1; n=voronoi(3,u,y,v,0.08); r>8&&r<56&&abs(dy)<2.5+0.5*sin(r*0.28)&&arm&&n>0.32&&random()<0.012
+//gen -r orange_stained_glass dx=x-63.5; dz=z-63.5; dy=y-64; r=sqrt(dx*dx+dz*dz); r>4.8&&r<9.0&&(r/9.0)^2+(dy/4.0)^2<1
+//gen -r gold_block dx=x-63.5; dz=z-63.5; dy=y-64; r=sqrt(dx*dx+dz*dz); r>=4.8&&r<6.5&&abs(dy)<0.7
+//gen -r yellow_stained_glass dx=x-63.5; dz=z-63.5; dy=y-64; r=sqrt(dx*dx+dz*dz); r>=6.5&&r<9.0&&abs(dy)<1.0
+//gen -r black_stained_glass dx=x-63.5; dz=z-63.5; dy=y-64; r=sqrt(dx*dx+dz*dz); a=atan2(dz,dx); r>15&&r<30&&abs(dy)<0.9&&abs(sin(2*a+0.35*r))<0.08
+//gen -r black_concrete dx=x-63.5; dz=z-63.5; dy=y-64; dx*dx+dz*dz+dy*dy<4.8^2
+//gen -r glowstone dx=x-63.5; dz=z-63.5; dy=y-64; r=sqrt(dx*dx+dz*dz); r>=5.2&&r<6.4&&abs(dy)<0.6&&random()<0.2
+//gen -r light_blue_stained_glass dx=x-63.5; dz=z-63.5; dy=y-64; rr=dx*dx+dz*dz; r=sqrt(rr); h=abs(dy); K=900+100*perlin(12,dx*0.04,dy*0.05,dz*0.04,0.08,2,0.5); j=abs(h*rr-K)<(0.45+0.035*r)*rr; r>4.8&&r<10&&h>6&&h<40&&j
+//gen -r magenta_stained_glass dx=x-63.5; dz=z-63.5; dy=y-64; rr=dx*dx+dz*dz; r=sqrt(rr); h=abs(dy); K=900+100*perlin(12,dx*0.04,dy*0.05,dz*0.04,0.08,2,0.5); j=abs(h*rr-K)<(0.22+0.018*r)*rr; r>4.8&&r<10&&h>6&&h<40&&j
+//gen -r white_stained_glass dx=x-63.5; dz=z-63.5; dy=y-64; r=sqrt(dx*dx+dz*dz); h=abs(dy); r<1.2&&h>6&&h<38
+//gen -r glowstone dx=x-63.5; dz=z-63.5; dy=y-64; rr=dx*dx+dz*dz; r=sqrt(rr); h=abs(dy); K=900+100*perlin(12,dx*0.04,dy*0.05,dz*0.04,0.08,2,0.5); j=abs(h*rr-K)<(0.45+0.035*r)*rr; r>4.8&&r<10&&h>6&&h<40&&j&&random()<0.03
+//gen -r light_blue_stained_glass dx=x-63.5; dz=z-63.5; dy=y-64; r=sqrt(dx*dx+dz*dz); p=dx; q=dz; rot=0.045*r+0.3; rotate(p,q,rot); p=p+1.2*perlin(6,dx*0.05,0,dz*0.05,0.04,3,0.5); n=12; t=2*pi/n; for(k=0;k<n*3;k+=3){megabuf(k,cos(t*k/3)); megabuf(k+2,-sin(t*k/3))}; d=3.0; A=closest(p+d,0,q,0,n,3); B=closest(p-d,0,q,0,n,3); C=closest(p,0,q+d,0,n,3); D=closest(p,0,q-d,0,n,3); raw=(A!=B||B!=C||C!=D); r>8&&r<48&&abs(dy)<0.7&&raw&&random()<0.30
+//gen -r glowstone dx=x-63.5; dz=z-63.5; dy=y-64; r=sqrt(dx*dx+dz*dz); p=dx; q=dz; rot=0.045*r+0.3; rotate(p,q,rot); p=p+1.2*perlin(6,dx*0.05,0,dz*0.05,0.04,3,0.5); n=12; t=2*pi/n; for(k=0;k<n*3;k+=3){megabuf(k,cos(t*k/3)); megabuf(k+2,-sin(t*k/3))}; d=3.0; A=closest(p+d,0,q,0,n,3); B=closest(p-d,0,q,0,n,3); C=closest(p,0,q+d,0,n,3); D=closest(p,0,q-d,0,n,3); raw=(A!=B||B!=C||C!=D); r>8&&r<48&&abs(dy)<0.7&&raw&&random()<0.03
+//gen -r glowstone dx=x-63.5; dz=z-63.5; dy=y-64; R=sqrt((dx/58)^2+(dy/20)^2+(dz/58)^2); r=sqrt(dx*dx+dz*dz); R<1&&r>8&&random()<0.0016*(1-R)^1.5+0.00015
 stop
-
-

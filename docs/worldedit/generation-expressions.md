@@ -116,6 +116,8 @@
   min, rint, round, sin, sinh, sqrt, tan, tanh`
 - 其他：`rotate(x,y,angle)`、`swap(x,y)`、`random()`、`randint(max)`、`perlin(...)`、
   `voronoi(...)`、`ridgedmulti(...)`
+- `rotate(a,b,angle)` / `swap(a,b)` **只接受变量并原地改写**，不会返回新坐标。XZ 平面旋转必须写
+  `u=dx; v=dz; rotate(u,v,angle)`；半径 `sqrt(dx²+dz²)` 只能用来计算角度/宽度，不能当坐标参数。
 - 常量：`e`、`pi`、`true`、`false`
 - 控制：`if/else`、`while`、`do/while`、`for`；循环最多 256 次
 - 最后一条语句的值会作为结果返回；末尾分号通常可省略
