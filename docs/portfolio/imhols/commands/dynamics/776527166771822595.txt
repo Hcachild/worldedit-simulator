@@ -1,0 +1,1 @@
+//generate 251 -c f=0.05;a=10;c=2;S=1;s=500;x+=s;z+=s;X=floor(x/a)*a;Z=floor(z/a)*a;p=perlin(S,X,1,Z,f,1,1);pz=perlin(S,X,1,Z+a,f,1,1);px=perlin(S,X+a,1,Z,f,1,1);b=((pz0.5)||(p>0.5))?c:0;x%a<b||z%a<d

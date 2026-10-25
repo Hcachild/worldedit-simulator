@@ -1,0 +1,1 @@
+//generate 41 b=1.5;L=1-abs(z);x/=L;y/=L;X=abs(x);n=5;sqrt(x^2+y^2)<(1+b)*cos(pi/n)/cos(pi/n-(atan2(X,y)%(2*pi/n)))-b

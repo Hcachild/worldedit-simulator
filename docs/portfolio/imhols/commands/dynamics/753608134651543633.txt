@@ -1,0 +1,1 @@
+//generate 251 k=12;data=(abs(sin(k*atan2(x,z))))<0.15?4:1;sqrt(x^2+z^2)<sqrt(1-y^2/0.5)*(1-0.065*(abs(sin(k*atan2(x,z)))))

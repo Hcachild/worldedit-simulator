@@ -6,7 +6,7 @@
     "avatar": "https://i0.hdslb.com/bfs/face/4190e4a4d5881db25f7a310a943c98ae3683ccc1.jpg"
   },
   "fetchedAt": "2026-10-25",
-  "note": "Public Bilibili API returned 11 articles and 12 recent dynamics without login. Images are stored as 760px thumbnails; a few source images failed to download. Complete originals are at the source links.",
+  "note": "Public Bilibili API returned 11 articles and 12 recent dynamics without login. Images are selected (up to 4/article, 2/dynamic) because the original CDN is slow; complete galleries are at the source links.",
   "articles": [
     {
       "id": "25579754",
@@ -497,7 +497,7 @@
     },
     {
       "id": "1210891056222044161",
-      "title": "三叶草结（Trefoil Knot）",
+      "title": "三叶草结（Trefoil Knot ）axiom 脚本笔刷：",
       "date": "6月7日",
       "type": "DYNAMIC_TYPE_DRAW",
       "worldedit": true,
@@ -648,7 +648,1884 @@
         "images/dynamics/1041536789140996103/01.jpg"
       ],
       "commandsFile": "commands/dynamics/1041536789140996103.txt"
+    },
+    {
+      "id": "1040800004722130985",
+      "title": "【Minecraft】方形渐变生成 | Axiom script brush #4",
+      "date": "2025年3月5日",
+      "type": "DYNAMIC_TYPE_AV",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/video/BV1N49dY3Eyi",
+      "text": "链接: https://pan.baidu.com/s/1BgfDyJJTVjPvUWkijuk8Zw?pwd=f9np 提取码: f9np\n或者交流群135176845里获取更多",
+      "commands": [],
+      "images": [
+        "images/dynamics/1040800004722130985/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/1040800004722130985.txt"
+    },
+    {
+      "id": "1030177837625114625",
+      "title": "【直播回放】2025-02-04_19-54-51",
+      "date": "2025年2月5日",
+      "type": "DYNAMIC_TYPE_AV",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/video/BV1d7PzeBEd1",
+      "text": "",
+      "commands": [],
+      "images": [
+        "images/dynamics/1030177837625114625/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/1030177837625114625.txt"
+    },
+    {
+      "id": "1021471019748032518",
+      "title": "2p更新",
+      "date": "2025年1月12日",
+      "type": "DYNAMIC_TYPE_FORWARD",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/1021471019748032518",
+      "text": "2p更新",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/1021471019748032518.txt"
+    },
+    {
+      "id": "1021166751410290689",
+      "title": "【Minecraft】人字形地板纹理笔刷（网格，棋盘） | Axiom script brush #3",
+      "date": "2025年1月11日",
+      "type": "DYNAMIC_TYPE_AV",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/video/BV1MxcAe2E3Y",
+      "text": "链接: https://pan.baidu.com/s/1BgfDyJJTVjPvUWkijuk8Zw?pwd=f9np 提取码: f9np\n或者交流群135176845里获取更多",
+      "commands": [],
+      "images": [
+        "images/dynamics/1021166751410290689/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/1021166751410290689.txt"
+    },
+    {
+      "id": "1020760997249417225",
+      "title": "【Minecraft】滴水石锥修复笔刷 | Axiom script brush #2",
+      "date": "2025年1月10日",
+      "type": "DYNAMIC_TYPE_AV",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/video/BV1pscJeHELW",
+      "text": "链接: https://pan.baidu.com/s/1BgfDyJJTVjPvUWkijuk8Zw?pwd=f9np 提取码: f9np\n\n没考虑上下连接的情况",
+      "commands": [],
+      "images": [
+        "images/dynamics/1020760997249417225/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/1020760997249417225.txt"
+    },
+    {
+      "id": "1017876656105193497",
+      "title": "【Minecraft】我用Axiom的Script Brush做了个砖块纹理笔刷",
+      "date": "2025年1月2日",
+      "type": "DYNAMIC_TYPE_AV",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/video/BV1yg66YfEDX",
+      "text": "链接: https://pan.baidu.com/s/1BgfDyJJTVjPvUWkijuk8Zw?pwd=f9np 提取码: f9np\n或者交流群135176845里获取更多\n\n（想要涨粉到500，这样才能有自动上传直播回放，急）",
+      "commands": [],
+      "images": [
+        "images/dynamics/1017876656105193497/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/1017876656105193497.txt"
+    },
+    {
+      "id": "1017570141494312967",
+      "title": "直播回放_2024-12-31_20-09-04",
+      "date": "2025年1月2日",
+      "type": "DYNAMIC_TYPE_AV",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/video/BV1UkrcYtEVg",
+      "text": "",
+      "commands": [],
+      "images": [
+        "images/dynamics/1017570141494312967/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/1017570141494312967.txt"
+    },
+    {
+      "id": "1011628792954748934",
+      "title": "【漫威争锋】以为我很帅，居然还有高手",
+      "date": "2024年12月17日",
+      "type": "DYNAMIC_TYPE_AV",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/video/BV1prkGYQEQQ",
+      "text": "本想录个保护队友的视频，看了回放才发现这么有节目效果",
+      "commands": [],
+      "images": [
+        "images/dynamics/1011628792954748934/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/1011628792954748934.txt"
+    },
+    {
+      "id": "982109860729454597",
+      "title": "有些地方会糊，以后整合好了发高清图，第一天的录像还没过审",
+      "date": "2024年9月28日",
+      "type": "DYNAMIC_TYPE_FORWARD",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/982109860729454597",
+      "text": "有些地方会糊，以后整合好了发高清图，第一天的录像还没过审",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/982109860729454597.txt"
+    },
+    {
+      "id": "956282049089503249",
+      "title": "砖墙",
+      "date": "2024年7月20日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/956282049089503249",
+      "text": "砖墙\n\n//ezspline expression 1 20 -n UPRIGHT -p 0:0:-1 -q 3 w=0.2;s1=0.2;s2=0.4;d=0.05;t=0.08;abs(y)<w-t*((z%s1+s1)%s1<d||((x+floor(z/s1)*s2/2)%s2+s2)%s2<d)\n\n//eztexture sunlight 1 ##Grayscale\n\nw：墙宽\ns1：行间距\ns2：柱间距\nd：砖缝宽度\nt：砖缝深度 \n\n插件：ezedits\n",
+      "commands": [],
+      "images": [
+        "images/dynamics/956282049089503249/01.jpg",
+        "images/dynamics/956282049089503249/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/956282049089503249.txt"
+    },
+    {
+      "id": "955717724798976000",
+      "title": "分享视频",
+      "date": "2024年7月19日",
+      "type": "DYNAMIC_TYPE_FORWARD",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/955717724798976000",
+      "text": "分享视频",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/955717724798976000.txt"
+    },
+    {
+      "id": "953716553493250053",
+      "title": "拱桥",
+      "date": "2024年7月14日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/953716553493250053",
+      "text": "拱桥\n\n//ezspline expression 1 20 -n UPRIGHT w1=0.3;w2=0.35;h1=1.5;h2=1;d=0.15;r=0.8;z-1+h1-r<-sqrt(r^2-((x+1)%(2*r)-r)^2)&&abs(y)<w1||abs((x+1+r)%(2*r)-r)<d&&1-z<h2&&abs(y)<w2\n\nw1，w2 ：分别为拱门和桥墩的宽度（0 ~ 1）\nh1，h2 ：分别为拱门开口和桥墩的高度（0 ~ 2）\nd ：桥墩在另一个方向的宽度\nr ：拱门的半径（它也控制间距）\n\n插件：ezedits\n",
+      "commands": [],
+      "images": [
+        "images/dynamics/953716553493250053/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/953716553493250053.txt"
+    },
+    {
+      "id": "953189827255205890",
+      "title": "触手",
+      "date": "2024年7月12日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/953189827255205890",
+      "text": "触手\n\n//ezspline expression 1 25,2 0.5 o=0;r=0.4;s=0.1;h=0.3;a=(h+.4)/2;rotate(z,y,o);X=(x+1)%(2*r+s)-r;Z=abs(z)-1+r;d=sqrt(X^2+Z^2);sqrt(z^2+y^2)<1&&y<.4||d<r&&abs(y-a)<a-(r-d)^(1.5)\n\no ：校正朝向的旋转角度\nr ：触手吸盘的半径\ns ：吸盘之间的间距\nh ：吸盘的高度\n",
+      "commands": [],
+      "images": [
+        "images/dynamics/953189827255205890/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/953189827255205890.txt"
+    },
+    {
+      "id": "952579332012769285",
+      "title": "DNA",
+      "date": "2024年7月11日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/952579332012769285",
+      "text": "DNA\n\nezedits初体验\n\n//ezspline expression 1 20 2 sqrt((abs(z)-0.7)^2+y^2)<0.2||sqrt((x%0.5)^2+y^2)<0.1&&abs(z)<0.7 \n\n//eztexture ambient 1 ##GlowOrange \n\n插件地址：https://ezedits.gitbook.io/ezedits\n",
+      "commands": [],
+      "images": [
+        "images/dynamics/952579332012769285/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/952579332012769285.txt"
+    },
+    {
+      "id": "906133547071307785",
+      "title": "崩裂",
+      "date": "2024年3月7日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/906133547071307785",
+      "text": "崩裂\n\n//g 251 s=1;f=7;r=sqrt(x^2+z^2);a=x/r;b=z/r;for(d=0;1;d+=.01){if(voronoi(s,x,1,z,f)!=voronoi(s,x+d*a,1,z+d*b,f))break};data=min(d*min(r,1)*60+r*2,15);y+1<d*min(r,1)*6+r;\n",
+      "commands": [
+        "//g 251 s=1;f=7;r=sqrt(x^2+z^2);a=x/r;b=z/r;for(d=0;1;d+=.01){if(voronoi(s,x,1,z,f)!=voronoi(s,x+d*a,1,z+d*b,f))break};data=min(d*min(r,1)*60+r*2,15);y+1<d*min(r,1)*6+r;"
+      ],
+      "images": [
+        "images/dynamics/906133547071307785/01.jpg",
+        "images/dynamics/906133547071307785/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/906133547071307785.txt"
+    },
+    {
+      "id": "869710991745613865",
+      "title": "平行光源着色",
+      "date": "2023年11月30日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/869710991745613865",
+      "text": "平行光源着色\r\n\r\nabc是法向量的xyz的值，先设为0，利用3×3×3的范围，共有26个方向/组合，如果一方向是空气就在法向量上累加1，最后就能大致求表面一点的法向量，接着归一化，（这个计算法向量的办法绝了[热词系列_妙啊]）然后与设定的光线方向的向量点积求出两方向的夹角的余弦值cos(θ)（a·b=|a||b|*cos(θ)=1*1*cos(θ)）判断出两个向量的接近的程度，可以理解成光照强度，直射的就会更大，背离的就会越小，然后用这个余弦值进行上色。\r\n\n(非原创，来源：https://discord.com/channels/804414667551670335/1178755403664851066 ）\r\n在ta的基础上进行了改进：\r\n能设置光源的角度，A：水平角度θ，B：仰角φ\r\nn为调色板的长度，另外最后的x=y=z=后跟的是调色板的起始坐标，z+=是指沿着z轴正方向延申，见图三\r\n避免了生成后实心变空心\r\n\r\n注意：\r\n1、模型不能是单层的/空心的，至少要有2到3层或者实心的\r\n2、原模型的方块需要有数字id，防止we的query()检测不出该方块\r\n3、下方指令已经超过了聊天栏的字符上限256，可以用命令方块加/sudo指令运行（服务器插件），你也可以把AB相关的删掉手动计算下面的v=...然后删点不必要的分号等等\r\n\r\n/deform -r \nA=-5*pi/6;B=pi/3;n=16;\na=0;b=0;c=0;\nif(queryAbs(x,y,z,0,0))return 0;\nfor(i=-1;i<2;i++)for(j=-1;j<2;j++)for(k=-1;k<2;k++){\nif(queryAbs(x+i,y+j,z+k,0,0)){a+=i;b+=j;c+=k}}\nd=sqrt(a*a+b*b+c*c);\nif(d==0)return 0;\na/=d;b/=d;c/=d;\nv=cos(B)*cos(A)*a+sin(B)*b+cos(B)*sin(A)*c;\nx=-136;y=81;z=381;\nz+=(v+1)/2*(n-1)\n",
+      "commands": [],
+      "images": [
+        "images/dynamics/869710991745613865/01.jpg",
+        "images/dynamics/869710991745613865/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/869710991745613865.txt"
+    },
+    {
+      "id": "849776257526661140",
+      "title": "门格海绵",
+      "date": "2023年10月7日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/849776257526661140",
+      "text": "门格海绵\n\n//g 19 \r\nn=4;\r\nfor(j=0,2){\r\nif(j==1)swap(x,y);\r\nif(j==2)swap(z,y);\r\nX=0;Z=0;\r\nfor(i=1,n){\r\no=1/3^i;\r\nif(max(abs(x-X),abs(z-Z))o)-(x-Xo)-(z-Z<-o);\r\nX+=u*o*2;Z+=v*o*2\r\n}\r\n}\r\n1\n",
+      "commands": [
+        "//g 19"
+      ],
+      "images": [
+        "images/dynamics/849776257526661140/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/849776257526661140.txt"
+    },
+    {
+      "id": "847192297837690886",
+      "title": "五星红旗",
+      "date": "2023年10月1日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/847192297837690886",
+      "text": "五星红旗\n\n/sudo * /g 251 \r\nx+=1;z+=1;x*=10/2;z*=15/2;\r\nn=5;\r\nX=x-5;Z=z-5;\r\nfor(i=0,n){if(abs(Z)=0)return 1;rotate(X,Z,2*pi/n)}\r\nX=x-8;Z=z-10;\r\nrotate(X,Z,atan(3/5)+pi/2);\r\nfor(i=0,n){if(abs(Z)=0)return 1;rotate(X,Z,2*pi/n)}\r\nX=x-6;Z=z-12;\r\nrotate(X,Z,atan(1/7)+pi/2);\r\nfor(i=0,n){if(abs(Z)=0)return 1;rotate(X,Z,2*pi/n)}\r\nX=x-3;Z=z-12;\r\nrotate(X,Z,atan(-2/7)+pi/2);\r\nfor(i=0,n){if(abs(Z)=0)return 1;rotate(X,Z,2*pi/n)}\r\nX=x-1;Z=z-10;\r\nrotate(X,Z,atan(-4/5)+pi/2);\r\nfor(i=0,n){if(abs(Z)=0)return 1;rotate(X,Z,2*pi/n)}\r\n0 \n\n（因为太长，需要命令方块配合EssentialsX的sudo来运行）\n",
+      "commands": [],
+      "images": [
+        "images/dynamics/847192297837690886/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/847192297837690886.txt"
+    },
+    {
+      "id": "846676635478392855",
+      "title": "希尔伯特楼梯",
+      "date": "2023年9月29日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/846676635478392855",
+      "text": "希尔伯特楼梯\n\nsize:100,256,100\n\n//g 251 \nn=4;h=0;f=0;\nfor(i=1,n){\nZ=0;X=0;\na=(z-Z>0);b=(x-X>0);\nf=a*b?2:!a*b?1:!a*!b?0:3;\nh+=4^(n-i)*f;\nZ-=(-1)^a/2^i;X-=(-1)^b/2^i;\nz-=Z;x-=X;\nif(f==0){rotate(x,z,pi/2)x=-x;}\nif(f==3){rotate(x,z,-pi/2)x=-x;}\n}\ny+1<h/2^(2*n-1)\n",
+      "commands": [
+        "//g 251"
+      ],
+      "images": [],
+      "commandsFile": "commands/dynamics/846676635478392855.txt"
+    },
+    {
+      "id": "841959129288278081",
+      "title": "两两连接所有点",
+      "date": "2023年9月16日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/841959129288278081",
+      "text": "两两连接所有点\n\n1、生成点\n随机\r\n//calc n=1000;for(i=0,255)for(j=0;jn*3)break;gmegabuf(k,2*random()-1);gmegabuf(k+1,0);gmegabuf(k+2,2*random()-1)}1\n正多边形顶点\n//calc n=8;t=2*pi/n;for(i=0;i<(n+1)*3;i+=3){X=cos(t*i/3);Z=-sin(t*i/3);gmegabuf(i,X);gmegabuf(i+1,0);gmegabuf(i+2,Z)} \r\n\n2、连线\n直的\r\n//g 251 n=8for(i=0;i<3*n;i+=3)for(j=0;j<3*n;j+=3){a=gmegabuf(i)b=gmegabuf(i+2)c=gmegabuf(j)d=gmegabuf(j+2)t=atan2(b-d,a-c)r=sqrt((a-c)^2+(b-d)^2)X=x-(a+c)/2Z=z-(b+d)/2if(max(abs(X*sin(t)-Z*cos(t))*r/.01,abs(X*cos(t)+Z*sin(t)))<r/2)return 1}0 \n拉丝的\n//g 251 n=8for(i=0;i<3*n;i+=3)for(j=0;j<3*n;j+=3){a=gmegabuf(i)b=gmegabuf(i+2)c=gmegabuf(j)d=gmegabuf(j+2)t=atan2(b-d,a-c)r=sqrt((a-c)^2+(b-d)^2)X=x-(a+c)/2Z=z-(b+d)/2if(max(abs(X*sin(t)-Z*cos(t))*r/.1/(.1+X^2+Z^2),abs(X*cos(t)+Z*sin(t)))<r/2)return 1}0 \n\n",
+      "commands": [
+        "//calc n=1000;for(i=0,255)for(j=0;jn*3)break;gmegabuf(k,2*random()-1);gmegabuf(k+1,0);gmegabuf(k+2,2*random()-1)}1",
+        "//calc n=8;t=2*pi/n;for(i=0;i<(n+1)*3;i+=3){X=cos(t*i/3);Z=-sin(t*i/3);gmegabuf(i,X);gmegabuf(i+1,0);gmegabuf(i+2,Z)}",
+        "//g 251 n=8for(i=0;i<3*n;i+=3)for(j=0;j<3*n;j+=3){a=gmegabuf(i)b=gmegabuf(i+2)c=gmegabuf(j)d=gmegabuf(j+2)t=atan2(b-d,a-c)r=sqrt((a-c)^2+(b-d)^2)X=x-(a+c)/2Z=z-(b+d)/2if(max(abs(X*sin(t)-Z*cos(t))*r/.01,abs(X*cos(t)+Z*sin(t)))<r/2)return 1}0",
+        "//g 251 n=8for(i=0;i<3*n;i+=3)for(j=0;j<3*n;j+=3){a=gmegabuf(i)b=gmegabuf(i+2)c=gmegabuf(j)d=gmegabuf(j+2)t=atan2(b-d,a-c)r=sqrt((a-c)^2+(b-d)^2)X=x-(a+c)/2Z=z-(b+d)/2if(max(abs(X*sin(t)-Z*cos(t))*r/.1/(.1+X^2+Z^2),abs(X*cos(t)+Z*sin(t)))<r/2)return 1}0"
+      ],
+      "images": [
+        "images/dynamics/841959129288278081/01.jpg",
+        "images/dynamics/841959129288278081/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/841959129288278081.txt"
+    },
+    {
+      "id": "831138990235058197",
+      "title": "向内同心旋转的螺旋正方形",
+      "date": "2023年8月18日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/831138990235058197",
+      "text": "向内同心旋转的螺旋正方形\n\n//generate 251 k=24;for(i=0,2*k){if(abs(max(abs(x),abs(z))-k^(-i/k))<0.02*sqrt(x^2+z^2)){return 1}rotate(x,z,pi/k);}0 \n\nk代表每次旋转角度为pi/k，下图k分别为24，12，4\n\nhttps://www.desmos.com/calculator/8t0p4wp3ps\n（找规律的途中找到了这样一个通式，一眼看上去很完美，放大看居然还有一段距离）\n",
+      "commands": [
+        "//generate 251 k=24;for(i=0,2*k){if(abs(max(abs(x),abs(z))-k^(-i/k))<0.02*sqrt(x^2+z^2)){return 1}rotate(x,z,pi/k);}0"
+      ],
+      "images": [
+        "images/dynamics/831138990235058197/01.jpg",
+        "images/dynamics/831138990235058197/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/831138990235058197.txt"
+    },
+    {
+      "id": "827081865085059110",
+      "title": "【Minecraft】worldedit|generate 深入解析gmegabuf()缓冲函数——从原理到应用",
+      "date": "2023年8月7日",
+      "type": "DYNAMIC_TYPE_ARTICLE",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/827081865085059110",
+      "text": "一、格式和用法\n[图片]\nhttps://worldedit.enginehub.org/en/latest/usage/other/expressions/\n（megabuf有全局的gmegabuf和本地的megabuf，为了方便，下文只写gmegabuf）\n看wiki翻译不难理解，gmegabuf本质上是一个数组，数组默认为0；\n提供了三个函数 \n1.1、gmegabuf()\n先讲这两个\ngmegabuf(索引值)：调用数组对应索引值处的值，后期调用使用\n...",
+      "commands": [],
+      "images": [
+        "images/dynamics/827081865085059110/01.jpg",
+        "images/dynamics/827081865085059110/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/827081865085059110.txt"
+    },
+    {
+      "id": "822511826609635377",
+      "title": "[辣眼睛][星星眼]ndjm",
+      "date": "2023年7月26日",
+      "type": "DYNAMIC_TYPE_FORWARD",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/822511826609635377",
+      "text": "[辣眼睛][星星眼]ndjm",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/822511826609635377.txt"
+    },
+    {
+      "id": "820476042191831107",
+      "title": "星轨",
+      "date": "2023年7月21日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/820476042191831107",
+      "text": "星轨\r\n\r\n1.撒星星\r\n//calc n=1000;for(i=0,255)for(j=0;jn*3)break;gmegabuf(k,2*random()-1);gmegabuf(k+1,0);gmegabuf(k+2,2*random()-1)}1 \r\n\r\n2.1轴向\r\n//g 251 n=100;for(i=0,255)for(j=0;jn*3)break;\r\nX=gmegabuf(k);Z=gmegabuf(k+2)\r\nif(abs(z-Z)n*3)break;\r\nX=gmegabuf(k);Z=gmegabuf(k+2)\r\nr=sqrt(x^2+z^2);R=sqrt(X^2+Z^2);\r\nt=atan2(x,z);T=atan2(X,Z);\r\nif(t>T){T+=2*pi}\r\nif(abs(r-R)<0.01&&(r=T-t)){data=r*16%16;return r}};0\n",
+      "commands": [
+        "//calc n=1000;for(i=0,255)for(j=0;jn*3)break;gmegabuf(k,2*random()-1);gmegabuf(k+1,0);gmegabuf(k+2,2*random()-1)}1",
+        "//g 251 n=100;for(i=0,255)for(j=0;jn*3)break;"
+      ],
+      "images": [
+        "images/dynamics/820476042191831107/01.jpg",
+        "images/dynamics/820476042191831107/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/820476042191831107.txt"
+    },
+    {
+      "id": "814126706377883682",
+      "title": "涟漪",
+      "date": "2023年7月3日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/814126706377883682",
+      "text": "涟漪\r\n\r\n//calc n=1000;for(i=0,255)for(j=0;jn*3)break;gmegabuf(k,2*random()-1);gmegabuf(k+1,0);gmegabuf(k+2,2*random()-1)}1 \r\n\r\n//g 251 \r\nn=50;f=0;\r\nfor(i=0,255)for(j=0;jn*3)break;\r\nX=gmegabuf(k);\r\nZ=gmegabuf(k+2);\r\nr=sqrt((x-X)^2+(z-Z)^2);\r\nf=max(f,max((0.1*(k/3%6)-r),0)*(sin(80*r+k)+1))\r\n}\r\ndata=f*16%16;\r\ny+1<2*f\n",
+      "commands": [
+        "//calc n=1000;for(i=0,255)for(j=0;jn*3)break;gmegabuf(k,2*random()-1);gmegabuf(k+1,0);gmegabuf(k+2,2*random()-1)}1",
+        "//g 251"
+      ],
+      "images": [
+        "images/dynamics/814126706377883682/01.jpg",
+        "images/dynamics/814126706377883682/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/814126706377883682.txt"
+    },
+    {
+      "id": "810085537041874947",
+      "title": "螺",
+      "date": "2023年6月23日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/810085537041874947",
+      "text": "螺\n\n//calc \nn=1000;d=0.1;\na=20;b=6;\nfor(i=0,255)for(j=0;jn*3)break;\nt=k/3*d;\nr=e^(-t/a);\ngmegabuf(k,r*cos(t));\ngmegabuf(k+1,1-r*b);\ngmegabuf(k+2,r*sin(t))\n}1\r\n\r\nn是点的个数，d是步长\na控制旋转程度，b控制斜率\r\n\r\n//g 251 \nn=1000;i=gclosest(x,y,z,0,n,3);a=gmegabuf(i)b=gmegabuf(i+1)c=gmegabuf(i+2);\nr=(x-a)^2+(y-b)^2+(z-c)^2;\nR=a^2+c^2;\ndata=abs(y-b)/sqrt(r)*16%16;\nr<R\n",
+      "commands": [
+        "//calc",
+        "//g 251"
+      ],
+      "images": [
+        "images/dynamics/810085537041874947/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/810085537041874947.txt"
+    },
+    {
+      "id": "806726730877239335",
+      "title": "非常棒的视频",
+      "date": "2023年6月13日",
+      "type": "DYNAMIC_TYPE_FORWARD",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/806726730877239335",
+      "text": "非常棒的视频",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/806726730877239335.txt"
+    },
+    {
+      "id": "797811070499553337",
+      "title": "Möbius",
+      "date": "2023年5月20日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/797811070499553337",
+      "text": "Möbius \n\n重新渲染一下\n",
+      "commands": [],
+      "images": [
+        "images/dynamics/797811070499553337/01.jpg",
+        "images/dynamics/797811070499553337/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/797811070499553337.txt"
+    },
+    {
+      "id": "787312555462754377",
+      "title": "边缘到样点最短距离​",
+      "date": "2023年4月22日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/787312555462754377",
+      "text": "边缘到样点最短距离​\n\n生成足够的点\n//calc n=1000;for(i=0,255)for(j=0;jn*3)break;gmegabuf(k,2*random()-1);gmegabuf(k+1,0);gmegabuf(k+2,2*random()-1)}1\n\n生成到样点距离为到边缘最短距离r的区域\n//g 35 \nn=100\ni=gclosest(x,y,z,0,n,3)\nr=1\ndata=i/3%16+.1;\nX=gmegabuf(i)\nZ=gmegabuf(i+2)\nfor(l=0,255)for(k=0;kn*3)break;\nif(j==i)continue;\nr=min(sqrt((gmegabuf(j)-X)^2+(gmegabuf(j+2)-Z)^2)/2,r)\n}\nx-=X;\nz-=Z;\nx^2+z^2<r^2\n\n思路是先找到除自己以外最近的点，取两点距离的一般为圆的半径r\n",
+      "commands": [
+        "//calc n=1000;for(i=0,255)for(j=0;jn*3)break;gmegabuf(k,2*random()-1);gmegabuf(k+1,0);gmegabuf(k+2,2*random()-1)}1",
+        "//g 35"
+      ],
+      "images": [
+        "images/dynamics/787312555462754377/01.jpg",
+        "images/dynamics/787312555462754377/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/787312555462754377.txt"
+    },
+    {
+      "id": "785849436211249156",
+      "title": "用voronoi的办法来做等宽的辐条",
+      "date": "2023年4月18日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/785849436211249156",
+      "text": "用voronoi的办法来做等宽的辐条\n\n//g 251 -c \nn=12\nd=5\nt=2*pi/n;\nfor(i=0;i<n*3;i+=3){\nmegabuf(i,cos(t*i/3))\nmegabuf(i+2,-sin(t*i/3))\n}\nA=closest(x+d,y,z,0,n,3)\nB=closest(x-d,y,z,0,n,3)\nC=closest(x,y,z+d,0,n,3)\nD=closest(x,y,z-d,0,n,3);\nif(A!=B||B!=C||C!=D)1\n\n先生成多边形的顶点，然后生成voronoi图的边缘 \nn：数量，d：宽度/2\n加-c为了更精准控制d，去掉没影响，把d改小就行\n",
+      "commands": [
+        "//g 251 -c"
+      ],
+      "images": [
+        "images/dynamics/785849436211249156/01.jpg",
+        "images/dynamics/785849436211249156/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/785849436211249156.txt"
+    },
+    {
+      "id": "784377847313596436",
+      "title": "上海中心大厦",
+      "date": "2023年4月14日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/784377847313596436",
+      "text": "上海中心大厦\n\n//generate 251 -h s=e^(0.345*(y+1));x*=s;z*=s;rotate(x,z,-(1+y)*pi/3);a=0.18;r=sqrt(x^2+z^2);t=atan2(x,z)+pi;L=1-a+a*sin(3/2*t)^4;r<L&&z<tan(95/360*pi)*abs(x)+0.82\r\n\r\n//generate 0 h=0.1;rotate(x,z,(1-y)*pi/3+pi/3)t=atan2(x,z);1-y<h*(t+pi)/pi/2 \n\n选区大小：61x375x61\n比例和一些数值不太准确，比如h\n",
+      "commands": [
+        "//generate 251 -h s=e^(0.345*(y+1));x*=s;z*=s;rotate(x,z,-(1+y)*pi/3);a=0.18;r=sqrt(x^2+z^2);t=atan2(x,z)+pi;L=1-a+a*sin(3/2*t)^4;r<L&&z<tan(95/360*pi)*abs(x)+0.82",
+        "//generate 0 h=0.1;rotate(x,z,(1-y)*pi/3+pi/3)t=atan2(x,z);1-y<h*(t+pi)/pi/2"
+      ],
+      "images": [
+        "images/dynamics/784377847313596436/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/784377847313596436.txt"
+    },
+    {
+      "id": "783321865137422377",
+      "title": "有点圆角的voronoi",
+      "date": "2023年4月11日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/783321865137422377",
+      "text": "有点圆角的voronoi\n\n//calc n=1000;for(i=0,255)for(j=0;jn*3)break;gmegabuf(k,2*random()-1);gmegabuf(k+1,0);gmegabuf(k+2,2*random()-1)}1 \n\n//g 251 \nn=100d=0i=gclosest(x,y,z,0,n,3)\ndo{d+=.005\nj=gclosest(x+d,y,z,0,n,3)k=gclosest(x-d,y,z,0,n,3)l=gclosest(x,y,z+d,0,n,3)m=gclosest(x,y,z-d,0,n,3)}\nwhile(j==k&&k==l&&l==m)\nr=sqrt((x-gmegabuf(i))^2+(z-gmegabuf(i+2))^2)\ndata=i/3%15+1;\nd>max(.005,.8*(r-.1)) \n我尝试把与边缘距离与与样点的距离结合，意外达到了圆角的效果（似乎点间有种引力一样在吸引）当r的权重变大时，就会更圆润\n",
+      "commands": [
+        "//calc n=1000;for(i=0,255)for(j=0;jn*3)break;gmegabuf(k,2*random()-1);gmegabuf(k+1,0);gmegabuf(k+2,2*random()-1)}1",
+        "//g 251"
+      ],
+      "images": [
+        "images/dynamics/783321865137422377/01.jpg",
+        "images/dynamics/783321865137422377/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/783321865137422377.txt"
+    },
+    {
+      "id": "781447275145592881",
+      "title": "其实我想的太复杂了",
+      "date": "2023年4月6日",
+      "type": "DYNAMIC_TYPE_FORWARD",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/781447275145592881",
+      "text": "其实我想的太复杂了\n不用gmegabuf也可以啊\n//g 251 s=1;f=5;d=0do{d+=0.01;v1=voronoi(s,x+d,1,z,f)v2=voronoi(s,x-d,1,z,f)v3=voronoi(s,x,1,z+d,f)v4=voronoi(s,x,1,z-d,f)}while(v1==v2&&v2==v3&&v3==v4)data=d*50;y+1<d*10",
+      "commands": [
+        "//g 251 s=1;f=5;d=0do{d+=0.01;v1=voronoi(s,x+d,1,z,f)v2=voronoi(s,x-d,1,z,f)v3=voronoi(s,x,1,z+d,f)v4=voronoi(s,x,1,z-d,f)}while(v1==v2&&v2==v3&&v3==v4)data=d*50;y+1<d*10"
+      ],
+      "images": [],
+      "commandsFile": "commands/dynamics/781447275145592881.txt"
+    },
+    {
+      "id": "779970034029035577",
+      "title": "voronoi岩石",
+      "date": "2023年4月2日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/779970034029035577",
+      "text": "voronoi岩石\n\n//calc n=1000;for(i=0,255)for(j=0;jn*3)break;gmegabuf(k,2*random()-1);gmegabuf(k+1,0);gmegabuf(k+2,2*random()-1)}1 \n\n//g 251 \nn=100;\nd=0;\np=(perlin(1,x,1,z,5,2,0.3)-.5)*0.1;x+=p;z+=p;\ndo{\nd+=0.01;i1=gclosest(x+d,y,z,0,n,3)i2=gclosest(x-d,y,z,0,n,3)i3=gclosest(x,y,z+d,0,n,3)i4=gclosest(x,y,z-d,0,n,3)\n}while(i1==i2&&i2==i3&&i3==i4)\ndata=d*70;\ny+1<d*10 \n\n接上个动态，我想获得d的值而不是提前给d赋值，用一个while循环，每次步长0.01当没达到要求时退出就得到了d（顺便加了个xz方向的柏林噪声\n",
+      "commands": [
+        "//calc n=1000;for(i=0,255)for(j=0;jn*3)break;gmegabuf(k,2*random()-1);gmegabuf(k+1,0);gmegabuf(k+2,2*random()-1)}1",
+        "//g 251"
+      ],
+      "images": [
+        "images/dynamics/779970034029035577/01.jpg",
+        "images/dynamics/779970034029035577/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/779970034029035577.txt"
+    },
+    {
+      "id": "779149862779224084",
+      "title": "二维谢尔宾斯基集Sierpinski",
+      "date": "2023年3月31日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/779149862779224084",
+      "text": "二维谢尔宾斯基集Sierpinski \r\n\r\n以谢尔宾斯基六边形为例：\r\n1.生成初始正多边形顶点\r\n//calc n=6;t=2*pi/n;for(i=3;i(I+n+1)*3)break;q=randint(n)*3+3;gmegabuf(k,gmegabuf(p)*(1-s)+gmegabuf(q)*s);gmegabuf(k+2,gmegabuf(p+2)*(1-s)+gmegabuf(q+2)*s)p=k}1 \r\n\r\n3.生成点\r\n//generate 251 I=8000;i=gclosest(x,0,z,3,I,3);(x-gmegabuf(i))^2+(z-gmegabuf(i+2))^2<0.01^2 \r\n\r\n下图对应的n和s分别是\r\nn=3;s=1/2 \r\nn=4;s=4/7 \r\nn=5;s=3/5 \r\nn=6;s=2/3 \r\nn=7;s=13/19 \r\nn=8;s=14/19\n",
+      "commands": [
+        "//calc n=6;t=2*pi/n;for(i=3;i(I+n+1)*3)break;q=randint(n)*3+3;gmegabuf(k,gmegabuf(p)*(1-s)+gmegabuf(q)*s);gmegabuf(k+2,gmegabuf(p+2)*(1-s)+gmegabuf(q+2)*s)p=k}1",
+        "//generate 251 I=8000;i=gclosest(x,0,z,3,I,3);(x-gmegabuf(i))^2+(z-gmegabuf(i+2))^2<0.01^2"
+      ],
+      "images": [
+        "images/dynamics/779149862779224084/01.jpg",
+        "images/dynamics/779149862779224084/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/779149862779224084.txt"
+    },
+    {
+      "id": "778762632823832596",
+      "title": "寻找voronoi边缘附近的一个办法",
+      "date": "2023年3月30日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/778762632823832596",
+      "text": "寻找voronoi边缘附近的一个办法\n\n首先还是随机取1000个点备用\n//calc n=1000;for(i=0,255)for(j=0;jn*3)break;gmegabuf(k,2*random()-1);gmegabuf(k+1,0);gmegabuf(k+2,2*random()-1)}1 \n以第一个圆形为例\n//generate 251 \nn=300;\nd=min(0,0.05*sqrt(x^2+z^2)-0.05);\ni=gclosest(x,y,z,0,n,3)\ni1=gclosest(x+d,y,z,0,n,3)\ni2=gclosest(x-d,y,z,0,n,3)\ni3=gclosest(x,y,z+d,0,n,3)\ni4=gclosest(x,y,z-d,0,n,3);\nif(i1==i2&&i2==i3&&i3==i4)1 \n\n为了判断该点是否在边缘附近，只要判断与它相隔\"d\"的位置处的索引是否与它自己的相同\n",
+      "commands": [
+        "//calc n=1000;for(i=0,255)for(j=0;jn*3)break;gmegabuf(k,2*random()-1);gmegabuf(k+1,0);gmegabuf(k+2,2*random()-1)}1",
+        "//generate 251"
+      ],
+      "images": [
+        "images/dynamics/778762632823832596/01.jpg",
+        "images/dynamics/778762632823832596/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/778762632823832596.txt"
+    },
+    {
+      "id": "776527166771822595",
+      "title": "基于柏林噪声的随机矩形生成",
+      "date": "2023年3月24日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/776527166771822595",
+      "text": "\n基于柏林噪声的随机矩形生成\n\n//generate 251 -c f=0.05;a=10;c=2;S=1;s=500;x+=s;z+=s;X=floor(x/a)*a;Z=floor(z/a)*a;p=perlin(S,X,1,Z,f,1,1);pz=perlin(S,X,1,Z+a,f,1,1);px=perlin(S,X+a,1,Z,f,1,1);b=((pz0.5)||(p>0.5))?c:0;x%a<b||z%a<d \n\nf:频率a:网格基础边长c:线宽S:种子s：越大越好\n",
+      "commands": [
+        "//generate 251 -c f=0.05;a=10;c=2;S=1;s=500;x+=s;z+=s;X=floor(x/a)*a;Z=floor(z/a)*a;p=perlin(S,X,1,Z,f,1,1);pz=perlin(S,X,1,Z+a,f,1,1);px=perlin(S,X+a,1,Z,f,1,1);b=((pz0.5)||(p>0.5))?c:0;x%a<b||z%a<d"
+      ],
+      "images": [
+        "images/dynamics/776527166771822595/01.jpg",
+        "images/dynamics/776527166771822595/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/776527166771822595.txt"
+    },
+    {
+      "id": "775826979728392200",
+      "title": "蜂窝地形",
+      "date": "2023年3月22日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/775826979728392200",
+      "text": "蜂窝地形\n\n（以后专栏会详解）\n",
+      "commands": [],
+      "images": [
+        "images/dynamics/775826979728392200/01.jpg",
+        "images/dynamics/775826979728392200/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/775826979728392200.txt"
+    },
+    {
+      "id": "774422684335341593",
+      "title": "Voronoi Mountain",
+      "date": "2023年3月18日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/774422684335341593",
+      "text": "Voronoi Mountain\n\r\n1,随机生成100组随机坐标\r\n//calc n=100;for(i=0,255)for(j=0;jn*3){break;}gmegabuf(k,1-2*random());gmegabuf(k+2,1-2*random())}1\n\r\n2，生成山，并按与最近点之间的角度取data\r\n//generate 251 n=100;c=gclosest(x,y,z,0,n,3);a=x-gmegabuf(c);b=z-gmegabuf(c+2);data=(atan2(a,b)/pi+1)/2*16%16;y<1-5*sqrt(a^2+b^2)\n",
+      "commands": [
+        "//calc n=100;for(i=0,255)for(j=0;jn*3){break;}gmegabuf(k,1-2*random());gmegabuf(k+2,1-2*random())}1",
+        "//generate 251 n=100;c=gclosest(x,y,z,0,n,3);a=x-gmegabuf(c);b=z-gmegabuf(c+2);data=(atan2(a,b)/pi+1)/2*16%16;y<1-5*sqrt(a^2+b^2)"
+      ],
+      "images": [
+        "images/dynamics/774422684335341593/01.jpg",
+        "images/dynamics/774422684335341593/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/774422684335341593.txt"
+    },
+    {
+      "id": "773117349286903808",
+      "title": "【Minecraft】worldedit|generate 探索神奇的噪声——从原理到应用",
+      "date": "2023年3月15日",
+      "type": "DYNAMIC_TYPE_ARTICLE",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/773117349286903808",
+      "text": "本专栏教程旨在为mc玩家打开一扇新的大门，看完让你掌握噪声的原理和基础运用\n[图片]\n一、详解原理\n1.1格式\n[图片]\nhttps://worldedit.enginehub.org/en/latest/usage/other/expressions/\n我们现在先只拿perlin噪声作为例子，其中各个参数概念这里不做过多介绍，这里推荐蓝鸡的视频介绍\n【创世神的64把木斧】#58 - 我于万物之中 [柏林噪声函数]\n...",
+      "commands": [],
+      "images": [
+        "images/dynamics/773117349286903808/01.jpg",
+        "images/dynamics/773117349286903808/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/773117349286903808.txt"
+    },
+    {
+      "id": "772482913895710946",
+      "title": "megabuf",
+      "date": "2023年3月13日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/772482913895710946",
+      "text": "megabuf\n",
+      "commands": [],
+      "images": [
+        "images/dynamics/772482913895710946/01.jpg",
+        "images/dynamics/772482913895710946/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/772482913895710946.txt"
+    },
+    {
+      "id": "771792416260751444",
+      "title": "牛顿分形",
+      "date": "2023年3月11日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/771792416260751444",
+      "text": "牛顿分形\nz->z-(z^3-1)/(3*z^2)\n\n//generate 251 \nx*=2;z*=2;\nfor(n=0,10){\nk=(x^2-z^2)^2+4*(x*z)^2;\nnx=(x*2+(x^2-z^2)/k)/3;nz=(z*2-2*x*z/k)/3;\nx=nx;z=nz\n};\nr1=(x-1)^2+z^2;\nr2=(x+1/2)^2+(z-sqrt(3)/2)^2;\nr3=(x+1/2)^2+(z+sqrt(3)/2)^2;\ndata=r1<r2&&r1<r3?1:(r2<r3?2:3) \n\n",
+      "commands": [
+        "//generate 251"
+      ],
+      "images": [
+        "images/dynamics/771792416260751444/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/771792416260751444.txt"
+    },
+    {
+      "id": "769586740139655187",
+      "title": "转发动态",
+      "date": "2023年3月5日",
+      "type": "DYNAMIC_TYPE_FORWARD",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/769586740139655187",
+      "text": "转发动态",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/769586740139655187.txt"
+    },
+    {
+      "id": "767788171043799105",
+      "title": "曼德尔球Mandelbulb",
+      "date": "2023年3月1日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/767788171043799105",
+      "text": "曼德尔球Mandelbulb\r\n\r\n//generate 251 n=8;a=0b=0c=0for(k=0,5){r=sqrt(a^2+b^2+c^2);p=atan2(a,b);t=atan2(sqrt(a^2+b^2),c);na=r^n*sin(n*t)*cos(n*p);nb=r^n*sin(n*t)*sin(n*p);nc=r^n*cos(n*t);a=na+x;b=nb+y;c=nc+z}r<1\n",
+      "commands": [
+        "//generate 251 n=8;a=0b=0c=0for(k=0,5){r=sqrt(a^2+b^2+c^2);p=atan2(a,b);t=atan2(sqrt(a^2+b^2),c);na=r^n*sin(n*t)*cos(n*p);nb=r^n*sin(n*t)*sin(n*p);nc=r^n*cos(n*t);a=na+x;b=nb+y;c=nc+z}r<1"
+      ],
+      "images": [
+        "images/dynamics/767788171043799105/01.jpg",
+        "images/dynamics/767788171043799105/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/767788171043799105.txt"
+    },
+    {
+      "id": "767659532440567844",
+      "title": "分形——Julia集和Mandelbrot集",
+      "date": "2023年2月28日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/767659532440567844",
+      "text": "分形——Julia集和Mandelbrot集 \r\n\r\n图前5为Julia集，6为Mandelbrot集合\r\n\r\nJulia ：\r\n//generate 251 x*=2;z*=2;a=x;b=z;cr=0.8;ci=0;for(n=1,20){na=a^2-b^2+cr;nb=2*a*b+ci;a=na;b=nb}sqrt(a^2+b^2)<2 \r\n\r\nz=(a,b)为复平面内点的坐标(x,z)，cr为c的实部，ci为c的虚部，改变二者的值获得不同的形状，for循环从1迭代到20，迭代过程为z=z^2+c，循环结束判断迭代后的a和b是否收敛即模小于2，小于就在此处的x,z生成方块\r\n\r\nMandelbrot :\r\n//generate 251 x*=2;z*=2;a=0;b=0;cr=x;ci=z;for(n=1,20){na=a^2-b^2+cr;nb=2*a*b+ci;a=na;b=nb}sqrt(a^2+b^2)<2 \r\n\r\nz=(0,0)为初始值，cr和ci为复平面平面内点的坐标(x,z) \r\n\r\n参考：\r\nhttp://www.matrix67.com/blog/archives/292 \r\nhttp://www.matrix67.com/blog/archives/4570\n",
+      "commands": [
+        "//generate 251 x*=2;z*=2;a=x;b=z;cr=0.8;ci=0;for(n=1,20){na=a^2-b^2+cr;nb=2*a*b+ci;a=na;b=nb}sqrt(a^2+b^2)<2",
+        "//generate 251 x*=2;z*=2;a=0;b=0;cr=x;ci=z;for(n=1,20){na=a^2-b^2+cr;nb=2*a*b+ci;a=na;b=nb}sqrt(a^2+b^2)<2"
+      ],
+      "images": [
+        "images/dynamics/767659532440567844/01.jpg",
+        "images/dynamics/767659532440567844/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/767659532440567844.txt"
+    },
+    {
+      "id": "767303355107115024",
+      "title": "星球",
+      "date": "2023年2月27日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/767303355107115024",
+      "text": "星球\n\n嵌套噪声 先在p1里把y轴压缩（y*8），形成水平的条纹，再用另一个噪声p2，对其进行相加，使条纹不再只是水平\n//generate 251 p2=perlin(1,x,y,z,1,1,1);p1=perlin(1,x,y*8+p2*5,z,3,1,1);data=p1*4%4;x^2+z^2+y^2<0.85+0.15*p1\n",
+      "commands": [
+        "//generate 251 p2=perlin(1,x,y,z,1,1,1);p1=perlin(1,x,y*8+p2*5,z,3,1,1);data=p1*4%4;x^2+z^2+y^2<0.85+0.15*p1"
+      ],
+      "images": [
+        "images/dynamics/767303355107115024/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/767303355107115024.txt"
+    },
+    {
+      "id": "760921909878587413",
+      "title": "[星星眼]",
+      "date": "2023年2月10日",
+      "type": "DYNAMIC_TYPE_WORD",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/760921909878587413",
+      "text": "[星星眼]",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/760921909878587413.txt"
+    },
+    {
+      "id": "759639037534273554",
+      "title": "蜂窝六边形",
+      "date": "2023年2月7日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/759639037534273554",
+      "text": "蜂窝六边形\n\n//generate 251 -c s=200;a=20;d=2;i=sqrt(3);b=i*a/2;x+=s;z+=s;(x+d/2)%b<d&&(z+d/2+3*a/2*floor((x+d/2)/b))%(3*a)<a||(z+d+a/4+(-1)^(floor((z-d)/(3/2*a)))*asin(cos(x*pi/i/a*2))/pi*a/2)%(3*a/2)<d \n\ns越大越好；a=边长；d=线宽\n\n（弄出来可费劲了[囧]，虽然这个可以用#clipboard方法来实现）\n",
+      "commands": [
+        "//generate 251 -c s=200;a=20;d=2;i=sqrt(3);b=i*a/2;x+=s;z+=s;(x+d/2)%b<d&&(z+d/2+3*a/2*floor((x+d/2)/b))%(3*a)<a||(z+d+a/4+(-1)^(floor((z-d)/(3/2*a)))*asin(cos(x*pi/i/a*2))/pi*a/2)%(3*a/2)<d"
+      ],
+      "images": [
+        "images/dynamics/759639037534273554/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/759639037534273554.txt"
+    },
+    {
+      "id": "757314648454201385",
+      "title": "棋盘渐变",
+      "date": "2023年1月31日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/757314648454201385",
+      "text": "棋盘渐变\n\na为中心初始方形的边长，s为选区边长一半，指最长边的个长度的一半（如果你的选区为长方形的话），保证整个选区内都有效，k指的是在渐变方向上方形各边每次递进时缩进几格，当为s/a^2时占满选区，不管怎样，要满足a为s的因数，不然会对不齐\n\n//generate 251:2 -c s=100;a=10;k=1;b=a-floor(x/a)*k;(x+s)%(2*a)<b&&(z+s)%(2*a)<b||(x+s+a)%(2*a)<b&&(z+s+a)%(2*a)<b\n",
+      "commands": [
+        "//generate 251:2 -c s=100;a=10;k=1;b=a-floor(x/a)*k;(x+s)%(2*a)<b&&(z+s)%(2*a)<b||(x+s+a)%(2*a)<b&&(z+s+a)%(2*a)<b"
+      ],
+      "images": [
+        "images/dynamics/757314648454201385/01.jpg",
+        "images/dynamics/757314648454201385/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/757314648454201385.txt"
+    },
+    {
+      "id": "756199631990292521",
+      "title": "砖块纹理2",
+      "date": "2023年1月28日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/756199631990292521",
+      "text": "砖块纹理2\n\n未加噪声：//generate 251 -c s=200;z+=s;x+=s;a=10;b=15;d=1;(x%(2*a)(b-f)):((z+b/2)%(2*b)(2*b-f)))||(x%a(a-f))\n",
+      "commands": [
+        "//generate 251 -c s=200;z+=s;x+=s;a=10;b=15;d=1;(x%(2*a)(b-f)):((z+b/2)%(2*b)(2*b-f)))||(x%a(a-f))"
+      ],
+      "images": [
+        "images/dynamics/756199631990292521/01.jpg",
+        "images/dynamics/756199631990292521/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/756199631990292521.txt"
+    },
+    {
+      "id": "755194158665170944",
+      "title": "分享图片",
+      "date": "2023年1月26日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/755194158665170944",
+      "text": "分享图片\n",
+      "commands": [],
+      "images": [
+        "images/dynamics/755194158665170944/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/755194158665170944.txt"
+    },
+    {
+      "id": "755102641513562116",
+      "title": "破损砖墙",
+      "date": "2023年1月25日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/755102641513562116",
+      "text": "破损砖墙\n\n未加噪声：\n//generate 251 -c a=15;b=10;d=1;s=500;x+=s;z+=s;y+=s;Ly=y;Lz=(z+a*floor(y/b));(Lz%(2*a))(2*a-f)||Ly%b>(b-f)\n\n稍微说明一下吧，a,b控制砖的长宽；d控制纹理的基础宽度；k控制噪声的幅值；c为一个0到1的数，控制纹理的显示程度，越大越少；s使被除数为正，大于选区边长一半，越大越好\n如果想换方向可以在式子最前面加个swap()，如swap(z,y)就是把y与z调换，纹理就成了水平的地砖，也可以再swap(x,z)x与z调换；当然也可以用rotate()\r\n\n附加：\n//gmask 251\r\n//deform -c x/=1-0.3*perlin(1,x,y,z,0.1,2,1)\r\n//gmask !251\r\n//deform -c x/=1-0.1*perlin(2,x,y,z,0.1,2,1)\n",
+      "commands": [
+        "//generate 251 -c a=15;b=10;d=1;s=500;x+=s;z+=s;y+=s;Ly=y;Lz=(z+a*floor(y/b));(Lz%(2*a))(2*a-f)||Ly%b>(b-f)",
+        "//deform -c x/=1-0.3*perlin(1,x,y,z,0.1,2,1)",
+        "//deform -c x/=1-0.1*perlin(2,x,y,z,0.1,2,1)"
+      ],
+      "images": [
+        "images/dynamics/755102641513562116/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/755102641513562116.txt"
+    },
+    {
+      "id": "753608134651543633",
+      "title": "红灯笼",
+      "date": "2023年1月21日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/753608134651543633",
+      "text": "红灯笼\n\n//generate 251 k=12;data=(abs(sin(k*atan2(x,z))))<0.15?4:1;sqrt(x^2+z^2)<sqrt(1-y^2/0.5)*(1-0.065*(abs(sin(k*atan2(x,z)))))\n",
+      "commands": [
+        "//generate 251 k=12;data=(abs(sin(k*atan2(x,z))))<0.15?4:1;sqrt(x^2+z^2)<sqrt(1-y^2/0.5)*(1-0.065*(abs(sin(k*atan2(x,z)))))"
+      ],
+      "images": [
+        "images/dynamics/753608134651543633/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/753608134651543633.txt"
+    },
+    {
+      "id": "749254158772600867",
+      "title": "鱼脊地板​",
+      "date": "2023年1月10日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/749254158772600867",
+      "text": "鱼脊地板​\n\n对应之前的动态，修改了一下主体部分，并支持控制纹理宽度d，要求是d为a的 因数，这个限制应该无大碍，先这样用着吧，能用就行，安心睡觉[doge]\n\n//generate 0 -c rotate(x,z,pi/4);d=2;a=10;k=3;s=500;a=(a+d)/d;x=floor(x/d);z=floor(z/d);(x+s)%a<1&&(x+z+2*s+a*k)%(2*k*a)<((k+1)*a)||(z+s)%a<1&&(z+x+2*s)%(2*k*a)<((k+1)*a)\n",
+      "commands": [
+        "//generate 0 -c rotate(x,z,pi/4);d=2;a=10;k=3;s=500;a=(a+d)/d;x=floor(x/d);z=floor(z/d);(x+s)%a<1&&(x+z+2*s+a*k)%(2*k*a)<((k+1)*a)||(z+s)%a<1&&(z+x+2*s)%(2*k*a)<((k+1)*a)"
+      ],
+      "images": [
+        "images/dynamics/749254158772600867/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/749254158772600867.txt"
+    },
+    {
+      "id": "748870661133303809",
+      "title": "融球",
+      "date": "2023年1月9日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/748870661133303809",
+      "text": "融球\n\nabs(z)-1)^2 限定噪声的值，z=0时为1达到最大，perlin()里的z用z/3代替，在z方向上拉伸；\n部分函数图像：https://www.desmos.com/calculator/pnsytkbwll?lang=zh-CN \n\n//generate 251 p=(abs(z)-1)^2*perlin(1,x,y,z/3,10,2,1);data=15*p%15;((z+0.6)^2+x^2+y^2)*((z-0.6)^2+x^2+y^2)<(0.65-0.3*p)^4\n",
+      "commands": [
+        "//generate 251 p=(abs(z)-1)^2*perlin(1,x,y,z/3,10,2,1);data=15*p%15;((z+0.6)^2+x^2+y^2)*((z-0.6)^2+x^2+y^2)<(0.65-0.3*p)^4"
+      ],
+      "images": [
+        "images/dynamics/748870661133303809/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/748870661133303809.txt"
+    },
+    {
+      "id": "748777202658574371",
+      "title": "鱼脊地板（Herringbone Flooring）",
+      "date": "2023年1月8日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/748777202658574371",
+      "text": "鱼脊地板（Herringbone Flooring）\r\n\r\n旋转在最前面加个rotate()函数，比如 rotate(x,z,pi/3)；s越大越好，最好大于选区边长，目的是把被除数调成正数；a为宽度；k为长宽比\r\n\r\n图1 ：//generate 1 -c rotate(x,z,pi/3);s=500;k=5;a=10;(x+s)%a((k-1)*a)||(z+s)%a((k-1)*a)||(z+s)%a((k-1)*a)||(z+s)%a<1&&(z+x+2*s)%(2*k*a)<((k+1)*a)\n",
+      "commands": [
+        "//generate 1 -c rotate(x,z,pi/3);s=500;k=5;a=10;(x+s)%a((k-1)*a)||(z+s)%a((k-1)*a)||(z+s)%a((k-1)*a)||(z+s)%a<1&&(z+x+2*s)%(2*k*a)<((k+1)*a)"
+      ],
+      "images": [
+        "images/dynamics/748777202658574371/01.jpg",
+        "images/dynamics/748777202658574371/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/748777202658574371.txt"
+    },
+    {
+      "id": "748495989660188710",
+      "title": "烟花",
+      "date": "2023年1月8日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/748495989660188710",
+      "text": "烟花\r\n\r\ng（可以理解为重力加速度）控制下坠程度，噪声频率20控制线条稀疏程度，a控制粗细\r\n也可以在最后一个式子前加个 b=5;data=b*sqrt(x^2+z^2+y^2) %b; 来分层，b不超16\r\n\r\n//generate 251 g=1;a=0.05;t=sqrt(x^2+z^2);r=sqrt(x^2+z^2+y^2);y+=g*t^2/2;perlin(1,x/r,y/r,z/r,20,1,1)*r<a&&x^2+z^2+y^2<1\n",
+      "commands": [
+        "//generate 251 g=1;a=0.05;t=sqrt(x^2+z^2);r=sqrt(x^2+z^2+y^2);y+=g*t^2/2;perlin(1,x/r,y/r,z/r,20,1,1)*r<a&&x^2+z^2+y^2<1"
+      ],
+      "images": [
+        "images/dynamics/748495989660188710/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/748495989660188710.txt"
+    },
+    {
+      "id": "748004297510223879",
+      "title": "杂色 网格 渐变",
+      "date": "2023年1月6日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/748004297510223879",
+      "text": "杂色 网格 渐变\n\n选区大小200×200\n//generate -c 251 a=5;X=a*floor(x/a);Z=a*floor(z/a);data=(x+100)%a<1||(z+100)%a<1?15:15*perlin(1,X,1,Z,0.5,1,1)%15;X+100<200*perlin(1,X,1,Z,0.5,1,1)\n",
+      "commands": [
+        "//generate -c 251 a=5;X=a*floor(x/a);Z=a*floor(z/a);data=(x+100)%a<1||(z+100)%a<1?15:15*perlin(1,X,1,Z,0.5,1,1)%15;X+100<200*perlin(1,X,1,Z,0.5,1,1)"
+      ],
+      "images": [
+        "images/dynamics/748004297510223879/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/748004297510223879.txt"
+    },
+    {
+      "id": "747746603766382611",
+      "title": "火环",
+      "date": "2023年1月6日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/747746603766382611",
+      "text": "火环\n\n基础圆环，环半径R加perlin噪声形成不规则的外形，为使不被rotate()影响，在perlin噪声定义后再旋转rotate(),接着再定义voronoi噪声，用voronoi噪声作为圆环的小半径r形成不规则的火焰效果\n\n//generate 251 R=0.85;r=0.15;k=0.5;p=perlin(1,x,y,z,2.5,1,1);rotate(z,y,x*pi);v=2*voronoi(1,x,y,z,6)-1;data=(4*(v+1)/2)%4;(sqrt(z^2+y^2)-(R-k)-k*p)^2+(x/2)^2<(r*v)^2\n",
+      "commands": [
+        "//generate 251 R=0.85;r=0.15;k=0.5;p=perlin(1,x,y,z,2.5,1,1);rotate(z,y,x*pi);v=2*voronoi(1,x,y,z,6)-1;data=(4*(v+1)/2)%4;(sqrt(z^2+y^2)-(R-k)-k*p)^2+(x/2)^2<(r*v)^2"
+      ],
+      "images": [
+        "images/dynamics/747746603766382611/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/747746603766382611.txt"
+    },
+    {
+      "id": "747655863994417236",
+      "title": "山",
+      "date": "2023年1月5日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/747655863994417236",
+      "text": "山\n\n看《中国奇谭》来的灵感，简单尝试一下\n两个噪声相乘叠加，再与一个梯台相乘叠加达到淡出边缘的效果\n\n//generate 251 y+1<2*perlin(23,x*2,1,z,3,1,1)*(perlin(2,x,1,z,2,1,1)-0.2)*(1-sqrt(x^2+z^2)^8) \n\n//deform -c x=3*floor(x/3);\n",
+      "commands": [
+        "//generate 251 y+1<2*perlin(23,x*2,1,z,3,1,1)*(perlin(2,x,1,z,2,1,1)-0.2)*(1-sqrt(x^2+z^2)^8)",
+        "//deform -c x=3*floor(x/3);"
+      ],
+      "images": [
+        "images/dynamics/747655863994417236/01.jpg",
+        "images/dynamics/747655863994417236/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/747655863994417236.txt"
+    },
+    {
+      "id": "745534369192476679",
+      "title": "【Minecraft】worldedit&FAWE 你可能需要知道的指令",
+      "date": "2022年12月31日",
+      "type": "DYNAMIC_TYPE_ARTICLE",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/745534369192476679",
+      "text": "前言：\n本来我是不想做这类查wiki就知道的教程，但是经常看到有些人并不知道一些指令的用法，这个专栏将介绍we中非常好用的能大幅提高效率的指令，可能以后会接着补充。\n教程使用的均为服务器插件版we和fawe\n[图片]\nmask和pattern\n这个属于前置的知识，并不是指令，你需要知道这两者的意思。众所周知，we指令中有两个重要的概念，一个是蒙版mask，一个是图案pattern，如replace指令中第一个参数就是mask蒙版，第二个是pattern图案，mask决定你要在哪个位置上执行命令，pattern决定你执行时所用的图案，一般来说就是用什么方块，其实大部分指令都离不开这两者。\n...",
+      "commands": [],
+      "images": [
+        "images/dynamics/745534369192476679/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/745534369192476679.txt"
+    },
+    {
+      "id": "740625191509426263",
+      "title": "圣诞树",
+      "date": "2022年12月17日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/740625191509426263",
+      "text": "圣诞树\n\ndesmos模拟\nhttps://www.desmos.com/calculator/oc6pihbr6n?lang=zh-CN \n\n//generate 18:1 y+=0.08*(voronoi(1,x,5*atan2(x,z),z,5)-1);c=3.1;a=0.15;n=0.2;c*((1-y)%a)*sqrt(x^2+z^2)-n*(y-1)>sqrt(x^2+z^2)\n",
+      "commands": [
+        "//generate 18:1 y+=0.08*(voronoi(1,x,5*atan2(x,z),z,5)-1);c=3.1;a=0.15;n=0.2;c*((1-y)%a)*sqrt(x^2+z^2)-n*(y-1)>sqrt(x^2+z^2)"
+      ],
+      "images": [
+        "images/dynamics/740625191509426263/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/740625191509426263.txt"
+    },
+    {
+      "id": "739563484196372499",
+      "title": "五角星",
+      "date": "2022年12月14日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/739563484196372499",
+      "text": "五角星\n\n在多边形的基础上做点改变，详情见专栏\n\n//generate 41 b=1.5;L=1-abs(z);x/=L;y/=L;X=abs(x);n=5;sqrt(x^2+y^2)<(1+b)*cos(pi/n)/cos(pi/n-(atan2(X,y)%(2*pi/n)))-b\n",
+      "commands": [
+        "//generate 41 b=1.5;L=1-abs(z);x/=L;y/=L;X=abs(x);n=5;sqrt(x^2+y^2)<(1+b)*cos(pi/n)/cos(pi/n-(atan2(X,y)%(2*pi/n)))-b"
+      ],
+      "images": [
+        "images/dynamics/739563484196372499/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/739563484196372499.txt"
+    },
+    {
+      "id": "739160891123040258",
+      "title": "deform实现选区里的莫比乌斯环的变换   注： 原形状为沿着z轴的形状，即图2的圆柱的中心轴为z轴方向 选区为正方体 r为旋转的半径，保证选区里的形状的宽度",
+      "date": "2022年12月13日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/739160891123040258",
+      "text": "deform实现选区里的莫比乌斯环的变换   注： 原形状为沿着z轴的形状，即图2的圆柱的中心轴为z轴方向 选区为正方体 r为旋转的半径，保证选区里的形状的宽度的一半加半径不超选区边长的一半，不然会超出选区 生成的形状较粗糙 具体还请看之前的专栏  //deform -c r=40;a=atan2(x,z)/2;x=sqrt(x^2+z^2)-r;Y=x*sin(a)+y*cos(a);X=x*cos(a)-y*sin(a);swap(X,x);swap(Y,y)  \n",
+      "commands": [
+        "//deform -c r=40;a=atan2(x,z)/2;x=sqrt(x^2+z^2)-r;Y=x*sin(a)+y*cos(a);X=x*cos(a)-y*sin(a);swap(X,x);swap(Y,y)"
+      ],
+      "images": [
+        "images/dynamics/739160891123040258/01.jpg",
+        "images/dynamics/739160891123040258/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/739160891123040258.txt"
+    },
+    {
+      "id": "738700651006001202",
+      "title": "【Minecraft】worldedit|deform&generate 利用floor函数实现“二次体素化”",
+      "date": "2022年12月12日",
+      "type": "DYNAMIC_TYPE_ARTICLE",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/738700651006001202",
+      "text": "成品\n[图片]\n//deform -c x=3*floor(x/3);z=3*floor(z/3);y=3*floor(y/3)\n[图片]\n//generate -c 251 X=3*floor(x/3);Z=3*floor(z/3);y+60<40*perlin(1,x,1,z,0.03,1,1)\n[图片]\n//generate -c 251 Y=2*floor(y/2);Y+60<40*perlin(1,x,1,z,0.03,1,1)\n...",
+      "commands": [
+        "//deform -c x=3*floor(x/3);z=3*floor(z/3);y=3*floor(y/3)",
+        "//generate -c 251 X=3*floor(x/3);Z=3*floor(z/3);y+60<40*perlin(1,x,1,z,0.03,1,1)",
+        "//generate -c 251 Y=2*floor(y/2);Y+60<40*perlin(1,x,1,z,0.03,1,1)"
+      ],
+      "images": [
+        "images/dynamics/738700651006001202/01.jpg",
+        "images/dynamics/738700651006001202/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/738700651006001202.txt"
+    },
+    {
+      "id": "738443223551180804",
+      "title": "再次体素化   //generate -c 251 X=5*floor(x/5);Z=5*floor(z/5);y+50<50*perlin(1,X,1,Z,0",
+      "date": "2022年12月11日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/738443223551180804",
+      "text": "再次体素化   //generate -c 251 X=5*floor(x/5);Z=5*floor(z/5);y+50<50*perlin(1,X,1,Z,0.02,1,1)  \n",
+      "commands": [
+        "//generate -c 251 X=5*floor(x/5);Z=5*floor(z/5);y+50<50*perlin(1,X,1,Z,0.02,1,1)"
+      ],
+      "images": [
+        "images/dynamics/738443223551180804/01.jpg",
+        "images/dynamics/738443223551180804/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/738443223551180804.txt"
+    },
+    {
+      "id": "738052763786674273",
+      "title": "科幻​  （使用光影更佳）  size:199,50,199  //generate 251 y+0.5<0.5*voronoi(1,x,1,z,50)  //",
+      "date": "2022年12月10日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/738052763786674273",
+      "text": "科幻​  （使用光影更佳）  size:199,50,199  //generate 251 y+0.5<0.5*voronoi(1,x,1,z,50)  //deform -c x/=5;z/=5;y*=2;y+=50*(1-1/2)  //re \"~[0][1] <251\" 244\n",
+      "commands": [
+        "//generate 251 y+0.5<0.5*voronoi(1,x,1,z,50) //deform -c x/=5;z/=5;y*=2;y+=50*(1-1/2) //re \"~[0][1] <251\" 244"
+      ],
+      "images": [
+        "images/dynamics/738052763786674273/01.jpg",
+        "images/dynamics/738052763786674273/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/738052763786674273.txt"
+    },
+    {
+      "id": "737338721163018272",
+      "title": "蓝->紫<-红  size:199,1,65  //generate -c 251:11 s=199;a=8;k=a/s;(x+z+s+2)%a<a-k*(x+",
+      "date": "2022年12月8日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/737338721163018272",
+      "text": "蓝->紫<-红  size:199,1,65  //generate -c 251:11 s=199;a=8;k=a/s;(x+z+s+2)%a<a-k*(x+20+s/2)&&(x-z+s+2)%a<a-k*(x+20+s/2)   //generate -c 25:14 x=-x;z-=4;s=199;a=8;k=a/s;(x+z+s+2)%a<a-k*(x+20+s/2)&&(x-z+s+2)%a<a-k*(x+20+s/2)\n",
+      "commands": [
+        "//generate -c 251:11 s=199;a=8;k=a/s;(x+z+s+2)%a<a-k*(x+20+s/2)&&(x-z+s+2)%a<a-k*(x+20+s/2) //generate -c 25:14 x=-x;z-=4;s=199;a=8;k=a/s;(x+z+s+2)%a<a-k*(x+20+s/2)&&(x-z+s+2)%a<a-k*(x+20+s/2)"
+      ],
+      "images": [
+        "images/dynamics/737338721163018272/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/737338721163018272.txt"
+    },
+    {
+      "id": "736215432610971665",
+      "title": "等高线",
+      "date": "2022年12月5日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/736215432610971665",
+      "text": "等高线\n",
+      "commands": [],
+      "images": [
+        "images/dynamics/736215432610971665/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/736215432610971665.txt"
+    },
+    {
+      "id": "736194700784959509",
+      "title": "梯田    generate+smear+deform+replace    size:301× 51×301    //generate 251 -c (y+",
+      "date": "2022年12月5日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/736194700784959509",
+      "text": "梯田    generate+smear+deform+replace    size:301× 51×301    //generate 251 -c (y+25)%5<2&&(y+25)<50*perlin(1,x,1,z,0.02,1,1)   //smear 3 d   //deform -c y*=1.5;y+=51*(1-1/1.5)   //re \"~[0][1] 251 <0\" 9   ....\n",
+      "commands": [
+        "//generate 251 -c (y+25)%5<2&&(y+25)<50*perlin(1,x,1,z,0.02,1,1) //smear 3 d //deform -c y*=1.5;y+=51*(1-1/1.5) //re \"~[0][1] 251 <0\" 9 ...."
+      ],
+      "images": [
+        "images/dynamics/736194700784959509/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/736194700784959509.txt"
+    },
+    {
+      "id": "734996830115332167",
+      "title": "轴向菱形渐变 ：  //generate -c 251 s=201;a=12;k=a/s;(x+z+s)%a<a-k*(x+s/2)&&(x-z+s)%a<a-",
+      "date": "2022年12月2日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/734996830115332167",
+      "text": "轴向菱形渐变 ：  //generate -c 251 s=201;a=12;k=a/s;(x+z+s)%a<a-k*(x+s/2)&&(x-z+s)%a<a-k*(x+s/2)  s为选区内要渐变方向的大小（这里为x轴方向）； a控制密度； k为a/s时渐变填满s大小的区域   拓展：径向菱形渐变：  //generate -c 251 s=335;a=12;k=a/s;X=sqrt(x^2+z^2);(x+z+s)%a<a-k*(X+s/2)&&(x-z+s)%a<a-k*(X+s/2)   \n",
+      "commands": [
+        "//generate -c 251 s=201;a=12;k=a/s;(x+z+s)%a<a-k*(x+s/2)&&(x-z+s)%a<a-k*(x+s/2) s为选区内要渐变方向的大小（这里为x轴方向）； a控制密度； k为a/s时渐变填满s大小的区域 拓展：径向菱形渐变： //generate -c 251 s=335;a=12;k=a/s;X=sqrt(x^2+z^2);(x+z+s)%a<a-k*(X+s/2)&&(x-z+s)%a<a-k*(X+s/2)"
+      ],
+      "images": [
+        "images/dynamics/734996830115332167/01.jpg",
+        "images/dynamics/734996830115332167/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/734996830115332167.txt"
+    },
+    {
+      "id": "734357575792853081",
+      "title": "油污   //generate -r 251 data=(x+200*perlin(1,x,y,z,0.02,1,1))/3%15",
+      "date": "2022年11月30日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/734357575792853081",
+      "text": "油污   //generate -r 251 data=(x+200*perlin(1,x,y,z,0.02,1,1))/3%15\n",
+      "commands": [
+        "//generate -r 251 data=(x+200*perlin(1,x,y,z,0.02,1,1))/3%15"
+      ],
+      "images": [
+        "images/dynamics/734357575792853081/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/734357575792853081.txt"
+    },
+    {
+      "id": "733932468506198017",
+      "title": "祥云 有瑕​  //re =a=26;b=8;c=2;sqrt(((x)%a)^2+((z)%a)^2)%b<c 41",
+      "date": "2022年11月29日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/733932468506198017",
+      "text": "祥云 有瑕​  //re =a=26;b=8;c=2;sqrt(((x)%a)^2+((z)%a)^2)%b<c 41\n",
+      "commands": [
+        "//re =a=26;b=8;c=2;sqrt(((x)%a)^2+((z)%a)^2)%b<c 41"
+      ],
+      "images": [
+        "images/dynamics/733932468506198017/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/733932468506198017.txt"
+    },
+    {
+      "id": "733837085880877081",
+      "title": "视错觉  角度求余+莫比乌斯环   //generate 251 -h a=atan2(x,z);x1=sqrt(x^2+(z)^2)-0.5;X=x1*cos",
+      "date": "2022年11月29日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/733837085880877081",
+      "text": "视错觉  角度求余+莫比乌斯环   //generate 251 -h a=atan2(x,z);x1=sqrt(x^2+(z)^2)-0.5;X=x1*cos(a)-y*sin(a);Y=x1*sin(a)+y*cos(a);data=((18*(atan2(X,Y)+pi)/pi)%2<1)?0:15;(X)^2+Y^2<0.4^2\n",
+      "commands": [
+        "//generate 251 -h a=atan2(x,z);x1=sqrt(x^2+(z)^2)-0.5;X=x1*cos(a)-y*sin(a);Y=x1*sin(a)+y*cos(a);data=((18*(atan2(X,Y)+pi)/pi)%2<1)?0:15;(X)^2+Y^2<0.4^2"
+      ],
+      "images": [
+        "images/dynamics/733837085880877081/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/733837085880877081.txt"
+    },
+    {
+      "id": "733181734006292530",
+      "title": "【Minecraft】worldedit|表达式蒙版 噪声+条纹=人造摩尔纹？",
+      "date": "2022年11月27日",
+      "type": "DYNAMIC_TYPE_ARTICLE",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/733181734006292530",
+      "text": "成品\n[图片]\n//re =(x+50*perlin(1,x,y,z,0.02,1,1))%10<5 251\n[图片]\n//re =x-=528;z-=-176;(sqrt(x^2+z^2)+80*perlin(1,x,y,z,0.02,1,1))%4<2 hand\n表达式蒙版里使用的是世界坐标，在之前的专栏里也提到过求余的操作，可以先看一下这一篇\n【Minecraft】worldedit|generate 角度+求余=生成网状支撑结构？\n...",
+      "commands": [
+        "//re =(x+50*perlin(1,x,y,z,0.02,1,1))%10<5 251",
+        "//re =x-=528;z-=-176;(sqrt(x^2+z^2)+80*perlin(1,x,y,z,0.02,1,1))%4<2 hand"
+      ],
+      "images": [
+        "images/dynamics/733181734006292530/01.jpg",
+        "images/dynamics/733181734006292530/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/733181734006292530.txt"
+    },
+    {
+      "id": "732894443623940131",
+      "title": "视错觉",
+      "date": "2022年11月27日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/732894443623940131",
+      "text": "视错觉 \n",
+      "commands": [],
+      "images": [
+        "images/dynamics/732894443623940131/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/732894443623940131.txt"
+    },
+    {
+      "id": "732060756134068247",
+      "title": "正多边形+莫比乌斯环  //generate 35 a=atan2(x,z)*2;n=5;x1=1.5*sqrt(abs(x)^2+z^2)-cos(pi/n)",
+      "date": "2022年11月24日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/732060756134068247",
+      "text": "正多边形+莫比乌斯环  //generate 35 a=atan2(x,z)*2;n=5;x1=1.5*sqrt(abs(x)^2+z^2)-cos(pi/n)*(1/cos(pi/n-(atan2(abs(x),z)%(2*pi/n))));X=x1*cos(a)-y*sin(a);Y=x1*sin(a)+y*cos(a);data=(X0?1:2):(Y<0?3:4);(abs(X)-0.1)^2+(abs(Y)-0.1)^2<0.1^2\n",
+      "commands": [
+        "//generate 35 a=atan2(x,z)*2;n=5;x1=1.5*sqrt(abs(x)^2+z^2)-cos(pi/n)*(1/cos(pi/n-(atan2(abs(x),z)%(2*pi/n))));X=x1*cos(a)-y*sin(a);Y=x1*sin(a)+y*cos(a);data=(X0?1:2):(Y<0?3:4);(abs(X)-0.1)^2+(abs(Y)-0.1)^2<0.1^2"
+      ],
+      "images": [
+        "images/dynamics/732060756134068247/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/732060756134068247.txt"
+    },
+    {
+      "id": "727603499190190217",
+      "title": "【Minecraft】worldedit|generate 莫比乌斯旋转模型",
+      "date": "2022年11月12日",
+      "type": "DYNAMIC_TYPE_ARTICLE",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/727603499190190217",
+      "text": "成品\n[图片]\n//generate 35 a=atan2(x,z)*2;x1=sqrt(x^2+z^2)-0.7;X=x1*cos(a)-y*sin(a);Y=x1*sin(a)+y*cos(a);data=(X0?1:2):(Y<0?3:4);(abs(X)-0.1)^2+(abs(Y)-0.1)^2<0.1^2\n[图片]\n//generate 35 a=atan2(x,z)/2;x1=sqrt(x^2+(z)^2)-0.7;X=x1*cos(a)-y*sin(a);Y=x1*sin(a)+y*cos(a);(X)^2+15*Y^2<0.2^2\n...",
+      "commands": [
+        "//generate 35 a=atan2(x,z)*2;x1=sqrt(x^2+z^2)-0.7;X=x1*cos(a)-y*sin(a);Y=x1*sin(a)+y*cos(a);data=(X0?1:2):(Y<0?3:4);(abs(X)-0.1)^2+(abs(Y)-0.1)^2<0.1^2",
+        "//generate 35 a=atan2(x,z)/2;x1=sqrt(x^2+(z)^2)-0.7;X=x1*cos(a)-y*sin(a);Y=x1*sin(a)+y*cos(a);(X)^2+15*Y^2<0.2^2"
+      ],
+      "images": [
+        "images/dynamics/727603499190190217/01.jpg",
+        "images/dynamics/727603499190190217/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/727603499190190217.txt"
+    },
+    {
+      "id": "725845620621836321",
+      "title": "【Minecraft】worldedit|generate 角度+求余=生成网状支撑结构？",
+      "date": "2022年11月8日",
+      "type": "DYNAMIC_TYPE_ARTICLE",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/725845620621836321",
+      "text": "成品\n[图片]\n//generate 35 -h A=(atan2(x,z)+pi)/pi;type=((((A+(1+y))*40)%8<1)||(((A+(1-y))*40)%8<1))?35:95;x^2+z^2<0.5^2\n求余很好理解，就是一个除数一个被除数，求出余数，比如5%3=2，如果放入到we中，可以用在判断语句中，比如在表达式蒙版中，如果要做出相隔a距离（这里指的是空白区域）的且有b宽度的格栅的图案就可以用 //re =x%(a+b)<b 1 来实现，如图\n...",
+      "commands": [
+        "//generate 35 -h A=(atan2(x,z)+pi)/pi;type=((((A+(1+y))*40)%8<1)||(((A+(1-y))*40)%8<1))?35:95;x^2+z^2<0.5^2",
+        "//re =x%(a+b)<b 1 来实现，如图"
+      ],
+      "images": [
+        "images/dynamics/725845620621836321/01.jpg",
+        "images/dynamics/725845620621836321/02.jpg"
+      ],
+      "commandsFile": "commands/dynamics/725845620621836321.txt"
+    },
+    {
+      "id": "723161880227479569",
+      "title": "[给心心]",
+      "date": "2022年10月31日",
+      "type": "DYNAMIC_TYPE_FORWARD",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/723161880227479569",
+      "text": "[给心心]",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/723161880227479569.txt"
+    },
+    {
+      "id": "722897975975608322",
+      "title": "【Minecraft】worldedit|generate 旋转体|实例：万圣节南瓜",
+      "date": "2022年10月31日",
+      "type": "DYNAMIC_TYPE_ARTICLE",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/722897975975608322",
+      "text": "成品\n[图片]\n渲染：borbibiborbi\n首先是整体思路，找出一个曲线，以y轴做旋转体，一边加上一圈周期函数\n思路和之前专栏的都是一样的，无非是使用的具体的函数曲线不同\n【Minecraft】worldedit|generate 正多边形及正多边形尖顶的设计思路\n[图片]\n这里先讲一下怎么让一条在二维平面x正半轴的曲线如何在mc的三维空间中绕着一轴旋转成一个封闭图形，就比如何让x=1的曲线绕y轴做成旋转体，思路就是把x到原点的值换成与z轴相关的值，如果x与z的权值是1:1的话，就是把x换成sqrt(x^2+z^2)，即求x,z平面上的点到原点的距离\n...",
+      "commands": [],
+      "images": [
+        "images/dynamics/722897975975608322/01.jpg"
+      ],
+      "commandsFile": "commands/dynamics/722897975975608322.txt"
+    },
+    {
+      "id": "722483550275764281",
+      "title": "渲染 ：@_Duke___",
+      "date": "2022年10月29日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/722483550275764281",
+      "text": "渲染 ：@_Duke___ \n",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/722483550275764281.txt"
+    },
+    {
+      "id": "722475132158738452",
+      "title": "建筑 imhols & borbibiborbi | 渲染 borbibibrobi",
+      "date": "2022年10月29日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/722475132158738452",
+      "text": "建筑 imhols & borbibiborbi | 渲染 borbibibrobi\n",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/722475132158738452.txt"
+    },
+    {
+      "id": "721290545796743168",
+      "title": "【Minecraft】worldedit|generate 正多边形及正多边形尖顶的设计思路",
+      "date": "2022年10月26日",
+      "type": "DYNAMIC_TYPE_ARTICLE",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/721290545796743168",
+      "text": "成品：八角尖顶\n[图片]\n//generate 35 -h r=1-(y+1)^2/4;n=8;sqrt(x^2+z^2)/cos(pi/n)*cos(pi/n-((atan2(x,z)+pi)%(2*pi/n)))<r\n[图片]\n一\n做这种涉及正多边形的形状问题，我们首先要找到一个能画出正多边形的通式或办法，目前我能想到的和找到的有两种办法：\n1、一种是能够画出边是绝对平直的正多边形，这是在知乎上找到的\nzhuanlan.zhihu.com/p/522197221\n...",
+      "commands": [
+        "//generate 35 -h r=1-(y+1)^2/4;n=8;sqrt(x^2+z^2)/cos(pi/n)*cos(pi/n-((atan2(x,z)+pi)%(2*pi/n)))<r"
+      ],
+      "images": [],
+      "commandsFile": "commands/dynamics/721290545796743168.txt"
+    },
+    {
+      "id": "720932083546980470",
+      "title": "【Minecraft】worldedit|generate洋葱顶进阶及上色办法|包含data/type、atan2、min",
+      "date": "2022年10月25日",
+      "type": "DYNAMIC_TYPE_ARTICLE",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/720932083546980470",
+      "text": "成品如下\n[图片]\n//generate 35 G=min(sin(18*atan2(x,z)+20*(y+1)),sin(18*atan2(x,z)-20*(y+1)));data=(G>(-0.7))?4:13;i=sqrt(x^2+z^2);k=0.9;a=6.5;b=0.9;m=0.6;i<k*a^(-b*(y+m)^2)+0.02*G\n之前在视频里演示的不是很详细，这次将其进行了改进\n【Minecraft】生成俄罗斯洋葱式圆顶（自制）generate教程#1\n...",
+      "commands": [
+        "//generate 35 G=min(sin(18*atan2(x,z)+20*(y+1)),sin(18*atan2(x,z)-20*(y+1)));data=(G>(-0.7))?4:13;i=sqrt(x^2+z^2);k=0.9;a=6.5;b=0.9;m=0.6;i<k*a^(-b*(y+m)^2)+0.02*G"
+      ],
+      "images": [],
+      "commandsFile": "commands/dynamics/720932083546980470.txt"
+    },
+    {
+      "id": "719916645896683552",
+      "title": "【Minecraft】worldedit|generate 一键生成旋风2.0",
+      "date": "2022年10月23日",
+      "type": "DYNAMIC_TYPE_ARTICLE",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/719916645896683552",
+      "text": "首先你得有generate的基础认识\n[图片]\n废话少说，看成品\n[图片]\n成品图\n下面是设计思路包括包括基础轮廓→加噪声→旋转\n[图片]\n模拟轮廓\n[图片]\ndesmos模拟x,y在-1到1的图像\n网站：https://www.desmos.com/\n这里用了三次方的曲线，和之前视频的一样\n【Minecraft】用指令做出旋风 generate教程#2\n[图片]\n生成轮廓\n[图片]\n//generate 35 r=sqrt(x^2+z^2);10*(r-0.06)<(y+1)^3\n...",
+      "commands": [
+        "//generate 35 r=sqrt(x^2+z^2);10*(r-0.06)<(y+1)^3"
+      ],
+      "images": [],
+      "commandsFile": "commands/dynamics/719916645896683552.txt"
+    },
+    {
+      "id": "719675676756541473",
+      "title": "分享图片",
+      "date": "2022年10月22日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/719675676756541473",
+      "text": "分享图片\n",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/719675676756541473.txt"
+    },
+    {
+      "id": "711604217726369828",
+      "title": "[热词系列_吹爆]",
+      "date": "2022年9月30日",
+      "type": "DYNAMIC_TYPE_FORWARD",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/711604217726369828",
+      "text": "[热词系列_吹爆]",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/711604217726369828.txt"
+    },
+    {
+      "id": "709332321772240932",
+      "title": "[脱单doge]",
+      "date": "2022年9月24日",
+      "type": "DYNAMIC_TYPE_FORWARD",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/709332321772240932",
+      "text": "[脱单doge]",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/709332321772240932.txt"
+    },
+    {
+      "id": "704634894511243273",
+      "title": "@MaxKim 登顶了",
+      "date": "2022年9月11日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/704634894511243273",
+      "text": "@MaxKim 登顶了\n",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/704634894511243273.txt"
+    },
+    {
+      "id": "702640985996263440",
+      "title": "期待[脱单doge]",
+      "date": "2022年9月6日",
+      "type": "DYNAMIC_TYPE_FORWARD",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/702640985996263440",
+      "text": "期待[脱单doge]",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/702640985996263440.txt"
+    },
+    {
+      "id": "698728738942091286",
+      "title": "#我的世界 #战地1",
+      "date": "2022年8月26日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/698728738942091286",
+      "text": "#我的世界 #战地1\n",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/698728738942091286.txt"
+    },
+    {
+      "id": "696554519026204678",
+      "title": "#战地1#圣傻萌[给心心]",
+      "date": "2022年8月21日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/696554519026204678",
+      "text": "#战地1#圣傻萌[给心心]\n",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/696554519026204678.txt"
+    },
+    {
+      "id": "690775279975530498",
+      "title": "【Minecraft】一键生成砖块纹理 | 表达式蒙版案例#1",
+      "date": "2022年8月5日",
+      "type": "DYNAMIC_TYPE_AV",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/video/BV1Pd4y1S7eM",
+      "text": "：）",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/690775279975530498.txt"
+    },
+    {
+      "id": "653378569992404994",
+      "title": "从马提尼到kolibri[蜂鸟]精通【Battlefield 1】",
+      "date": "2022年4月26日",
+      "type": "DYNAMIC_TYPE_AV",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/video/BV1XZ4y1C7PP",
+      "text": "BGM：Various Artists - 你要结婚了+plain Jane",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/653378569992404994.txt"
+    },
+    {
+      "id": "650412981222375443",
+      "title": "摸个教堂",
+      "date": "2022年4月18日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/650412981222375443",
+      "text": "摸个教堂\n",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/650412981222375443.txt"
+    },
+    {
+      "id": "648569224779792434",
+      "title": "每 日 一 遍 （完整版）【Battlefield 1】",
+      "date": "2022年4月13日",
+      "type": "DYNAMIC_TYPE_AV",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/video/BV14Y411j7cm",
+      "text": "",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/648569224779792434.txt"
+    },
+    {
+      "id": "631141050480590853",
+      "title": "每日一遍 【Battlefield 1】",
+      "date": "2022年2月25日",
+      "type": "DYNAMIC_TYPE_AV",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/video/BV1Q44y1n7dL",
+      "text": "",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/631141050480590853.txt"
+    },
+    {
+      "id": "614425385578756730",
+      "title": "【Battlefield 1】”绷不住了“",
+      "date": "2022年1月11日",
+      "type": "DYNAMIC_TYPE_AV",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/video/BV19S4y1Z7z1",
+      "text": "",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/614425385578756730.txt"
+    },
+    {
+      "id": "605946591851833395",
+      "title": "【Battlefield 1】”反复横跳”",
+      "date": "2021年12月19日",
+      "type": "DYNAMIC_TYPE_AV",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/video/BV14M4y1c7L6",
+      "text": "被医生扎起来，就变这样了。",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/605946591851833395.txt"
+    },
+    {
+      "id": "605505520182556558",
+      "title": "【文明6】 ”大获全胜“",
+      "date": "2021年12月18日",
+      "type": "DYNAMIC_TYPE_AV",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/video/BV1e34y197D3",
+      "text": "新入坑，打的第二局赢了！",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/605505520182556558.txt"
+    },
+    {
+      "id": "602189470423949521",
+      "title": "【Minecraft】用指令做出旋风 generate教程#2",
+      "date": "2021年12月9日",
+      "type": "DYNAMIC_TYPE_AV",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/video/BV1mq4y1z7e8",
+      "text": "BGM：Piago - Bread And Milk\n视频内指令：//generate 41 a=7*(1-y)*pi;X=x*cos(a)-z*sin(a);Z=x*sin(a)+z*cos(a);(X-0.1)^2+Z^2<0.1*(1+y)^3\n服务器：鸽子城 dove.city",
+      "commands": [
+        "//generate 41 a=7*(1-y)*pi;X=x*cos(a)-z*sin(a);Z=x*sin(a)+z*cos(a);(X-0.1)^2+Z^2<0.1*(1+y)^3"
+      ],
+      "images": [],
+      "commandsFile": "commands/dynamics/602189470423949521.txt"
+    },
+    {
+      "id": "601304939090052124",
+      "title": "【Minecraft】生成俄罗斯洋葱式圆顶（自制）generate教程#1",
+      "date": "2021年12月7日",
+      "type": "DYNAMIC_TYPE_AV",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/video/BV1Yg411P7wx",
+      "text": "试着做一期",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/601304939090052124.txt"
+    },
+    {
+      "id": "600601543709048075",
+      "title": "【ORI】灵树之末-最终BOSS战",
+      "date": "2021年12月5日",
+      "type": "DYNAMIC_TYPE_AV",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/video/BV1Ti4y1Z7dV",
+      "text": "奥里是勇气、坚强、冒险、执着、善良的化身，看到最后我真的哭出来了，奥里与萤火意志带给我的不仅仅是画面上的冲击震撼，还有剧情的凄美与跌宕起伏，当看到小精灵与小猫头鹰失散相聚的那一刻我笑了，当看到小猫头鹰死去的时候我的心情也跟着跌倒了谷底，奥里之后克服重重困难险阻，途中也失去了巨蛙这个重要的伙伴，英雄之路永远是孤独的，一个人肩负了所有的命运，在最后一刻奥里打败了老鹰也跌入了深渊，醒过来时所有的过往都在眼前一晃而过，奥里接受了自己的命运成为了萤火之光，为森林重新带来生机，游戏剧情最后一幕泛着白色光芒的叶子随风告",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/600601543709048075.txt"
+    },
+    {
+      "id": "600332592860928573",
+      "title": "【ORI】风袭废墟-沙虫追逐战",
+      "date": "2021年12月4日",
+      "type": "DYNAMIC_TYPE_AV",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/video/BV1w341147yQ",
+      "text": "",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/600332592860928573.txt"
+    },
+    {
+      "id": "598125774230992722",
+      "title": "【战地2042】机械狗：行不行啊你？我来！",
+      "date": "2021年11月28日",
+      "type": "DYNAMIC_TYPE_AV",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/video/BV1vq4y1g7wx",
+      "text": "这素材不好录啊",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/598125774230992722.txt"
+    },
+    {
+      "id": "597335319860528118",
+      "title": "【ORI】沃林深处Boss战与剧情",
+      "date": "2021年11月26日",
+      "type": "DYNAMIC_TYPE_AV",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/video/BV1nQ4y1i7H2",
+      "text": "",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/597335319860528118.txt"
+    },
+    {
+      "id": "595121912758306246",
+      "title": "【ORI】鲍尔之触雪崩追逐与剧情",
+      "date": "2021年11月20日",
+      "type": "DYNAMIC_TYPE_AV",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/video/BV14b4y1b76K",
+      "text": "史雷克也是猫头鹰所生，但由于天生畸形被排挤，导致其一步步陷入黑暗无法自拔",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/595121912758306246.txt"
+    },
+    {
+      "id": "594075731749327614",
+      "title": "【ORI】光之池夸洛克追逐与剧情",
+      "date": "2021年11月17日",
+      "type": "DYNAMIC_TYPE_AV",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/video/BV1hg411N7Za",
+      "text": "将夸洛克击败后，夸洛克终于醒悟过来，并反手将怪物杀死，不过自己也身受重伤濒死。\r\n在临死前它委托我们照顾好莫基，守护这片土地，说完身躯便消散在空中了。",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/594075731749327614.txt"
+    },
+    {
+      "id": "589843831752845487",
+      "title": "【ORI】超然BGM——泉源追逐",
+      "date": "2021年11月6日",
+      "type": "DYNAMIC_TYPE_AV",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/video/BV1pL4y1v7yM",
+      "text": "",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/589843831752845487.txt"
+    },
+    {
+      "id": "589821759906335091",
+      "title": "【ORI】游戏中感人的剧情——猫头鹰之死",
+      "date": "2021年11月6日",
+      "type": "DYNAMIC_TYPE_AV",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/video/BV1Zr4y1C7mu",
+      "text": "-",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/589821759906335091.txt"
+    },
+    {
+      "id": "586937788154521318",
+      "title": "#minecraft# #我的世界# 基于generate的南瓜",
+      "date": "2021年10月29日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": true,
+      "source": "https://www.bilibili.com/opus/586937788154521318",
+      "text": "#minecraft# #我的世界# 基于generate的南瓜\n",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/586937788154521318.txt"
+    },
+    {
+      "id": "557676450849621653",
+      "title": "[热词系列_好耶]‍` `",
+      "date": "2021年8月11日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/557676450849621653",
+      "text": "[热词系列_好耶]‍` `\n",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/557676450849621653.txt"
+    },
+    {
+      "id": "546144648341323865",
+      "title": "【Minecraft】基姆镇完成 探索的时光 成就",
+      "date": "2021年7月11日",
+      "type": "DYNAMIC_TYPE_AV",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/video/BV1LX4y1w7eH",
+      "text": "芜湖~",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/546144648341323865.txt"
+    },
+    {
+      "id": "540557664689744003",
+      "title": "【Minecraft】基姆镇完成均衡饮食成就",
+      "date": "2021年6月26日",
+      "type": "DYNAMIC_TYPE_AV",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/video/BV1ZB4y1M7nG",
+      "text": "",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/540557664689744003.txt"
+    },
+    {
+      "id": "530936628702353748",
+      "title": "狐主任[2233娘_大笑]",
+      "date": "2021年5月31日",
+      "type": "DYNAMIC_TYPE_FORWARD",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/530936628702353748",
+      "text": "狐主任[2233娘_大笑]",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/530936628702353748.txt"
+    },
+    {
+      "id": "519314687723188299",
+      "title": "水很深，把握不住[脱单doge]",
+      "date": "2021年4月30日",
+      "type": "DYNAMIC_TYPE_FORWARD",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/519314687723188299",
+      "text": "水很深，把握不住[脱单doge]",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/519314687723188299.txt"
+    },
+    {
+      "id": "500871891995160874",
+      "title": "【我的世界】悬崖极简小屋",
+      "date": "2021年3月11日",
+      "type": "DYNAMIC_TYPE_AV",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/video/BV1Sy4y177KQ",
+      "text": "等有缘人",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/500871891995160874.txt"
+    },
+    {
+      "id": "498731817170048338",
+      "title": "”积木“住宅",
+      "date": "2021年3月5日",
+      "type": "DYNAMIC_TYPE_AV",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/video/BV1Yb4y1X7Qj",
+      "text": "又来了",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/498731817170048338.txt"
+    },
+    {
+      "id": "497972965158282825",
+      "title": "坡屋顶住宅",
+      "date": "2021年3月3日",
+      "type": "DYNAMIC_TYPE_AV",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/video/BV1bz4y1m7LA",
+      "text": "坡屋顶住宅",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/497972965158282825.txt"
+    },
+    {
+      "id": "497419356766291590",
+      "title": "[脱单doge]",
+      "date": "2021年3月2日",
+      "type": "DYNAMIC_TYPE_FORWARD",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/497419356766291590",
+      "text": "[脱单doge]",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/497419356766291590.txt"
+    },
+    {
+      "id": "485589500703704951",
+      "title": "#bilibili个性装扮# 我正在使用“斗破苍穹”头像挂件，你也来试试~",
+      "date": "2021年1月29日",
+      "type": "DYNAMIC_TYPE_COMMON_SQUARE",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/485589500703704951",
+      "text": "#bilibili个性装扮# 我正在使用“斗破苍穹”头像挂件，你也来试试~",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/485589500703704951.txt"
+    },
+    {
+      "id": "476479127743481364",
+      "title": "进入浮空车？我V要做城市之王",
+      "date": "2021年1月5日",
+      "type": "DYNAMIC_TYPE_AV",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/video/BV1my4y127qf",
+      "text": "没粉丝，第一次投稿，试一试。",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/476479127743481364.txt"
+    },
+    {
+      "id": "471870348665174631",
+      "title": "我参与了投票​新头像我投给了“2号”",
+      "date": "2020年12月23日",
+      "type": "DYNAMIC_TYPE_FORWARD",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/471870348665174631",
+      "text": "我参与了投票​新头像我投给了“2号”",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/471870348665174631.txt"
+    },
+    {
+      "id": "453381571021449646",
+      "title": "我参与了投票​观众老爷们预测一波，究竟谁能代表漂亮国？ 我投给了“川建国”",
+      "date": "2020年11月3日",
+      "type": "DYNAMIC_TYPE_FORWARD",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/453381571021449646",
+      "text": "我参与了投票​观众老爷们预测一波，究竟谁能代表漂亮国？ 我投给了“川建国”",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/453381571021449646.txt"
+    },
+    {
+      "id": "452299475482997363",
+      "title": "万一呢？",
+      "date": "2020年10月31日",
+      "type": "DYNAMIC_TYPE_FORWARD",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/452299475482997363",
+      "text": "万一呢？ ",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/452299475482997363.txt"
+    },
+    {
+      "id": "437632926674085413",
+      "title": "我参与了投票​十一假期服务器生存 我投给了“猛男生存服务器”",
+      "date": "2020年9月22日",
+      "type": "DYNAMIC_TYPE_FORWARD",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/437632926674085413",
+      "text": "我参与了投票​十一假期服务器生存 我投给了“猛男生存服务器”",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/437632926674085413.txt"
+    },
+    {
+      "id": "436138114845882012",
+      "title": "当个分母[微笑]",
+      "date": "2020年9月18日",
+      "type": "DYNAMIC_TYPE_FORWARD",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/436138114845882012",
+      "text": "当个分母[微笑]",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/436138114845882012.txt"
+    },
+    {
+      "id": "430691752718619744",
+      "title": "转发动态",
+      "date": "2020年9月3日",
+      "type": "DYNAMIC_TYPE_FORWARD",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/430691752718619744",
+      "text": "转发动态",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/430691752718619744.txt"
+    },
+    {
+      "id": "424068256011695201",
+      "title": "我参与了投票​Minecraft 1.17生物群系更新你最希望是哪个？ 我投给了“白桦林”",
+      "date": "2020年8月16日",
+      "type": "DYNAMIC_TYPE_FORWARD",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/424068256011695201",
+      "text": "我参与了投票​Minecraft 1.17生物群系更新你最希望是哪个？ 我投给了“白桦林”",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/424068256011695201.txt"
+    },
+    {
+      "id": "418825127443254047",
+      "title": "我已成为哔哩哔哩第80919434位转正会员，挑战转正答题考试获得63分，获得\"全明星\"挂件，有效期10天。",
+      "date": "2020年8月2日",
+      "type": "DYNAMIC_TYPE_DRAW",
+      "worldedit": false,
+      "source": "https://www.bilibili.com/opus/418825127443254047",
+      "text": "我已成为哔哩哔哩第80919434位转正会员，挑战转正答题考试获得63分，获得\"全明星\"挂件，有效期10天。\n",
+      "commands": [],
+      "images": [],
+      "commandsFile": "commands/dynamics/418825127443254047.txt"
     }
   ]
 }
-

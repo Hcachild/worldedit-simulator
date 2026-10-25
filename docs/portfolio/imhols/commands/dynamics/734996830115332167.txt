@@ -1,0 +1,1 @@
+//generate -c 251 s=201;a=12;k=a/s;(x+z+s)%a<a-k*(x+s/2)&&(x-z+s)%a<a-k*(x+s/2) s为选区内要渐变方向的大小（这里为x轴方向）； a控制密度； k为a/s时渐变填满s大小的区域 拓展：径向菱形渐变： //generate -c 251 s=335;a=12;k=a/s;X=sqrt(x^2+z^2);(x+z+s)%a<a-k*(X+s/2)&&(x-z+s)%a<a-k*(X+s/2)

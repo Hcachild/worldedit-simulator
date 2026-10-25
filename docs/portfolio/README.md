@@ -6,7 +6,7 @@
 
 ## 作者专题
 
-- [imhols — WorldEdit 进阶](imhols/README.md)：11 篇 WorldEdit 专栏 + 12 条公开动态，包含 `gmegabuf/gclosest`、Voronoi、噪声、`//deform` 二次体素化、正多边形/洋葱顶等进阶公式与指令。
+- [imhols — WorldEdit 进阶](imhols/README.md)：11 篇 WorldEdit 专栏 + 143 条动态（72 条 WorldEdit/程序化建模相关），包含 `gmegabuf/gclosest`、Voronoi、噪声、`//deform` 二次体素化、正多边形/洋葱顶等进阶公式与指令。
 
 ## 工程制图视角
 
@@ -90,4 +90,3 @@ we.cmd schematics\my_heart.schem examples\advanced\01_heart_128.txt
 - [高级 //gen 文档](../worldedit/advanced-generation.md)
 - [18 个生成脚本](../../examples/advanced/README.md)
 - [应用截图/视角源码](../../web/static/js/viewer.js)
-

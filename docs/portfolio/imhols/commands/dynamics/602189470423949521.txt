@@ -1,0 +1,1 @@
+//generate 41 a=7*(1-y)*pi;X=x*cos(a)-z*sin(a);Z=x*sin(a)+z*cos(a);(X-0.1)^2+Z^2<0.1*(1+y)^3

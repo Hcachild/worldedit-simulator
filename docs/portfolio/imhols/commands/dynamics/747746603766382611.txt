@@ -1,0 +1,1 @@
+//generate 251 R=0.85;r=0.15;k=0.5;p=perlin(1,x,y,z,2.5,1,1);rotate(z,y,x*pi);v=2*voronoi(1,x,y,z,6)-1;data=(4*(v+1)/2)%4;(sqrt(z^2+y^2)-(R-k)-k*p)^2+(x/2)^2<(r*v)^2

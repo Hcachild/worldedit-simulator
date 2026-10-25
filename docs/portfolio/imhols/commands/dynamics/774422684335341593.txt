@@ -1,0 +1,2 @@
+//calc n=100;for(i=0,255)for(j=0;jn*3){break;}gmegabuf(k,1-2*random());gmegabuf(k+2,1-2*random())}1
+//generate 251 n=100;c=gclosest(x,y,z,0,n,3);a=x-gmegabuf(c);b=z-gmegabuf(c+2);data=(atan2(a,b)/pi+1)/2*16%16;y<1-5*sqrt(a^2+b^2)

@@ -1,0 +1,1 @@
+//generate 251 g=1;a=0.05;t=sqrt(x^2+z^2);r=sqrt(x^2+z^2+y^2);y+=g*t^2/2;perlin(1,x/r,y/r,z/r,20,1,1)*r<a&&x^2+z^2+y^2<1

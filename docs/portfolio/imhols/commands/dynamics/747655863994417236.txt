@@ -1,0 +1,2 @@
+//generate 251 y+1<2*perlin(23,x*2,1,z,3,1,1)*(perlin(2,x,1,z,2,1,1)-0.2)*(1-sqrt(x^2+z^2)^8)
+//deform -c x=3*floor(x/3);

@@ -1,0 +1,2 @@
+//generate 251 x*=2;z*=2;a=x;b=z;cr=0.8;ci=0;for(n=1,20){na=a^2-b^2+cr;nb=2*a*b+ci;a=na;b=nb}sqrt(a^2+b^2)<2
+//generate 251 x*=2;z*=2;a=0;b=0;cr=x;ci=z;for(n=1,20){na=a^2-b^2+cr;nb=2*a*b+ci;a=na;b=nb}sqrt(a^2+b^2)<2

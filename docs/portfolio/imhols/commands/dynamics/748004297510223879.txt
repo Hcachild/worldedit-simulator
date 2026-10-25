@@ -1,0 +1,1 @@
+//generate -c 251 a=5;X=a*floor(x/a);Z=a*floor(z/a);data=(x+100)%a<1||(z+100)%a<1?15:15*perlin(1,X,1,Z,0.5,1,1)%15;X+100<200*perlin(1,X,1,Z,0.5,1,1)

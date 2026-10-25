@@ -1,0 +1,1 @@
+//generate 251 p2=perlin(1,x,y,z,1,1,1);p1=perlin(1,x,y*8+p2*5,z,3,1,1);data=p1*4%4;x^2+z^2+y^2<0.85+0.15*p1

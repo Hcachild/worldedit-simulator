@@ -1,0 +1,1 @@
+//generate -c 251:11 s=199;a=8;k=a/s;(x+z+s+2)%a<a-k*(x+20+s/2)&&(x-z+s+2)%a<a-k*(x+20+s/2) //generate -c 25:14 x=-x;z-=4;s=199;a=8;k=a/s;(x+z+s+2)%a<a-k*(x+20+s/2)&&(x-z+s+2)%a<a-k*(x+20+s/2)

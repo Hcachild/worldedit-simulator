@@ -1,0 +1,1 @@
+//generate 251 n=8;a=0b=0c=0for(k=0,5){r=sqrt(a^2+b^2+c^2);p=atan2(a,b);t=atan2(sqrt(a^2+b^2),c);na=r^n*sin(n*t)*cos(n*p);nb=r^n*sin(n*t)*sin(n*p);nc=r^n*cos(n*t);a=na+x;b=nb+y;c=nc+z}r<1

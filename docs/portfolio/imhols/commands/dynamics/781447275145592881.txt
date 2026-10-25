@@ -1,0 +1,1 @@
+//g 251 s=1;f=5;d=0do{d+=0.01;v1=voronoi(s,x+d,1,z,f)v2=voronoi(s,x-d,1,z,f)v3=voronoi(s,x,1,z+d,f)v4=voronoi(s,x,1,z-d,f)}while(v1==v2&&v2==v3&&v3==v4)data=d*50;y+1<d*10

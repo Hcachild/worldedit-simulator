@@ -1,0 +1,1 @@
+//deform -c r=40;a=atan2(x,z)/2;x=sqrt(x^2+z^2)-r;Y=x*sin(a)+y*cos(a);X=x*cos(a)-y*sin(a);swap(X,x);swap(Y,y)

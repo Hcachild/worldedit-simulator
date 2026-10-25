@@ -1,0 +1,1 @@
+//generate 251:2 -c s=100;a=10;k=1;b=a-floor(x/a)*k;(x+s)%(2*a)<b&&(z+s)%(2*a)<b||(x+s+a)%(2*a)<b&&(z+s+a)%(2*a)<b

@@ -1,0 +1,1 @@
+//generate 251 -h a=atan2(x,z);x1=sqrt(x^2+(z)^2)-0.5;X=x1*cos(a)-y*sin(a);Y=x1*sin(a)+y*cos(a);data=((18*(atan2(X,Y)+pi)/pi)%2<1)?0:15;(X)^2+Y^2<0.4^2

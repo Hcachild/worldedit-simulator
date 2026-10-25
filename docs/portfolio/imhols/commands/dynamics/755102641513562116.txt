@@ -1,0 +1,3 @@
+//generate 251 -c a=15;b=10;d=1;s=500;x+=s;z+=s;y+=s;Ly=y;Lz=(z+a*floor(y/b));(Lz%(2*a))(2*a-f)||Ly%b>(b-f)
+//deform -c x/=1-0.3*perlin(1,x,y,z,0.1,2,1)
+//deform -c x/=1-0.1*perlin(2,x,y,z,0.1,2,1)

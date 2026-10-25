@@ -1,0 +1,1 @@
+//generate 251 k=24;for(i=0,2*k){if(abs(max(abs(x),abs(z))-k^(-i/k))<0.02*sqrt(x^2+z^2)){return 1}rotate(x,z,pi/k);}0

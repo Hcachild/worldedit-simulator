@@ -1,0 +1,1 @@
+//g 251 s=1;f=7;r=sqrt(x^2+z^2);a=x/r;b=z/r;for(d=0;1;d+=.01){if(voronoi(s,x,1,z,f)!=voronoi(s,x+d*a,1,z+d*b,f))break};data=min(d*min(r,1)*60+r*2,15);y+1<d*min(r,1)*6+r;

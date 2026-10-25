@@ -1,0 +1,1 @@
+//generate 1 -c rotate(x,z,pi/3);s=500;k=5;a=10;(x+s)%a((k-1)*a)||(z+s)%a((k-1)*a)||(z+s)%a((k-1)*a)||(z+s)%a<1&&(z+x+2*s)%(2*k*a)<((k+1)*a)

@@ -1,0 +1,1 @@
+//generate 251 -c s=200;a=20;d=2;i=sqrt(3);b=i*a/2;x+=s;z+=s;(x+d/2)%b<d&&(z+d/2+3*a/2*floor((x+d/2)/b))%(3*a)<a||(z+d+a/4+(-1)^(floor((z-d)/(3/2*a)))*asin(cos(x*pi/i/a*2))/pi*a/2)%(3*a/2)<d
